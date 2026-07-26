@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deeplearning.cs.cmu.edu/sitemap.xml

@@ -18,12 +18,12 @@ jobs:
           fetch-depth: 0
 
       - name: Setup python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
       - name: Install python dependencies
-        run: pip install Jinja2 PyYAML ruamel.yaml pytz
+        run: pip install Jinja2 PyYAML ruamel.yaml
 
       - name: Auto-approve eligible pending uploads and regenerate tables
         run: |

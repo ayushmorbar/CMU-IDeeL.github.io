@@ -107,10 +107,10 @@ def upload():
     pdf_name = find_slide_by_lecture_number(lec_num)
     if not pdf_name: # Fallback: if the lecture slide is not found based on lecture number, we take the most recently committed file to GitHub in slides folder
         print(f"[WARN] Not able to find lecture slide based on lecture number; Trying to find based on commit time")
-        if today.weekday() == 0: # for Monday lecture, check from Thursday 
+        if today.weekday() in (0, 1): # Monday or Tuesday: check back 4 days
             start_day = today - timedelta(days=4)
-        elif today.weekday() == 2: # for Wednesday lecture, check from Tuesday 
-            start_day = today - timedelta(days=1)
+        else: # Other days (Wed/Thu/Fri): check back 2 days
+            start_day = today - timedelta(days=2)
         start_timestamp = datetime.combine(start_day, time(0, 0), timezone).timestamp()
         pdf_name = find_slide_by_commit_time(start_timestamp)
     if not pdf_name:

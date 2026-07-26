@@ -14,7 +14,7 @@ This bot ingests uploads into `F26/documents/slides/inbox/` and logs metadata in
 ## Run
 
 ```powershell
-cd C:\Users\shiro\OneDrive\Desktop\Robot\CMU-IDeeL.github.io\tools\f26_discord_bot
+cd tools/f26_discord_bot
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -25,10 +25,9 @@ python discord_ingest_bot.py
 ## Review Queue
 
 ```powershell
-cd C:\Users\shiro\OneDrive\Desktop\Robot\CMU-IDeeL.github.io
-python tools\f26_discord_bot\process_pending_uploads.py --list
-python tools\f26_discord_bot\process_pending_uploads.py --approve <upload_id>
-python tools\f26_discord_bot\process_pending_uploads.py --reject <upload_id> --reason wrong_slide
+python tools/f26_discord_bot/process_pending_uploads.py --list
+python tools/f26_discord_bot/process_pending_uploads.py --approve <upload_id>
+python tools/f26_discord_bot/process_pending_uploads.py --reject <upload_id> --reason wrong_slide
 ```
 
 Approved files move to `F26/documents/slides/` and update `F26/pages/tables_data/lectures.yaml`.

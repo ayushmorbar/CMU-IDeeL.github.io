@@ -65,6 +65,27 @@ def update_yaml(lecture_number, filename):
     return True, "inserted"
 
 
+def _approve_single_record(r):
+    src = REPO / r["saved_path"]
+    if not src.exists():
+        r["status"] = "error"
+        r["reason"] = "missing_source"
+        print("source file missing")
+        return False
+
+    clean = r.get("canonical_name", "").strip() or r.get("original_name", "").strip() or re.sub(r"^[A-Za-z0-9]+_", "", src.name)
+    dst = SLIDES_DIR / clean
+    src.replace(dst)
+
+    ok, reason = update_yaml(r["lecture_number"], clean)
+    r["status"] = "approved" if ok else "error"
+    r["reason"] = reason
+    r["approved_at_utc"] = datetime.now(timezone.utc).isoformat()
+    r["final_path"] = f"F26/documents/slides/{clean}"
+    print(f"approved: {r.get('upload_id')} -> {dst.name} ({reason})")
+    return True
+
+
 def approve(upload_id):
     rows = load_records()
     found = None
@@ -79,44 +100,26 @@ def approve(upload_id):
         print("hold window not complete or status not pending")
         return
 
-    src = REPO / found["saved_path"]
-    if not src.exists():
-        found["status"] = "error"
-        found["reason"] = "missing_source"
-        write_records(rows)
-        print("source file missing")
-        return
-
-    clean = found.get("canonical_name", "").strip() or found.get("original_name", "").strip() or re.sub(r"^[A-Za-z0-9]+_", "", src.name)
-    dst = SLIDES_DIR / clean
-    src.replace(dst)
-
-    ok, reason = update_yaml(found["lecture_number"], clean)
-    found["status"] = "approved" if ok else "error"
-    found["reason"] = reason
-    found["approved_at_utc"] = datetime.now(timezone.utc).isoformat()
-    found["final_path"] = f"F26/documents/slides/{clean}"
+    _approve_single_record(found)
     write_records(rows)
-    print(f"approved: {upload_id} -> {dst.name} ({reason})")
 
 
 def auto_approve_eligible():
     rows = load_records()
     approved = 0
     skipped = 0
+    modified = False
     for r in rows:
-        if r.get("status") != "pending_approval":
+        if r.get("status") != "pending_approval" or not eligible(r) or not r.get("upload_id"):
             skipped += 1
             continue
-        if not eligible(r):
+        if _approve_single_record(r):
+            approved += 1
+            modified = True
+        else:
             skipped += 1
-            continue
-        upload_id = r.get("upload_id")
-        if not upload_id:
-            skipped += 1
-            continue
-        approve(upload_id)
-        approved += 1
+    if modified:
+        write_records(rows)
     print(f"auto_approve_summary approved={approved} skipped={skipped}")
 
 

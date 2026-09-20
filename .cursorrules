@@ -1,0 +1,10 @@
+# CMU 11-785 Cursor AI Guidelines
+
+Always adhere strictly to the repository architecture and constraints defined in `AGENTS.md` and `CLAUDE.md`:
+
+1. **Local Work Only**: Never run `git push`, `gh pr create`, or touch remote git repositories unless explicitly commanded by the user.
+2. **Asset Protection**: Binary assets (PDFs, PPTXs, IPYNBs, ZIPs, images) must never be deleted, truncated, or overwritten.
+3. **Structured Content**: Course data belongs in `content/semesters/<TERM>/`. Changes must conform to the Zod schemas in `src/schemas/`.
+4. **Verification**: Always verify changes by running:
+   - `pnpm typecheck`
+   - `pnpm build`

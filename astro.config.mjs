@@ -78,8 +78,11 @@ function legacySemestersIntegration() {
                       url.startsWith('/shared/') ||
                       url.match(/^\/[FS]\d\d\//)
                     ) {
-                      // Do not intercept Astro routes
-                      if (url === '/F26/' || url === '/F26/index.html') {
+                      // Do not intercept Astro routes (e.g. /S26/, /S26/index.html, /F26/, etc.)
+                      if (
+                        url.match(/^\/[FS]\d\d\/?$/) ||
+                        url.match(/^\/[FS]\d\d\/index\.html$/)
+                      ) {
                         return next();
                       }
                       const localPath = path.join(process.cwd(), url.replace(/^\//, ''));

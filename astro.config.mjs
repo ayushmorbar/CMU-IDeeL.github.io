@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const LEGACY_DIRS = [
   'F20', 'S20', 'F21', 'S21', 'F22', 'S22',
   'F23', 'S23', 'F24', 'S24', 'F25', 'S25',
-  'S26', 'shared', 'exp', 'exp-updated'
+  'S26', 'shared'
 ];
 
 const MIME_TYPES = {

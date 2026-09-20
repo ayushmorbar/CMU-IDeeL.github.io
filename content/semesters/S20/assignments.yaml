@@ -1,40 +1,88 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: January 5
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: HW0 —
+        due_date: January 19
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
+          - text: Handout (*.targ.gz)
+            url: document/homework/hw0p1_handout.tar.gz
+  - release_date: January 19
     assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
+      - name: HW1 P1
+        due_date: February 8
+        materials:
+          - text: Handout (*.tar)
+            url: document/homework/hw1p1_handout.tar
+          - text: Writeup (*.pdf)
+            url: document/homework/Homework_1.pdf
+      - name: HW1 P1-bonus
+        due_date: April 29
         materials: []
-  - release_date: "Friday, Oct 9"
+  - release_date: January 19
     assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
-        materials: []
-  - release_date: "Friday, Nov 6"
+      - name: HW1 P2
+        due_date: 'Early: January 29<br>On-Time: February 8'
+        materials:
+          - text: Writeup (*.pdf)
+            url: document/homework/Homework_1_2.pdf
+  - release_date: February 9
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
+      - name: HW2 P1
+        due_date: March 7
+        materials:
+          - text: Handout (*.tar)
+            url: document/homework/hw2p1_Handout.tar
+          - text: Writeup (*.pdf)
+            url: document/homework/HW2_P1.pdf
+      - name: HW2 P1-bonus
+        due_date: May 3
         materials: []
+  - release_date: February 9
+    assignments:
+      - name: HW2 P2
+        due_date: 'Early: February 23<br>On-Time: March 8'
+        materials:
+          - text: Writeup (*.pdf)
+            url: document/homework/Homework_2_2.pdf
+  - release_date: March 8
+    assignments:
+      - name: HW3 P1
+        due_date: April 5
+        materials:
+          - text: Handout (*.tar)
+            url: document/homework/hw3p1_handout.tar
+          - text: Writeup (*.pdf)
+            url: document/homework/hw3p1.pdf
+          - text: Submission Link
+            url: https://autolab.andrew.cmu.edu/courses/11785-s20/assessments/hw3p1
+      - name: HW3 P1-bonus
+        due_date: May 7
+        materials: []
+  - release_date: March 8
+    assignments:
+      - name: HW3 P2
+        due_date: 'Early: March 25<br>On-Time: April 5'
+        materials:
+          - text: Writeup (*.pdf)
+            url: document/homework/hw3p2_version1.pdf
+          - text: Code Submission Link
+            url: https://autolab.andrew.cmu.edu/courses/11785-s20/assessments/hw3p2code
+          - text: Writeup Submission Link
+            url: https://canvas.cmu.edu/courses/12995/assignments/242226
+  - release_date: April 5
+    assignments:
+      - name: HW4 P1
+        due_date: May 3
+        materials:
+          - text: Writeup (*.pdf)
+            url: document/homework/Homework_4_Part_1.pdf
+      - name: HW4 P1-bonus
+        due_date: ''
+        materials: []
+  - release_date: April 5
+    assignments:
+      - name: HW4 P2
+        due_date: 'Early: April 22<br>On-Time: May 3'
+        materials:
+          - text: Writeup (*.pdf)
+            url: document/homework/hw4p2.pdf

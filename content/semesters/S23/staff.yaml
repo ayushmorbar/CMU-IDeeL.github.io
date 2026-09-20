@@ -5,6 +5,48 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Abuzar Khan
+    email: abuzark@andrew.cmu.edu
+  - name: Aparajith Srinivasan
+    email: aparajis@andrew.cmu.edu
+  - name: Arjun Chauhan
+    email: arjunc@andrew.cmu.edu
+  - name: Cedric Manouan
+    email: cmanoun@andrew.cmu.edu
+  - name: Eshani Agrawal
+    email: eshania@andrew.cmu.edu
+  - name: Harshith Kumar
+    email: harunkum@andrew.cmu.edu
+  - name: Joseph Konan
+    email: jkonans@andrew.cmu.edu
+  - name: Liangze "Josh" Li
+    email: liangzel@andrew.cmu.edu
+  - name: Miya Sylvester
+    email: nsylvest@andrew.cmu.edu
+  - name: Prakruthi Pradeep
+    email: prakruth@andrew.cmu.edu
+  - name: Qin Wang
+    email: qinw@andrew.cmu.edu
+  - name: Sarthak Bisht
+    email: sbisht@andrew.cmu.edu
+  - name: Shikhar Agnihotri
+    email: sagnihot@andrew.cmu.edu
+  - name: Swathi Jadav
+    email: sjadav@andrew.cmu.edu
+  - name: Varun Jain
+    email: vjain2@andrew.cmu.edu
+  - name: Vedant Bhasin
+    email: vedantb@andrew.cmu.edu
+  - name: Vishhvak Srinivasan
+    email: vishhvas@andrew.cmu.edu
+  - name: Yooni Choi
+    email: jungyoon@andrew.cmu.edu
+  - name: (SV) Ruimeng Chang
+    email: ruimengc@andrew.cmu.edu
+  - name: (Kigali) Yonas Chanie
+    email: ychanie@andrew.cmu.edu
+  - name: (Kigali) Paul Ewuzie
+    email: pewuzie@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

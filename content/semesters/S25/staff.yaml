@@ -5,6 +5,54 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Kateryna Shapovalenko
+    email: kshapova@andrew.cmu.edu
+  - name: Miya Sylvester
+    email: nsylvest@andrew.cmu.edu
+  - name: Alexander Moker
+    email: amoker@andrew.cmu.edu
+  - name: Purusottam Samal
+    email: psamal@andrew.cmu.edu
+  - name: Shravanth Srinivas
+    email: shravans@andrew.cmu.edu
+  - name: Yuzhou Wang
+    email: yuzhouwa@andrew.cmu.edu
+  - name: Massa Baali
+    email: mbaali@andrew.cmu.edu
+  - name: Vedant Singh
+    email: vhsingh@andrew.cmu.edu
+  - name: Sadrishya Agrawal
+    email: sadrisha@andrew.cmu.edu
+  - name: Michael Kireeff
+    email: mkireeff@andrew.cmu.edu
+  - name: Vishan Oberoi
+    email: voberoi@andrew.cmu.edu
+  - name: Ishita Gupta
+    email: ishitag@andrew.cmu.edu
+  - name: Shubham Kachroo
+    email: skachroo@andrew.cmu.edu
+  - name: Shrey Jain
+    email: shreyj@andrew.cmu.edu
+  - name: Floris Nzabakira
+    email: fnzabaki@andrew.cmu.edu
+  - name: Christine Muthee
+    email: cmuthee@andrew.cmu.edu
+  - name: Ahmed Issah
+    email: aissah@andrew.cmu.edu
+  - name: Shubham Singh
+    email: shubham4@andrew.cmu.edu
+  - name: Tanghang Elvis Tata
+    email: etanghan@andrew.cmu.edu
+  - name: John Liu
+    email: johnliu@andrew.cmu.edu
+  - name: Damilare Olatunji
+    email: dolatunj@andrew.cmu.edu
+  - name: Brian Ebiyau
+    email: bebiyau@andrew.cmu.edu
+  - name: Peter Wauyo
+    email: pwauyo@andrew.cmu.edu
+  - name: Eman Ansar
+    email: eansar@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

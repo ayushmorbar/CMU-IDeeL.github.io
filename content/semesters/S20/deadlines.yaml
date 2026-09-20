@@ -1,31 +1,52 @@
-- id: hw1p1
-  assignment: HW1 P1
-  deadlines:
-    - label: Early Submission
-      date: 'Early Submission: Friday, Sep 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Implementing and training an MLP from scratch
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: hw1p2
-  assignment: HW1 P2
-  deadlines:
-    - label: Checkpoint Submission
-      date: 'Checkpoint Submission: Friday, Sept 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Phoneme state labelling using MLPs
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: resources
-  assignment: Resource Links
+- id: item-0
+  assignment: Homework 4 Part1
   deadlines: []
-  description: Quick access to piazza and project resources
+  description: Word-Level Neural Language Models
   links:
-    - label: Important Piazza Posts Finder
-      url: https://piazza.com
-    - label: Projects Page
-      url: ../shared/project.html
+    - label: Homework 4 Part1
+      url: '#homework'
+    - label: Writeup (*.pdf)
+      url: document/homework/Homework_4_Part_1.pdf
+- id: item-1
+  assignment: Homework 4 Part2
+  deadlines: []
+  description: Attention Mechanisms and Memory Networks
+  links:
+    - label: Homework 4 Part2
+      url: '#homework'
+    - label: Writeup (*.pdf)
+      url: document/homework/hw4p2.pdf
+- id: item-2
+  assignment: Midterm Report
+  deadlines: []
+  description: report template is provided to detail your initial experiments
+  links:
+    - label: Midterm Report
+      url: '#project'
+    - label: report template
+      url: https://www.overleaf.com/6348355873chbbypfsvswb
+- id: item-3
+  assignment: Final Project Video
+  deadlines: []
+  description: This is the 5-minute video for the course project
+  links:
+    - label: Final Project Video
+      url: '#project'
+    - label: Video Instruction
+      url: videoinstr.html
+- id: item-4
+  assignment: Final Project Report
+  deadlines: []
+  description: This should be the final document for the course project
+  links:
+    - label: Final Project Report
+      url: '#project'
+- id: item-5
+  assignment: Final Project Playlist
+  deadlines: []
+  description: Please enjoy the final project videos from our students
+  links:
+    - label: Final Project Playlist
+      url: '#project'
+    - label: Youtube Playlist
+      url: https://www.youtube.com/playlist?list=PLp-0K3kfddPyyQzmID534-R1CnGJs0Ls-

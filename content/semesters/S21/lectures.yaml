@@ -1,367 +1,532 @@
-# lectures_data.yaml
 lectures:
-- number: 0
-  date: ''
-  topics:
-  - Course Logistics
-  - Learning Objectives
-  - Grading
-  - Deadlines
-  slides_videos:
-  - text: "Slides"
-    url: "https://docs.google.com/presentation/d/1A0L9bH6cpl7lDfrLmr6zg97ys7dagvPg/edit?slide=id.p39#slide=id.p39"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=_GMenT2mLnA"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 1
-  date: 'August 24'
-  topics:
-  - Introduction
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec1.intro.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=40Ql7hdaJfU"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-%20Neural%20Networks%20/1_bxa916zk/415066862"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 2
-  date: 'August 26'
-  topics:
-  - Neural Nets As Universal Approximators
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec2.universal.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=ZEpUYyNi9RA"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning+-+Fall+2026+-+Neural+Networks%2C+What+a+network+can+represent/1_zsm34x4s/415066862"
-  additional_materials:
-  - text: "IIT CS6840: Size and Depth Complexity of Boolean Circuits"
-    url: "./documents/readings/booleancircuits_shannonproof.pdf"
-  - text: "The Synthesis of Two-Terminal Switching Circuits"
-    url: "./documents/readings/Shannon49.pdf"
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 3
-  date: 'August 31'
-  topics:
-  - main: Training Part I
-    sub_topics:
-    - The Problem of Learning
-    - Empirical Risk Minimization
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec3.learning.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=ip7wYCtuA94"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-%20Learning%20the%20Network%2C%20Part%201/1_xed7qk5u/415066862"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 4
-  date: 'September 2'
-  topics:
-  - main: Training Part II
-    sub_topics:
-    - Gradient Descent
-    - Training the Network
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec4.learning.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=i5KQxB03kdQ"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-%20Learning%20the%20network%2C%20Backprop/1_r68f6zyd/415066862"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 5
-  date: 'September 9'
-  topics:
-  - main: Training Part III
-    sub_topics:
-    - Backpropagation
-    - Calculus of Backpropagation
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec5.BP.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=RvDbWFv6a5M"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-Learning%20the%20Network%2C%20Part%203/1_h4au6374/415066862"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 6
-  date: 'September 11'
-  topics:
-  - main: Training Part IV
-    sub_topics:
-    - Convergence issues
-    - Loss Surfaces
-    - Momentum
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec6_convergence.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=tLdjyHeMg3I"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-Optimzation%20Part%201/1_fy66iorq/415066862"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 7
-  date: 'September 14'
-  topics:
-  - main: Training Part V
-    sub_topics:
-    - Optimization
-    - Batch Size, SGD, Mini-batch, Second-order Methods
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec7.stochastic_gradient.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=NDaQhV9UR2c"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-Training%20Neural%20Networks%2C%20Optimization/1_tg6bf90z/415066862"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 8
-  date: 'September 16'
-  topics:
-  - main: Training Part VI
-    sub_topics:
-    - Optimizers and Regularizers
-    - Choosing a Divergence (Loss) Function
-    - Batch Normalization
-    - Dropout
-  slides_videos:
-  - text: "Slides"
-    url: "./documents/slides/lec8.optimizersandregularizers.pdf"
-  - text: "YouTube"
-    url: "https://www.youtube.com/watch?v=mkMkpOupPOo"
-  - text: "MediaServices"
-    url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-Training%20Neural%20Networks%2C%20Normalization%2C%20Regularization%2C%20etc./1_ilvnra96/415066862"
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 9
-  date: 'September 21'
-  topics:
-  - Convolutional Neural Networks (CNNs) I
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 10
-  date: 'September 23'
-  topics:
-  - CNNs II
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 11
-  date: 'September 28'
-  topics:
-  - CNNs III
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 12
-  date: 'September 30'
-  topics:
-  - CNNs IV
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 13
-  date: 'October 5'
-  topics:
-  - Recurrent Neural Networks (RNNs) I
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 14
-  date: 'October 7'
-  topics:
-  - RNNs II
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: '-'
-  date: 'October 12'
-  topics:
-  - No Class - Fall Break
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: '-'
-  date: 'October 14'
-  topics:
-  - No Class - Fall Break
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 15
-  date: 'October 19'
-  topics:
-  - Sequence to Sequence Models
-  - Connectionist Temporal Classification (CTC)
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 16
-  date: 'October 21'
-  topics:
-  - main: Connectionist Temporal Classification
-    sub_topics:
-    - Blanks
-    - Beam Search
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 17
-  date: 'October 26'
-  topics:
-  - Language Models
-  - Translation
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 18
-  date: 'October 28'
-  topics:
-  - Attention Models
-  - Transformers
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 19
-  date: 'November 2'
-  topics:
-  - Transformers and Newer Architectures
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 20
-  date: 'November 4'
-  topics:
-  - Large Language Models
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 21
-  date: 'November 9'
-  topics:
-  - Representation and Autoencoders
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 22
-  date: 'November 11'
-  topics:
-  - Variational Auto Encoders
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 23
-  date: 'November 16'
-  topics:
-  - Normalizing Flows and Diffusion
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 24
-  date: 'November 18'
-  topics:
-  - Generative Adversarial Networks
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 25
-  date: 'November 23'
-  topics:
-  - Graph Neural Networks
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 26
-  date: 'November 25'
-  topics:
-  - Hopfield Networks
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 27
-  date: 'November 30'
-  topics:
-  - Boltzmann Machines
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
-- number: 28
-  date: 'December 2'
-  topics:
-  - Homework 1-4 Debrief and Deployment
-  slides_videos: []
-  additional_materials: []
-  quiz:
-    text: ''
-    rowspan: 1
+  - number: 0
+    date: '-'
+    topics:
+      - Course Logistics
+      - Learning Objectives
+      - Grading
+      - Deadlines
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec0.logistics.pdf
+      - text: Video (YT)
+        url: https://www.youtube.com/watch?v=gyL5ggH5hS8&feature=youtu.be
+    additional_materials: []
+  - number: 1
+    date: Monday<br> Feb. 1
+    topics:
+      - Introduction
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec1.intro.pdf
+      - text: Video (YT)
+        url: https://www.youtube.com/watch?v=JwWkxsNVeMM&t=170s
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/lecture 1_anonymized.txt
+      - text: Polls (*.rtf)
+        url: ./document/polls/polls.lec1.rtf
+    additional_materials:
+      - text: The New Connectionism (1988)
+        url: document/readings/Perceptrons-Epilogue-r.pdf
+      - text: On Alan Turing's Anticipation of Connectionism
+        url: http://www.alanturing.net/turing_archive/pages/pub/turing3/turing3.pdf
+    quiz:
+      text: "Quiz\_1"
+      url: https://canvas.cmu.edu/courses/21386/quizzes/52213
+      rowspan: 2
+  - number: 2
+    date: Wednesday<br> Feb.3
+    topics:
+      - Neural Nets as Universal Approximators
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec2.universal.pdf
+      - text: Video (YT)
+        url: https://www.youtube.com/watch?v=s6kGqUubQIw
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+2/1_i8g90efn/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/lec2_anon.txt
+      - text: Polls (*.rtf)
+        url: ./document/polls/polls.lec2.rtf
+    additional_materials:
+      - text: Hornik et al. (1989)
+        url: document/readings/Hornik_Stinchcombe_White.pdf
+      - text: Shannon (1949)
+        url: document/readings/Shannon49.pdf
+      - text: On the Bias-Variance Tradeoff
+        url: https://www.bradyneal.com/bias-variance-tradeoff-textbooks-update
+  - number: 3
+    date: Monday<br> Feb. &nbsp;8
+    topics:
+      - Learning a Neural Net
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec3.learning.pdf
+      - text: "Video\_(YT)"
+        url: https://youtu.be/vpG4MAD1T2I
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+3/1_kn0nblrp/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/Lecture3_chat_anonymized.txt
+      - text: Polls (*.rtf)
+        url: ./document/polls/polls.lec3.rtf
+    additional_materials:
+      - text: Widrow and Lehr (1992)
+        url: document/readings/c1992artificialneural.pdf
+      - text: Convergence of perceptron algorithm
+        url: http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
+    quiz:
+      text: "Quiz\_2"
+      url: '#'
+      rowspan: 2
+  - number: 4
+    date: Wednesday<br> Feb.&nbsp;10
+    topics:
+      - Backpropogation
+      - Calculus of backpropogation
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec4.learning.presented.pdf
+      - text: "Video\_(YT)"
+        url: https://youtu.be/0aGahmoxpa4
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+4/1_4un1edmb/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/lec4.txt
+      - text: Polls (*.docx)
+        url: ./document/polls/lec4.poll.final.docx
+    additional_materials:
+      - text: Werbos (1990)
+        url: http://axon.cs.byu.edu/Dan/678/papers/Recurrent/Werbos.pdf
+      - text: Rumelhart, Hinton and Williams (1986)
+        url: http://www.cs.toronto.edu/~hinton/absps/naturebp.pdf
+  - number: 5
+    date: Monday<br> Feb.&nbsp;15
+    topics:
+      - Backpropogation, continued
+      - Calculus of backpropogation, continued
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec5.presented.pdf
+      - text: "Video\_(YT, Part 1)"
+        url: https://youtu.be/MDlxdsTvI2Q
+      - text: "Video\_(YT, Part 2)"
+        url: https://youtu.be/UnpOSQA-IIY
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+5/1_5hsewmde/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/lec5_meeting_saved_chat_anonymized.txt
+      - text: Polls (*.docx)
+        url: ./document/polls/lec5.poll.docx
+    additional_materials:
+      - text: Werbos (1990)
+        url: http://axon.cs.byu.edu/Dan/678/papers/Recurrent/Werbos.pdf
+      - text: Rumelhart, Hinton and Williams (1986)
+        url: http://www.cs.toronto.edu/~hinton/absps/naturebp.pdf
+    quiz:
+      text: "Quiz\_3"
+      url: '#'
+      rowspan: 2
+  - number: 6
+    date: Wednesday<br> Feb.&nbsp;17
+    topics:
+      - Convergence issues
+      - Loss Surfaces
+      - Momentum
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec6.pdf
+      - text: "Video\_(YT)"
+        url: https://youtu.be/4nNUPwEBa7s
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+6/1_3uaykzzi/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/lec6_meeting_saved_chat_anonymized.txt
+      - text: Polls (*.docx)
+        url: ./document/polls/lec6.poll.docx
+    additional_materials:
+      - text: Backprop fails to separate, where perceptrons succeed, Brady et al. (1989)
+        url: https://ieeexplore.ieee.org/document/31314
+      - text: Why Momentum Really Works
+        url: https://distill.pub/2017/momentum/
+  - number: 7
+    date: Monday<br> Feb.&nbsp;22
+    topics:
+      - Batch Size, SGD, Minibatch, second-order methods
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec7.stochastic_gradient.pdf
+      - text: "Video\_(YT)"
+        url: https://youtu.be/jDkePF7nUWk
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+7/1_5wncuk9a/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/lec7_meeting_saved_chat_anonymized.txt
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture7poll.docx
+    additional_materials:
+      - text: Momentum, Polyak (1964)
+        url: https://www.sciencedirect.com/science/article/abs/pii/0041555364901375
+      - text: Nestorov (1983)
+        url: http://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng
+    quiz:
+      text: "Quiz\_4"
+      url: '#'
+      rowspan: 2
+  - number: 8
+    date: Wednesday<br> Feb.&nbsp;24
+    topics:
+      - Optimizers and Regularizers
+      - Choosing a divergence (loss) function
+      - Batch normalization
+      - Dropout
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec8.optimizersandregularizers.pdf
+      - text: "Video\_(YT)"
+        url: https://youtu.be/wBdraLEkQiY
+      - text: "Video Part 2\_(YT)"
+        url: https://youtu.be/jnmUuyUwAio
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+8/1_3dfty4kl/199884603
+      - text: Chat (*.txt)
+        url: ./document/chats/lec8_meeting_saved_chat_anonymized.txt
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture8poll.docx
+    additional_materials:
+      - text: ADAGRAD, Duchi, Hazan and Singer (2011)
+        url: http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf
+      - text: 'Adam: A method for stochastic optimization, Kingma and Ba (2014)'
+        url: https://arxiv.org/abs/1412.6980
+  - number: 9
+    date: Monday<br> March&nbsp;1
+    topics:
+      - Shift invariance and Convolutional Neural Networks
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec9.CNN1.pdf
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture9poll.docx
+      - text: Chat (*.txt)
+        url: ./document/chats/lec9_meeting_saved_chat_anonymized.txt
+      - text: "Video\_(YT)"
+        url: https://youtu.be/l3_WzGEUOU8
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+9/1_7yxmstxk/199884603
+    additional_materials: []
+    quiz:
+      text: "Quiz\_5"
+      url: '#'
+      rowspan: 2
+  - number: 10
+    date: Wednesday<br> March&nbsp;3
+    topics:
+      - Models of vision, Convolutional Neural Networks
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/Lec10.CNN2.pdf
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture10.poll.docx
+      - text: Chat (*.txt)
+        url: ./document/chats/Lecture_10_chat_anonymized.txt
+      - text: "Video\_(YT)"
+        url: https://youtu.be/Vhp6pG6jnzA
+      - text: "Video\_(MT)"
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning_Lecture+10/1_juvd8iag/199884603
+    additional_materials: []
+  - number: 11
+    date: Monday<br> March&nbsp;8
+    topics:
+      - Learning in Convolutional Neural Networks
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/Lec11_12_CNN3_4.pdf
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture.11.poll.docx
+      - text: Chat (*.txt)
+        url: ./document/chats/lec11_meeting_saved_chat_anonymized.txt
+      - text: "Video\_(YT)"
+        url: https://www.youtube.com/watch?v=Ts44xOWJX9Y
+    additional_materials:
+      - text: CNN Explainer
+        url: https://poloclub.github.io/cnn-explainer/
+    quiz:
+      text: "Quiz\_6"
+      url: '#'
+      rowspan: 2
+  - number: 12
+    date: Wednesday<br> March&nbsp;10
+    topics:
+      - Learning in CNNs, transpose Convolution
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/Lec12.CNN4.pdf
+      - text: "Video\_(YT)"
+        url: https://youtu.be/PA5Zp9-Oa8c
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture.12.poll.docx
+      - text: Chat (*.txt)
+        url: ./document/chats/lec12_meeting_saved_chat_anonymized.txt
+    additional_materials: []
+  - number: 13
+    date: Monday <br> March&nbsp;15
+    topics:
+      - Time Series and Recurrent Networks
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec13.recurrent.pdf
+      - text: Video Part 1(YT)
+        url: https://youtu.be/vqqNXcWCxkA
+      - text: Video Part 2(YT)
+        url: https://youtu.be/eW_rDSdXbsA
+      - text: Polls (*.docx)
+        url: ./document/polls/Lec13.docx
+      - text: Chat (*.txt)
+        url: ./document/chats/lec13_meeting_saved_chat_anonymized.txt
+    additional_materials:
+      - text: Fahlman and Lebiere (1990)
+        url: https://papers.nips.cc/paper/207-the-cascade-correlation-learning-architecture.pdf
+      - text: How to compute a derivative, extra help for HW3P1 (*.pptx)
+        url: ./document/slides/How to compute a derivative.pptx
+    quiz:
+      text: "Quiz\_7"
+      url: '#'
+      rowspan: 2
+  - number: 14
+    date: Wednesday<br> March&nbsp;17
+    topics:
+      - Stability and Memory, LSTMs
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec14.recurrent.pdf
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/EUhFs4HCGTI
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture14.docx
+      - text: Chat (*.txt)
+        url: document/chats/lec14meeting_saved_chat_anonymized.txt
+    additional_materials:
+      - text: Bidirectional Recurrent Neural Networks
+        url: document/readings/Bidirectional%20Recurrent%20Neural%20Networks.pdf
+  - number: 15
+    date: Monday<br> March&nbsp;22
+    topics:
+      - Loss Functions in RNNs, Sequence Prediction
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec15.recurrent.pdf
+      - text: Video (YT)
+        url: https://youtu.be/--2opBSVCfM
+    additional_materials:
+      - text: LSTM
+        url: document/readings/LSTM.pdf
+    quiz:
+      text: "Quiz\_8"
+      url: '#'
+      rowspan: 3
+  - number: '-'
+    date: Monday <br> Mar. 22
+    topics:
+      - CNNs Office Hours
+    slides_videos:
+      - text: Video (YT)
+        url: https://www.youtube.com/watch?v=LFeFDDSoNQk
+    additional_materials: []
+  - number: 16
+    date: Wednesday<br> March&nbsp;24
+    topics:
+      - Connectionist Temporal Classification
+      - Sequence prediction
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/RowViowx1Bg
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture16poll.docx
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec16.recurrent.pdf
+    additional_materials: []
+  - number: 17
+    date: Monday<br> March&nbsp;29
+    topics:
+      - Connectionist Temporal Classification (CTC)
+      - Sequence To Sequence Prediction
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/5Rj0J9AuGw0
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec17.recurrent.pdf
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture17poll.docx
+    additional_materials:
+      - text: |-
+          Labelling Unsegmented
+                                    Sequence Data with Recurrent Neural Networks
+        url: https://www.cs.toronto.edu/~graves/icml_2006.pdf
+    quiz:
+      text: "Quiz\_9"
+      url: '#'
+      rowspan: 2
+  - number: 18
+    date: Wednesday<br> March&nbsp;31
+    topics:
+      - Sequence To Sequence Methods
+      - Attention
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/UWj3aG5MoHg
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec18.attention.pdf
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture18.docx
+      - text: Chat (*.txt)
+        url: document/chats/lec18meeting_saved_chat_anonymized.txt
+    additional_materials: []
+  - number: '-'
+    date: Monday<br> Aprilr&nbsp;5
+    topics:
+      - No class
+    slides_videos: []
+    additional_materials: []
+    quiz:
+      text: "Quiz\_10"
+      url: '#'
+      rowspan: 2
+  - number: 19
+    date: Wednesday<br> April&nbsp;7
+    topics:
+      - Representations and Autoencoders
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/9dK0FG69-7Y
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec19.representations.pdf
+      - text: Polls (*.docx)
+        url: ./document/polls/Lecture19Poll.docx
+    additional_materials:
+      - text: Quiz Reading (*.pdf)
+        url: https://canvas.cmu.edu/courses/21386/files/folder/papers?preview=6322242
+  - number: 20
+    date: Monday<br> April&nbsp;12
+    topics:
+      - 'Variational Auto Encoders : EM and Variational Bounds'
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/nfzsbhnaHBM
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec20.VAE_1.pdf
+      - text: Polls (*.docx)
+        url: ./document/polls/VAEpolls1.docx
+    additional_materials: []
+    quiz:
+      text: "Quiz\_11"
+      url: '#'
+      rowspan: 2
+  - number: 21
+    date: Wednesday<br> April&nbsp;14
+    topics:
+      - Variational Auto Encoders
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/pNrTv49t5TE
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec21.VAE_2.pdf
+    additional_materials:
+      - text: Tutorial on VAEs (Doersch)
+        url: https://arxiv.org/abs/1606.05908
+      - text: Autoencoding variational Bayes (Kingma)
+        url: https://arxiv.org/abs/1312.6114
+  - number: 22
+    date: Monday<br> April&nbsp;19
+    topics:
+      - Generative Adversarial Networks, 1
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Video (YT)
+        url: https://youtu.be/eIO5_tXn9-4
+      - text: Slides (*.pdf)
+        url: ./document/slides/GANS-Lecture1.pdf
+    additional_materials: []
+    quiz:
+      text: "Quiz\_12"
+      url: '#'
+      rowspan: 2
+  - number: 23
+    date: Wednesday<br> April&nbsp;21
+    topics:
+      - Generative Adversarial Networks, 2
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Slides (*.pdf)
+        url: ./document/slides/GANS-Lecture2.pdf
+      - text: Video (YT)
+        url: https://youtu.be/mtjSkgj3HBg
+    additional_materials: []
+  - number: 24
+    date: Monday<br> April&nbsp;26
+    topics:
+      - Hopfield Nets
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec24.hopfield.pdf
+    additional_materials: []
+    quiz:
+      text: "Quiz\_13"
+      url: '#'
+      rowspan: 2
+  - number: 25
+    date: Wednesday<br> April&nbsp;28
+    topics:
+      - Hopfield Nets and Boltzmann Machines
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Slides (*.pdf)
+        url: ./document/slides/lec25.hopfield2.pdf
+      - text: Slides Boltzmann Machines (*.pdf)
+        url: ./document/slides/lec26.BM.pdf
+    additional_materials: []
+  - number: 26
+    date: Monday<br> May&nbsp;3
+    topics:
+      - 'Wrap Up : A quick run through over everything we covered'
+    slides_videos:
+      - text: Video (MT)
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning%2B%2528Spring%2B2021%2529/199884603
+      - text: Slides (*.pdf)
+        url: ./document/slides/11785 Lecture Graph Neural Networks.pdf
+    additional_materials: []
+    quiz:
+      text: "Quiz\_14"
+      url: '#'
+      rowspan: 2
+  - number: 27
+    date: Wednesday<br> May&nbsp;5
+    topics:
+      - Guest Lecture - Mahaveer Jain, Facebook
+    slides_videos:
+      - text: Slides (*.pdf)
+        url: ./document/slides/CMU_rnnt_asr_tutorial.pdf
+    additional_materials: []

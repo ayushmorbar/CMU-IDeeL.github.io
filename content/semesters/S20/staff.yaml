@@ -1,10 +1,46 @@
 instructors:
   - name: Bhiksha Raj
     email: bhiksha@cs.cmu.edu
-  - name: Rita Singh
-    email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Advait Gadhikar
+    email: agadhika@andrew.cmu.edu
+  - name: Amala Sanjay Deshmukh
+    email: asdeshmu@andrew.cmu.edu
+  - name: Bhuvan Agrawal
+    email: bhuvana@andrew.cmu.edu
+  - name: Christopher George
+    email: cmgeorge@andrew.cmu.edu
+  - name: David Park
+    email: jinhyun1@andrew.cmu.edu
+  - name: Hao Liang
+    email: hliang2@andrew.cmu.edu
+  - name: Jianfeng Xia
+    email: jianfenx@andrew.cmu.edu
+  - name: Rohit Prakash Barnwal
+    email: rohitprb@andrew.cmu.edu
+  - name: Soumya Vadlamannati
+    email: soumyav@andrew.cmu.edu
+  - name: Vedant Sanil
+    email: vsanil@andrew.cmu.edu
+  - name: Yang Xia
+    email: yangxia2@andrew.cmu.edu
+  - name: Yash Belhe
+    email: ybelhe@andrew.cmu.edu
+  - name: Yuying Zhu
+    email: yuyingz@andrew.cmu.edu
+  - name: Zhefan Xu
+    email: zhefanx@andrew.cmu.edu
+  - name: (Kigali) Abrham Gebreselasie
+    email: agebrese@andrew.cmu.edu
+  - name: (Kigali) Natnael Daba
+    email: ndaba@andrew.cmu.edu
+  - name: (Silicon Valley) Arpit Gupta
+    email: arpitgup@andrew.cmu.edu
+  - name: (Silicon Valley) Joseph Konan
+    email: jkonan@andrew.cmu.edu
+  - name: (Silicon Valley) Leo Chenghui Li
+    email: chenghui@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

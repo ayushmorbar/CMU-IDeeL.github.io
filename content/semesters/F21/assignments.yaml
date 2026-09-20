@@ -1,40 +1,136 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: Summer Break
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: HW0p1
+        due_date: Sept 5th, 2021 <br>11:59 PM EST<br>
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-f21/assessments/hw0p1
+          - text: handout
+            url: ./document/homework/HW0/P1/hw0p1-handout.tar
+  - release_date: Summer Break
     assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
-        materials: []
-  - release_date: "Friday, Oct 9"
+      - name: HW0p2
+        due_date: Sept 5th, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-f21/assessments/hw0p2
+          - text: handout
+            url: ./document/homework/HW0/P2/hw0p2-all-difficulty-versions.tar
+  - release_date: Sept 9th, 2021
     assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
-        materials: []
-  - release_date: "Friday, Nov 6"
+      - name: HW1p1
+        due_date: Sept 30th, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: Autolab,
+            url: https://autolab.andrew.cmu.edu/courses/11785-f21/assessments/hw1p1
+          - text: Handout(*.zip)
+            url: ./document/homework/HW1/hw1p1.zip
+  - release_date: Sept 9th, 2021
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
+      - name: HW1p2
+        due_date: 'Early Submission: Sept 16th, 2021 <br>11:59 PM EST<br>'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-f21/assessments/hw1p2codesubmission
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW1/HW1P2_Writeup.pdf
+      - name: 'Final: Sept 30th, 2021 11:59 PM EST'
+        due_date: ''
         materials: []
+  - release_date: <a href="https://canvas.cmu.edu/courses/22984/assignments/411477" target="blank">Canvas Submission</a>
+    assignments:
+      - name: Project Proposal
+        due_date: Sept 30th, 2021 <br>11:59 PM EST<br>
+        materials: []
+  - release_date: Sept 30th, 2021
+    assignments:
+      - name: HW2p1
+        due_date: Oct 21st, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: Autolab,
+            url: https://autolab.andrew.cmu.edu/courses/11785-f21/assessments/hw2p1test
+          - text: Handout (*.zip)
+            url: ./document/homework/HW2/HW2P1.zip
+  - release_date: Sept 30th, 2021
+    assignments:
+      - name: HW1p2
+        due_date: 'Early Submission: Oct 6th, 2021 <br>11:59 PM EST<br>'
+        materials:
+          - text: 'Face Classification: Autolab,'
+            url: https://www.kaggle.com/c/idl-fall21-hw2p2s1-face-classification/overview
+          - text: 'Face Verification: Autolab,'
+            url: https://www.kaggle.com/c/idl-fall21-hw2p2s2-face-verification
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW2/Homework_2_Part_2._Spring21.pdf
+      - name: 'Final: Oct 21st, 2021 11:59 PM EST'
+        due_date: ''
+        materials: []
+  - release_date: '-'
+    assignments:
+      - name: Project Midterm Report
+        due_date: Nov 4th, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: Canvas Submission
+            url: https://canvas.cmu.edu/courses/22984/assignments/423070
+  - release_date: Oct 21st, 2021
+    assignments:
+      - name: HW3p1
+        due_date: Nov 11th, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-f21/assessments/hw3p1
+          - text: handout (*.zip)
+            url: ./document/homework/HW3/HW3P1.zip
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW3/HW3P1_writeup.pdf
+  - release_date: Oct 21st, 2021
+    assignments:
+      - name: HW3p2
+        due_date: 'Early Submission: Oct 28th, 2021<br>11:59 PM EST<br>'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-f21/assessments/hw2p2codesubmission
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11785-fall2021-hw3p2/overview
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW3/hw3p2_writeup.pdf
+      - name: 'Final: Nov 11th, 2021 11:59 PM EST'
+        due_date: ''
+        materials: []
+  - release_date: Nov 4th, 2021
+    assignments:
+      - name: HW4p1
+        due_date: Nov 25th, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW4/P1/2021fall_HW4P1.pdf
+  - release_date: Nov 4th, 2021
+    assignments:
+      - name: HW4p2
+        due_date: 'Early Submission: Nov 11th, 2021<br>11:59 PM EST<br>'
+        materials:
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW4/P2/2021fall_HW4P2.pdf
+      - name: 'Final: Nov 29th, 2021 11:59 PM EST'
+        due_date: ''
+        materials: []
+  - release_date: Dec 1st, 2021 <br>11:59 PM EST<br>
+    assignments:
+      - name: Final Project Video Presentation & Preiliminary Project Report
+        due_date: Dec 5th, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: 'Preliminary Report: Canvas Submission'
+            url: https://canvas.cmu.edu/courses/22984/assignments/429955
+  - release_date: Dec 6th, 2021 <br>11:59 PM EST<br>
+    assignments:
+      - name: Project Peer reviews
+        due_date: Dec 8th, 2021 <br>11:59 PM EST<br>
+        materials: []
+  - release_date: '-'
+    assignments:
+      - name: Final Project Report Submission
+        due_date: Dec 9th, 2021 <br>11:59 PM EST<br>
+        materials:
+          - text: Canvas Submission
+            url: https://canvas.cmu.edu/courses/22984/assignments/423649

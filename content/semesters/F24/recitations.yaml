@@ -1,569 +1,482 @@
-# schedule_data.yaml
-recitations_0:
-  - date: "July 13 - August 28"
-    groups:
-      - name: "Python Programming + PyTorch"
-        topics:
-          - id: "0.01"
-            title: "Python Programming"
-            date: "July 13"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.1/%5BNotebook%5D%20Rec-0.01_Python_Fundamentals.ipynb"
-              - text: "Quick Check Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.1/%5BNotebook%5D%20Rec-0.01_Python_QuickCheck.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=9N42Wp8KwdI"
-            authors: "Dhiksha"
-          - id: "0.02"
-            title: "OOP Fundamentals"
-            date: "July 14"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.2/%5BNotebook%5D%20Rec-0.02_OOP_Fundamentals.ipynb"
-              - text: "Quick Check Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.2/%5BNotebook%5D%20Rec-0.02_OOP_QuickCheck.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=tssrNsW_YJQ"
-            authors: "Hrishikesh"
-          - id: "0.03"
-            title: "NumPy Fundamentals"
-            date: "July 15"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.3/%5BNotebook%5D%20Rec-0.03_NumPy_Fundamentals.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=8zbEBJae0KM"
-            authors: "Uwimana"
-          - id: "0.04"
-            title: "PyTorch"
-            date: "July 16"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.4/%5BNotebook%5D%20Rec-0.04_PyTorch.ipynb"
-              - text: "Slides (.pptx)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/raw/master/F26/documents/recitation_0/0.4/%5BSlides%5D%20Rec-0.04_PyTorch.pptx"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=iEgR2AM-Iyc"
-            authors: "Sneha & Shrirang"
-          - id: "0.05"
-            title: "Notebooks and Conda Environments"
-            date: "July 17"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.5/%5BNotebook%5D%20Rec-0.05_Notebooks_Conda.ipynb"
-              - text: "Slides (.pptx)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/raw/master/F26/documents/recitation_0/0.5/%5BSlides%5D%20Rec-0.05_Notebooks_Conda.pptx"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=TfVX0KcviR4"
-            authors: "Nayesha"
-          - id: "0.06"
-            title: "Tensordot & Einsum"
-            date: "July 20"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.6/%5BNotebook%5D%20Rec-0.06_Tensordot_Einsum.ipynb"
-              - text: "Slides (.pptx)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/raw/master/F26/documents/recitation_0/0.6/%5BSlides%5D%20Rec-0.06_Tensordot_Einsum.pptx"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=qF6CY0obCwI"
-            authors: "George"
-          - id: "0.07"
-            title: "Differentiation / Calculus"
-            date: "July 21"
-            materials:
-              - text: "Part I (Scalar Function PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.7/%5BPDF%5D%20Rec-0.07_Differentiation_Calculus_Part1_ScalarFunction.pdf"
-              - text: "Part II (Multivariate PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.7/%5BPDF%5D%20Rec-0.07_Differentiation_Calculus_Part2_Multivariate.pdf"
-            videos:
-              - text: "Part 1 Video"
-                url: "https://www.youtube.com/watch?v=cBF_Qi4qFGw"
-              - text: "Part 2 Video"
-                url: "https://www.youtube.com/watch?v=kgvGN8PzC5Q"
-            authors: "Bruno"
-      - name: "Computational Resources"
-        topics:
-          - id: "0.08"
-            title: "GitHub"
-            date: "July 22"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.8/%5BPDF%5D%20Rec-0.08_Git_GitHub_Fundamentals.pdf"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=8li7wnZKrDY"
-            authors: "Varun"
-          - id: "0.09"
-            title: "Google Colab"
-            date: "July 23"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.9/%5BNotebook%5D%20Rec-0.09_Google_Colab_Fall2026.ipynb"
-              - text: "Student Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.9/%5BNotebook%5D%20Rec-0.09_Google_Colab_Fall2026_Student.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=ct19eJN9VZQ"
-            authors: "Ayush"
-          - id: "0.10"
-            title: "Google Cloud Platform"
-            date: "July 24"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.10/%5BNotebook%5D%20Rec-0.10_GCP_VM_Setup.ipynb"
-              - text: "Slides (.pptx)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/raw/master/F26/documents/recitation_0/0.10/%5BSlides%5D%20Rec-0.10_GCP.pptx"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=zuk7X5TgwmU"
-            authors: "Anurag"
-          - id: "0.11"
-            title: "Kaggle"
-            date: "July 27"
-            materials:
-              - text: "Document (.docx)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/raw/master/F26/documents/recitation_0/0.11/%5BDoc%5D%20Rec-0.11_Kaggle_Script.docx"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=LJdlPXNVWD4"
-            authors: "Joshua"
-          - id: "0.12"
-            title: "PSC Part I (How to connect)"
-            date: "July 28"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.12/%5BSlides%5D%20Rec-0.12_PSC_Connection.pptx.pdf"
-              - text: "Usage Guide"
-                url: "https://docs.google.com/document/d/1AeeV_RfhQ52zW563dUB7w5nHYChswanr/edit?usp=sharing&ouid=108252146710887258069&rtpof=true&sd=true"
-            videos:
-              - text: "Video v1"
-                url: "https://www.youtube.com/watch?v=WYSCSODOMGM"
-              - text: "Video v2"
-                url: "https://www.youtube.com/watch?v=GuUmMK3Qf2c"
-            authors: "Pengyu, Mengchun, Sneha"
-          - id: "0.13"
-            title: "PSC Part II (Get compute for projects)"
-            date: "July 29"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.13/%5BSlides%5D%20Rec-0.13_Get_Compute.pptx.pdf"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=J4H4bvCLiPw"
-            authors: "Yixiong"
-          - id: "0.14"
-            title: "Intro to Linux"
-            date: "July 30"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.14/%5BSlides%5D%20Rec-0.14_Linux.pdf"
-              - text: "Bash Script"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.14/%5BBash_Script%5D%20Rec-0.14_Linux.sh"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=qhRtIlFPwv8"
-            authors: "Kangping, Aryan"
-      - name: "Data Handling and Processing"
-        topics:
-          - id: "0.15"
-            title: "Datasets"
-            date: "July 31"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.15/%5BSlides%5D%20Rec-0.15_Datasets.pdf"
-              - text: "Part 1 Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.15/%5BNotebook%5D%20Rec-0.15_Datasets_Part1.ipynb"
-              - text: "Part 2 Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.15/%5BNotebook%5D%20Rec-0.15_Datasets_Part2.ipynb"
-              - text: "Part 3 Optimization Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.15/%5BNotebook%5D%20Rec-0.15_Datasets_Part3_Optimization.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=pK9ZNxcun-A"
-            authors: "Felix"
-          - id: "0.16"
-            title: "Dataloaders"
-            date: "August 3"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.16/0_16_DataLoaders_modified.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=j4nPE5RSR28"
-            authors: "Hrishikesh & Shrirang"
-          - id: "0.17"
-            title: "Data Preprocessing"
-            date: "August 4"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.17/%5BSlides%5D%20Rec-0.17_Data_Preprocessing.pdf"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=0oYyMOpS-dM"
-            authors: "Aryan"
-      - name: "Debugging and Problem-Solving"
-        topics:
-          - id: "0.18"
-            title: "Wandb"
-            date: "August 5"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.18/%5BSlides%5D%20Rec-0.18_WandB.pdf"
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.18/%5BNotebook%5D%20Rec-0.18_WandB.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=RRTkoyplYok"
-            authors: "Ron"
-          - id: "0.19"
-            title: "Debugging your Model"
-            date: "August 6"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.19/%5BSlides%5D%20Rec-0.19_Debugging.pdf"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=6DdaZJjuJbI"
-            authors: "Felix"
-          - id: "0.20"
-            title: "What to Do When Struggling"
-            date: "August 7"
-            materials:
-              - text: "Slides (PDF)"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.20/%5BSlides%5D%20Rec-0.20_When_Struggling.pdf"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=M2HrAGk0X90"
-            authors: "Nayesha"
-      - name: "Algorithmic Techniques"
-        topics:
-          - id: "0.21"
-            title: "Losses Part 1"
-            date: "August 10"
-            materials:
-              - text: "Part 1 Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.21/Rec0.21_Part1.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=FQbIWjikrPI"
-            authors: "Yara & Mengchun"
-          - id: ""
-            title: "Losses Part 2"
-            date: "August 11"
-            materials: []
-            videos: []
-            authors: "Yara & Mengchun"
-          - id: "0.22"
-            title: "Block Processing"
-            date: "August 12"
-            materials:
-              - text: "Notebook"
-                url: "https://github.com/CMU-IDeeL/CMU-IDeeL.github.io/blob/master/F26/documents/recitation_0/0.22/Block_Processing.ipynb"
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=RAl_uFBfdOU"
-            authors: "Akshara"
-      - name: "Model Logistics"
-        topics:
-          - id: "0.23"
-            title: "Pipeline"
-            date: "August 13"
-            materials: []
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=-AidIpazgSE"
-            authors: "Devansh"
-          - id: "0.24"
-            title: "Distributed Training"
-            date: "August 14"
-            materials: []
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=nw6nto2wZj4"
-            authors: "Anurag"
-          - id: "0.25"
-            title: "Saving & Loading Model"
-            date: "August 17"
-            materials: []
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=ui1AdDgPEn0"
-            authors: "Hunter"
-      - name: "HWs and Project Workflow Management"
-        topics:
-          - id: "0.26"
-            title: "Workflow of HW Part 1"
-            date: "August 18"
-            materials: []
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=suXVl-ykGp8"
-            authors: "Akshara"
-          - id: ""
-            title: "Workflow of HW Part 2"
-            date: "August 19"
-            materials: []
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=ijVjRqUCEiU"
-            authors: "Devansh"
-          - id: "0.27"
-            title: "Flow of the Project"
-            date: "August 20"
-            materials: []
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=8XVWOGMN_2o"
-            authors: "Hunter & Uwimana"
-          - id: "0.28"
-            title: "How to Read/Write a Report"
-            date: "August 21"
-            materials: []
-            videos: []
-            authors: "Prof. Bhiksha"
-      - name: "Week of JAX"
-        status: TBA
-        topics:
-          - id: "jax-01"
-            title: "Intro to JAX"
-            date: "August 24"
-            materials: []
-            videos: []
-            authors: "Brad & Hrishikesh"
-
-          - id: "jax-02"
-            title: "Topic relevant to HW1"
-            date: "August 25"
-            materials: []
-            videos: []
-            authors: "TBD"
-
-          - id: "jax-03"
-            title: "Topic relevant to HW2"
-            date: "August 26"
-            materials: []
-            videos: []
-            authors: "TBD"
-
-          - id: "jax-04"
-            title: "Topic relevant to HW3"
-            date: "August 27"
-            materials: []
-            videos: []
-            authors: "TBD"
-
-          - id: "jax-05"
-            title: "Topic relevant to HW4"
-            date: "August 28"
-            materials: []
-            videos: []
-            authors: "TBD"
-      - name: ""
-        topics:
-          - id: "hohum-01"
-            title: "Hohum IDL HW Platform"
-            date: "Sep 15"
-            materials: []
-            videos:
-              - text: "Video"
-                url: "https://www.youtube.com/watch?v=8-xU0RfsV_A"
-            authors: "Garima & Lucky"
-
+recitations_0: []
 recitations:
-  - title: "Lab 1"
-    date: "Friday,<br> Aug 28"
-    topics: "PSC + Your First MLP Code"
-    materials:
-      - text: "Notebook"
-        url: "https://colab.research.google.com/drive/1ZNwOweKEgN9Sm6MdZLX_ZKSfJB9GLtXk#scrollTo=aabe0ad5"
-    videos:
-      - text: "YouTube"
-        url: "https://www.youtube.com/watch?v=5juV56HdibU"
-      - text: "MediaServices"
-        url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning-Fall%202026/1_ptwr3b2o/415066862"
-    authors: "Brad Warren & Bruno Payang"
-  - title: "Hackathon 1 + HW1 Bootcamp"
-    date: "Saturday,<br> Aug 29"
-    topics: "HW1 Bootcamps"
-    materials:
-      - text: "HW1P1 Slides"
-        url: "./documents/slides/HW1P1_Bootcamp.pdf"
-    videos:
-      - text: "YouTube"
-        url: "https://www.youtube.com/watch?v=C8Er1sGBa7Q"
-    authors: "Ron, Dinesh, Yara, <br> Pengyu, Hunter, Bruno, Cedric"
-  - title: "Lab 2"
-    date: "Friday,<br> Sep 4"
-    topics: "Debugging"
-    materials: []
-    videos:
-      - text: "YouTube"
-        url: "https://www.youtube.com/watch?v=ed74ViuofcY"
-      - text: "MediaServices"
-        url: "https://mediaservices.cmu.edu/media/Introduction%20to%20Deep%20Learning%20-%20Fall%202026%20-Recitation%203/1_h2ft6mvz/415066862"
-    authors: ""
-  - title: "Hackathon 2"
-    date: "Saturday,<br> Sep 5"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 3 + Hackathon 3"
-    date: "Saturday,<br> Sep 12"
-    topics: "Ablations, Hyperparameter Tuning Methods, Normalizations"
-    materials: []
-    videos:
-      - text: "YouTube"
-        url: "https://www.youtube.com/watch?v=m5R8_EJjhg8"
-    authors: ""
-  - title: "Lab 4"
-    date: "Friday,<br> Sep 18"
-    topics: "Computing Derivatives and Autograd"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 4 + HW2 Bootcamp + Guided Project Bootcamp"
-    date: "Saturday,<br> Sep 19"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 5"
-    date: "Friday,<br> Sep 25"
-    topics: "CNN Basics and Backprop"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 5"
-    date: "Saturday,<br> Sep 26"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 6"
-    date: "Friday,<br> Oct 2"
-    topics: "CNN Classification and Verification"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 6"
-    date: "Saturday,<br> Oct 3"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 7"
-    date: "Friday,<br> Oct 9"
-    topics: "RNN Basics"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 7 + HW3 Bootcamp"
-    date: "Saturday,<br> Oct 10"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Pre-recorded Lab 8"
-    date: "Friday,<br> Oct 16"
-    topics: "Kaggle Workshop + Pre-trained Models"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 8"
-    date: "Saturday,<br> Oct 17"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 9"
-    date: "Friday,<br> Oct 23"
-    topics: "CTC, Beam Search"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 9"
-    date: "Saturday,<br> Oct 24"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 10"
-    date: "Friday,<br> Oct 30"
-    topics: "Attention"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 10"
-    date: "Saturday,<br> Oct 31"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 11"
-    date: "Friday,<br> Nov 6"
-    topics: "Transformers"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 11 + HW4 Bootcamp"
-    date: "Saturday,<br> Nov 7"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 12"
-    date: "Friday,<br> Nov 13"
-    topics: "VAE"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 12"
-    date: "Saturday,<br> Nov 14"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Pre-recorded Lab 13"
-    date: "Friday,<br> Nov 20"
-    topics: "NF & Stable Diffusion"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 13"
-    date: "Saturday,<br> Nov 21"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 14"
-    date: "Friday,<br> Nov 27"
-    topics: "GAN"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 14"
-    date: "Saturday,<br> Nov 28"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Lab 15"
-    date: "Friday,<br> Dec 4"
-    topics: "Graph Neural Networks"
-    materials: []
-    videos: []
-    authors: ""
-  - title: "Hackathon 15"
-    date: "Saturday,<br> Dec 5"
-    topics: []
-    materials: []
-    videos: []
-    authors: ""
+  - number: 0A
+    date: Monday,<br> Aug 05
+    topics:
+      - Python Fundamentals
+    slides_videos:
+      - text: '1'
+        url: https://youtu.be/QNnaTJbBBfo
+      - text: '2'
+        url: https://youtu.be/gUqFI01F5-A
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1Lf-xatbQu8WGPTs-NoM5bQCc-uKcRvDy
+  - number: 0B
+    date: OOP Fundamentals
+    topics:
+      - |-
+        Links: 
+                                                1, 
+                                                2
+    slides_videos:
+      - text: '1'
+        url: https://youtu.be/ZZDfeXUZcLI
+      - text: '2'
+        url: https://youtu.be/mnAHmHDk1dk
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1MGNjUTZldIkv6MRxuRqEU8_uogg08S_y
+  - number: 0C
+    date: Numpy Fundamentals
+    topics:
+      - |-
+        Links: 
+                                                1, 
+                                                2, 
+                                                3, 
+                                                4
+    slides_videos:
+      - text: '1'
+        url: https://youtu.be/FjeybHcnmgk
+      - text: '2'
+        url: https://youtu.be/SiW4d22dAHI
+      - text: '3'
+        url: https://youtu.be/Q3hk2NUqyec
+      - text: '4'
+        url: https://youtu.be/b3z928CTLDA
+    notes_code:
+      - text: Colab Notebook (Part I, II, III)
+        url: https://colab.research.google.com/drive/1-rEPp1VcKOc7FbOqfR0LT0pf8x0XOmKu
+      - text: Broadcasting Pitfalls (Part IV)
+        url: https://colab.research.google.com/drive/1neSXHKqrrqsCAOMxt8O-lKXUGKlre4de
+  - number: 0D
+    date: Notebooks and Conda Environments
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/YBCao41t_I0
+    notes_code: []
+  - number: 0E
+    date: PyTorch
+    topics:
+      - |-
+        Colab Notebook
+                                             
+                                                PyTorch Cheatsheet
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/OQ43aQlxRzI
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1Euu2X86JZAWISZsUT_pHtNaKx6m_Zn6b
+      - text: PyTorch Cheatsheet
+        url: https://drive.google.com/file/d/1VuFkH8VtIvLLQTAA4FCy3XLG2wG9efj2/view?usp=drive_link
+  - number: 0F
+    date: PyTorch Part 2
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/Fc71SBcSqFA
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1zTWN3PvgVkshvasHVJwjMrGu7dyA8jFM
+  - number: 0G
+    date: Computational Resources
+    topics:
+      - Colab Notebook
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/PjGYERh_QEk
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1tFmTlcVA19jFlGqYSYGJsqir2UlhlDNe
+  - number: 0H
+    date: Google Cloud
+    topics:
+      - |-
+        Links: 
+                                                1, 
+                                                2
+    slides_videos:
+      - text: '1'
+        url: https://www.youtube.com/watch?v=UQI4DYkDUBE
+      - text: '2'
+        url: https://www.youtube.com/watch?v=zCByqQhNQII
+    notes_code: []
+  - number: 0I
+    date: AWS
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/Fz-cxZihdlk
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1vZFxG19HIGfLxAglvj5Vzepe9URZK22i
+  - number: 0J
+    date: Kaggle
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://www.youtube.com/watch?v=inMP-IZjMqU
+    notes_code: []
+  - number: 0K
+    date: Data Handling and Processing
+    topics:
+      - |-
+        Colab Notebook (Part I)
+                                            Colab Notebook (Part II)
+    slides_videos:
+      - text: Link
+        url: https://www.youtube.com/watch?v=CHLsqXT_Jq0
+    notes_code:
+      - text: Colab Notebook (Part I)
+        url: https://colab.research.google.com/drive/1FnT8_AkU7idt7Ul6MAaZimT9k0cNr8UN
+      - text: Colab Notebook (Part II)
+        url: https://colab.research.google.com/drive/1vFTal41cQexHVKqrGTymdJoJlIc7jl6B
+  - number: 0L
+    date: Dataloaders
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://www.youtube.com/watch?v=wVncM1biCkA
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1FIQZK6-S9_kk5unUps5-4QyMeDAk9iDY
+  - number: 0M
+    date: Data Preprocessing
+    topics:
+      - |-
+        Links: 
+                                                1, 
+                                                2
+    slides_videos:
+      - text: '1'
+        url: https://www.youtube.com/watch?v=z3L1wEkoJkE
+      - text: '2'
+        url: https://www.youtube.com/watch?v=zG_k19jtqWE
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1jCMDoMpsiqKufmUJgh3T5nf558kIckRO
+  - number: 0N
+    date: Debugging and Problem Solving
+    topics:
+      - |-
+        Colab Notebook (Part I)
+                                            
+                                                Colab Notebook (Part III)
+    slides_videos:
+      - text: '1'
+        url: https://youtu.be/uCp44RCzf0I
+      - text: '3'
+        url: https://youtu.be/i53KwCvz8ls
+    notes_code:
+      - text: Colab Notebook (Part I)
+        url: https://colab.research.google.com/drive/1uIHxQunIjkcBJvqQmX5DNJKnV_D9tisg
+      - text: Colab Notebook (Part III)
+        url: https://colab.research.google.com/drive/1rSOy2gs2Os04txABLX0k78pukfTap0y2
+  - number: 0O
+    date: What to Do When Struggling
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/SGhZvMcR_xw
+    notes_code: []
+  - number: 0P
+    date: Cheating
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/WEUeQfv6lpY
+    notes_code: []
+  - number: 0Q
+    date: HWs and Project Workflow Management
+    topics:
+      - 0Q
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/vtBxC_FsgD8
+    notes_code: []
+  - number: 0R
+    date: Weights and Biases (WandB)
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/BISATCds_L4
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1vig8Od7pSXPwB5ezkoU27x4sxp4XcTMe
+  - number: 0S
+    date: Git
+    topics:
+      - 0S
+    slides_videos: []
+    notes_code: []
+  - number: 0T
+    date: Flow of the Project
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/kw0Jg8hQKJA
+    notes_code: []
+  - number: 0U
+    date: Writing a Report
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/s8J9b98MKts
+    notes_code: []
+  - number: 0V
+    date: Algorithmic Techniques
+    topics:
+      - Colab Notebook
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/DKaAXEYgWjc?si=NT4xPMZJsSsK5Bv8
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1jDWs9TXATLVRNg8gZBkTJWBnDOX18ybB
+  - number: 0W
+    date: Block Processing
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/ARIHL1xkj44
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1kk1Q0yc8P0W65uWwJxQcCqPiChKcyVZg
+  - number: 0X
+    date: Model Logistics
+    topics:
+      - 0X
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/fdJxIqVBImU
+    notes_code: []
+  - number: 0Y
+    date: Pipeline
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/4wbGvefzU2c
+    notes_code: []
+  - number: 0Z
+    date: Distributed Training
+    topics:
+      - Link
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/4MsJNADTLCg
+    notes_code: []
+  - number: Lab 01
+    date: Friday,<br>Aug 30
+    topics:
+      - Your First MLP
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/o5wb7JE6F7M
+    notes_code:
+      - text: Colab Notebook
+        url: https://drive.google.com/file/d/16xbQbP2qc6GuVcVyYF68EHdMDszSSm6b/view?usp=sharing
+  - number: Bootcamp HW1
+    date: Saturday,<br>Aug 31
+    topics:
+      - HW1P1, HW1P2
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/3l3unT1rP7g
+    notes_code:
+      - text: Slides (PDF)
+        url: ./document/recitation/Recitation_1_F24.pdf
+  - number: Lab 02
+    date: Saturday,<br>Sep 07
+    topics:
+      - Network Optimizations
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/NtumGe6yr2o
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/lab2.pdf
+  - number: Lab 03
+    date: Friday,<br>Sep 13
+    topics:
+      - Debugging in Deep Learning Networks
+    slides_videos:
+      - text: Link
+        url: https://www.youtube.com/watch?v=yeSjFgdYwy8
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/Lab 03(Students).pdf
+  - number: Lab 04
+    date: Friday,<br>Sep 20
+    topics:
+      - Computing Derivatives and Autograd
+    slides_videos: []
+    notes_code:
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1R8LIRvwPCH5Fey4lGLlOXrcY1C07aOPL#scrollTo=qeYeJ_Dt70Uw
+      - text: Slides (PDF)
+        url: document/recitation/IDL_2024_recitation4.pdf
+  - number: Bootcamp HW2
+    date: Saturday,<br>Sep 21
+    topics:
+      - HW2P1, HW2P2
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/44FsJPQcmwM
+    notes_code:
+      - text: Slides HW2P1
+        url: ./document/recitation/HW2P1_Bootcamp.pdf
+      - text: Slides HW2P2
+        url: ./document/recitation/F24-HW2P2-BOOTCAMP.pdf
+  - number: Lab 05
+    date: Friday,<br>Sep 27
+    topics:
+      - CNN Basics
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/gtnMMBVmORQ
+      - text: Link
+        url: https://mediaservices.cmu.edu/media/Introduction+to+Deep+Learning%2C+Fall+2024+-+Lab+5/1_gq8885r8/351029282
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/F24_IDL_ Recitation 5.pptx.pdf
+  - number: Lab 06
+    date: Friday,<br>Oct 04
+    topics:
+      - CNN Classification and Verification
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/L2O0SNswUi0
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/Lab06-CNN Classification and Verification.pdf
+  - number: Lab 07
+    date: Friday,<br>Oct 11
+    topics:
+      - RNN Basics
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/NwXXsX9FATU
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/F24_Recitation 7_RNN Basics.pdf
+      - text: Colab Notebook
+        url: https://colab.research.google.com/drive/1oOM5Pcbovnm85UBiXCW-Nd0UjqlL5apE?usp=sharing
+      - text: Notebook Walkthrough
+        url: https://drive.google.com/file/d/1WRZeUfRc0OIZqc2fZ8I0eJYZMnMiCU9_/view?usp=sharing
+  - number: Lab 08
+    date: Friday,<br>Oct 18
+    topics:
+      - Kaggle Competition
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/vf11CG0UiMA
+    notes_code: []
+  - number: Lab 09
+    date: Friday,<br>Oct 25
+    topics:
+      - CTC, Beam Search
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/zPmNeJTk3hY
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/Recitation 9 CTC & Decoding.pptx.pdf
+  - number: Bootcamp HW3
+    date: Saturday,<br>Oct 26
+    topics:
+      - HW3P1, HW3P2
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/4GiIJjfhmDY?si=0bol-i2e0fhpxjCi
+    notes_code:
+      - text: Slides HW3P1
+        url: document/recitation/HW3P1 Bootcamp.pdf
+      - text: Slides HW3P2
+        url: document/recitation/hw3p2_bootcamp_f24.pptx.pdf
+  - number: Lab 10
+    date: Friday,<br>Nov 01
+    topics:
+      - Attention, MT, LAS
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/TafV6yj0Tdg
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/Recitation_10.pptx.pdf
+  - number: Lab 11
+    date: Friday,<br>Nov 08
+    topics:
+      - Transformers
+    slides_videos:
+      - text: Link
+        url: https://www.youtube.com/watch?v=ahB8vJlr2bo
+    notes_code:
+      - text: Notebook Language
+        url: https://drive.google.com/file/d/1fWDbuC8KcraE2a6tKF0l2lI4EnUjDzH3/view?usp=sharing
+      - text: Notebook Vision
+        url: https://colab.research.google.com/drive/1YLjaa_xAEhTYz1VANkq49FoDwPP3mSjj?usp=sharing
+  - number: Bootcamp HW4
+    date: Saturday,<br>Nov 09
+    topics:
+      - HW4P1, HW4P2
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/e1rnfr0HRuk
+    notes_code: []
+  - number: Lab 12
+    date: Friday,<br>Nov 15
+    topics:
+      - VAE
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/uzcpnludiSM
+    notes_code:
+      - text: Slides (PDF)
+        url: document/recitation/IDL Recitation 12 - AE and VAE F24.pptx.pdf
+      - text: Notebook
+        url: document/recitation/Recitation12_AEs&VAEs.ipynb
+  - number: Lab 13
+    date: Friday,<br>Nov 22
+    topics:
+      - NF and Stable Diffusion
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/ZO1kKnzVwbk
+    notes_code:
+      - text: Slides (PDF)
+        url: ./document/recitation/Lab13_ Diffusion.pptx.pdf
+      - text: Notebook
+        url: ./document/recitation/LetsTryDiffusion_Student.ipynb
+  - number: Lab 14
+    date: Friday,<br>Nov 29
+    topics:
+      - GAN
+    slides_videos:
+      - text: Link
+        url: https://youtu.be/9Jmz8xboV2E
+    notes_code:
+      - text: Slides (PDF)
+        url: ./document/recitation/Lab14_GANS.pptx.pdf
+      - text: Notebook
+        url: ./document/recitation/Lab14_DCGAN.ipynb
+  - number: Lab 15
+    date: Friday,<br>Dec 06
+    topics:
+      - Graph Neural Networks
+    slides_videos: []
+    notes_code: []

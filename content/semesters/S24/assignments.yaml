@@ -1,40 +1,75 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: Friday, Jan. 19th 11:59 PM
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: HW1P1
+        due_date: 'Early Deadline: Friday, Jan. 26th 11:59 PM<br>On-Time Deadline: Friday, Feb. 9th 11:59 PM'
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw1p1
+      - name: HW1P2
+        due_date: ''
+        materials:
+          - text: Writeup
+            url: https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fl336dgiz6bp5yl%2F19fbf9e1e94f4ea493e8f802b2e438347e14fe1441484d880be08a36b2435f9f%2FHW1P2_Writeup_v2.pdf
+          - text: Notebook
+            url: https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fl336dgiz6bp5yl%2F8aed8cbfd81d9048007a0ac1893d451881929a723c8a76149b61d1589a94848f%2FHW1P2_S24_Starter_Notebook_v1_0_%281%29.ipynb
+      - name: HW1P1 Bonus
+        due_date: Saturday, Mar. 2nd 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw1p1bonusv2H
+      - name: HW1P1 Autograd
+        due_date: Saturday, Mar. 9th 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw1p1autograd
+  - release_date: Friday, Feb. 9th 11:59 PM
     assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
-        materials: []
-  - release_date: "Friday, Oct 9"
+      - name: HW2P1
+        due_date: 'Early Deadline: Friday, Feb. 23rd 11:59 PM<br>On-Time Deadline: Friday, Mar. 8th 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw2p1
+      - name: HW2P2
+        due_date: ''
+        materials:
+          - text: Piazza
+            url: https://piazza.com/class/lp1q20fpp5c1wl/post/573
+      - name: HW2P1 Bonus
+        due_date: Saturday, Mar. 23rd 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw2p1bonus
+      - name: HW2P1 Autograd
+        due_date: Saturday, Mar. 30th 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/autogradcnn
+  - release_date: Friday, Mar. 8th 11:59 PM
     assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
-        materials: []
-  - release_date: "Friday, Nov 6"
+      - name: HW3P1
+        due_date: 'Early Deadline: Friday, Mar. 15th 11:59 PM<br>On-Time Deadline: Friday, Mar. 31st 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw3p1
+      - name: HW3P2
+        due_date: ''
+        materials:
+          - text: Piazza
+            url: https://piazza.com/class/lp1q20fpp5c1wl/post/1032
+  - release_date: Friday, Mar. 31th 11:59 PM
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
-        materials: []
+      - name: HW4P1
+        due_date: 'Early Deadline: Friday, Apr. 10th 11:59 PM<br>On-Time Deadline: Friday, Apr. 26th 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw4p1
+          - text: Piazza
+            url: https://piazza.com/class/lp1q20fpp5c1wl/post/1683
+      - name: HW4P2
+        due_date: ''
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-s24/assessments/hw4p2
+          - text: Piazza
+            url: https://piazza.com/class/lp1q20fpp5c1wl/post/1716

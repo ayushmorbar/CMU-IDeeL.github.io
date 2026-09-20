@@ -1,40 +1,165 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: Wednesday, 6th Sept, 12:00 AM
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: HW1P1
+        due_date: 'Early Submission: 14th Sept, 11:59 PM'
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
-    assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw1p1v2
+      - name: 'Final: 23rd Sept, 11:59 PM'
+        due_date: ''
         materials: []
-  - release_date: "Friday, Oct 9"
+  - release_date: Wednesday, 6th Sept, 12:00 AM
     assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
+      - name: HW1P2
+        due_date: 'Early Submission: 14th Sept, 11:59 PM'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/11785-hw1p2-f23
+          - text: Writeup (pdf)
+            url: ./document/homework/HW1/HW1P2_F23.pdf
+          - text: Starter Notebook
+            url: https://colab.research.google.com/drive/1ijkevCpDYlZZ3do7xoxkqPY5Pl22KFCF?usp=sharing
+      - name: 'Final: 24th Sept, 11:59 PM'
+        due_date: ''
         materials: []
-  - release_date: "Friday, Nov 6"
+  - release_date: Wednesday, 6th Sept, 12:00 AM
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
+      - name: HW1 Bonus
+        due_date: Saturday, 14th Oct, 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw1p1bonusv2
+  - release_date: Wednesday, 6th Sept, 12:00 AM
+    assignments:
+      - name: HW1 Autograd
+        due_date: Saturday, 21st Oct, 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw1p1autograd
+  - release_date: Monday, 25th Sept, 12:00 AM
+    assignments:
+      - name: HW2P1
+        due_date: 'Early Submission: 5th Oct, 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw2p1
+      - name: 'Final: 22nd Oct, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Monday, 25th Sept, 12:00 AM
+    assignments:
+      - name: HW2P2
+        due_date: 'Early Submission: 5th Oct, 11:59 PM'
+        materials:
+          - text: Kaggle-Classification
+            url: https://www.kaggle.com/competitions/11-785-f23-hw2p2-classification
+          - text: Kaggle-Verification
+            url: https://www.kaggle.com/competitions/11-785-f23-hw2p2-verification
+          - text: Writeup (pdf)
+            url: ./document/homework/HW2/HW2P2_F23.pdf
+          - text: Starter Notebook
+            url: https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fl336dgiz6bp5yl%2Fced67873a8e9e41d4cd51e28fe0e715b87bf31ddc6ce6ceed81bdf658b17f1ff%2FHW2P2_Starter_F23.ipynb
+      - name: 'Final: 22nd Oct, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Monday, 25th Sept, 12:00 AM
+    assignments:
+      - name: HW2 Bonus
+        due_date: Saturday, 4th Nov, 12:00 AM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw2p1bonus
+  - release_date: Monday, 25th Sept, 12:00 AM
+    assignments:
+      - name: HW2 Autograd
+        due_date: Saturday, 11th Nov, 12:00 AM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/autogradcnn
+  - release_date: Monday, 23rd Oct, 12:00 AM
+    assignments:
+      - name: HW3P1
+        due_date: 'Early Submission: 31st Oct, 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw3p1
+          - text: |-
+              Writeup
+                                                      (pdf)
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw3p1/attachments/4587
+          - text: |-
+              Handout
+                                                      (.tar)
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw3p1/attachments/4586
+      - name: 'Final: 9th Nov, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Monday, 23rd Oct, 12:00 AM
+    assignments:
+      - name: HW3P2
+        due_date: 'Early Submission: 31st Oct, 11:59 PM'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/automatic-speech-recognition-asr
+          - text: Writeup (pdf)
+            url: ./document/homework/HW3/HW3P2_F23_Writeup_Updated.pdf
+          - text: Starter Notebook
+            url: https://colab.research.google.com/drive/1rdKhV_6VAIvSVQCd68vSSRqpW-CBtoIy?usp=sharing
+          - text: MCQ
+            url: https://canvas.cmu.edu/courses/34747/quizzes/112171
+      - name: 'Final: 9th Nov, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: TBA
+    assignments:
+      - name: HW3 Bonus
+        due_date: TBA
+        materials: []
+  - release_date: TBA
+    assignments:
+      - name: HW3 Autograd
+        due_date: TBA
+        materials: []
+  - release_date: Monday, 6th Nov, 12:00 AM
+    assignments:
+      - name: HW4P1
+        due_date: 'Early Submission: 16th Nov, 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw4p1backup
+          - text: |-
+              Writeup
+                                                      (pdf)
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw4p1backup/attachments/4601
+          - text: |-
+              Handout
+                                                      (.tar)
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw4p1backup/attachments/4599
+      - name: 'Final: 2nd Dec, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Monday, 6th Nov, 12:00 AM
+    assignments:
+      - name: HW4P2
+        due_date: 'Early Submission: 16th Nov, 11:59 PM'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/attention-based-speech-recognition
+          - text: Writeup (pdf)
+            url: https://autolab.andrew.cmu.edu/courses/11485-f23/assessments/hw4p2/attachments/4602
+          - text: Starter Notebook
+            url: https://colab.research.google.com/drive/1FJU7ZUJCjkXL_r9C_J_aYZ1x8zOBBizL?usp=sharing
+      - name: 'Final: 2nd Dec, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: TBA
+    assignments:
+      - name: HW4 Bonus
+        due_date: TBA
+        materials: []
+  - release_date: TBA
+    assignments:
+      - name: HW4 Autograd
+        due_date: TBA
         materials: []

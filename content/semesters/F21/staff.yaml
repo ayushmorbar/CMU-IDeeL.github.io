@@ -5,6 +5,46 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Chaoran Zhang
+    email: chaoranz@andrew.cmu.edu
+  - name: Dijing Zhang
+    email: dijingz@andrew.cmu.edu
+  - name: Diksha Agarwal
+    email: dikshaa@andrew.cmu.edu
+  - name: Fan Zhou
+    email: fanzhou@andrew.cmu.edu
+  - name: Hao Chen
+    email: haoc3@andrew.cmu.edu
+  - name: Hyungon (Clay) Yoo
+    email: hyungony@andrew.cmu.edu
+  - name: Jinhyung Park
+    email: jinhyun1@andrew.cmu.edu
+  - name: Joseph Konan
+    email: jkonan@andrew.cmu.edu
+  - name: Manish Mishra
+    email: manishmi@andrew.cmu.edu
+  - name: Mehar Goli
+    email: mgoli@andrew.cmu.edu
+  - name: Ojas Bhargave
+    email: obhargav@andrew.cmu.edu
+  - name: Omisa Jinsi
+    email: ojinsi@andrew.cmu.edu
+  - name: Tianhao Wang
+    email: tianhao2@andrew.cmu.edu
+  - name: Urvil Kenia
+    email: ukenia@andrew.cmu.edu
+  - name: Xiang Li
+    email: xl6@andrew.cmu.edu
+  - name: Yuxin (Abbey) Pei
+    email: yuxinp@andrew.cmu.edu
+  - name: Zhe Chen
+    email: zhechen2@andrew.cmu.edu
+  - name: Zilin Si
+    email: zsi@andrew.cmu.edu
+  - name: (Kigali) Rukayat Sadiq
+    email: rsadiq@andrew.cmu.edu
+  - name: (Kigali) Sheila Mbadi
+    email: smbadi@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

@@ -5,6 +5,60 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Kateryna Shapovalenko
+    email: kshapova@andrew.cmu.edu
+  - name: Aarya Makwana
+    email: amakwana@andrew.cmu.edu
+  - name: Harshith Kumar
+    email: harunkum@andrew.cmu.edu
+  - name: Syed Hannan
+    email: shannan@andrew.cmu.edu
+  - name: Alexander Moker
+    email: amoker@andrew.cmu.edu
+  - name: Yuzhou Wang
+    email: yuzhouwa@andrew.cmu.edu
+  - name: Miya Sylvester
+    email: nsylvest@andrew.cmu.edu
+  - name: Dareen al Harthi
+    email: dalharth@andrew.cmu.edu
+  - name: Angela Chen
+    email: angelac3@andrew.cmu.edu
+  - name: Eman Ansar
+    email: eansar@andrew.cmu.edu
+  - name: Zhiheng(Andy) Ye
+    email: zhihengy@andrew.cmu.edu
+  - name: Yichen Xin
+    email: yichenx2@andrew.cmu.edu
+  - name: Purusottam Samal
+    email: psamal@andrew.cmu.edu
+  - name: NIYIBIGIRA Geredi
+    email: ngeredi@andrew.cmu.edu
+  - name: ChooWon Sir
+    email: csir@andrew.cmu.edu
+  - name: Khushali Daga
+    email: kdaga@andrew.cmu.edu
+  - name: Leo Xu
+    email: guanyix@andrew.cmu.edu
+  - name: Nebiyou Hailemariam
+    email: nhailema@andrew.cmu.edu
+  - name: Ketan Chaudhary
+    email: ketanc@andrew.cmu.edu
+  - name: Hao Chen
+    email: haoc3@andrew.cmu.edu
+  - name: Vish Srinivasan
+    email: vishhvas@andrew.cmu.edu
+  - name: Gabrial Zencha
+    email: gzenchaa@andrew.cmu.edu
+  - name: Emmanuel Ndayisaba
+    email: ndayem72@gmail.com
+  - name: Carmel Prosper SAGBO
+    email: csagbo@andrew.cmu.edu
+  - name: Alex Gichamba
+    email: angicham@andrew.cmu.edu
+  - name: Romerik Lokossou
+    email: rlokosso@andrew.cmu.edu
+  - name: Shravanth Srinivas
+    email: shravans@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

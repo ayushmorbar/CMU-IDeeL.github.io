@@ -1,40 +1,235 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: Friday, 13th Jan, 11:59 PM
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: HW0P1
+        due_date: 'Final: 30th Jan, 11:59 PM'
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
+          - text: Autolab
+            url: "https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw0p1\_"
+          - text: Handout
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw0p1/attachments/4322
+  - release_date: Friday, 13th Jan, 11:59 PM
     assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
+      - name: HW0P2
+        due_date: 'Final: 30th Jan, 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw0p2
+          - text: Handout
+            url: ' https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw0p2/attachments/4313'
+  - release_date: Sunday, 22nd Jan, 11:59 PM
+    assignments:
+      - name: HW1P1
+        due_date: 'Early Submission: 11th Feb, 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw1p1
+          - text: |-
+              Writeup
+                                                      (pdf)
+            url: ./document/homework/HW1/HW1P1_S23.pdf
+          - text: |-
+              Handout
+                                                      (.tar)
+            url: ./document/homework/HW1/hw1p1_handout.tar
+      - name: 'Final: 17th Feb, 11:59 PM'
+        due_date: ''
         materials: []
-  - release_date: "Friday, Oct 9"
+  - release_date: Sunday, 22nd Jan, 11:59 PM
     assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
+      - name: HW1P2
+        due_date: 'Early Submission: 11th Feb, 11:59 PM'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/11-785-s23-hw1p2
+          - text: Writeup (pdf)
+            url: ./document/homework/HW1/HW1P2_S23.pdf
+          - text: Starter Notebook
+            url: https://colab.research.google.com/drive/1KPvkpxELmLfjxBHrwOg1CApQW2t8Hv3c?usp=sharing8
+          - text: MCQ
+            url: https://canvas.cmu.edu/courses/32813/quizzes/98455
+      - name: 'Final: 17th Feb, 11:59 PM'
+        due_date: ''
         materials: []
-  - release_date: "Friday, Nov 6"
+  - release_date: Sunday, 22nd Jan, 12:00 AM
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
+      - name: HW1 Bonus
+        due_date: Friday, 10th Mar, 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw1p1bonus
+  - release_date: Sunday, 22nd Jan, 12:00 AM
+    assignments:
+      - name: HW1 Autograd
+        due_date: Wednesday, 3rd May, 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw1p1bonusautograd
+          - text: |-
+              Writeup
+                                                      (pdf)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw1p1bonusautograd/attachments/4347
+          - text: |-
+              Handout
+                                                      (.tar)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw1p1bonusautograd/attachments/4362
+  - release_date: Monday, 27th Feb, 11:59 PM
+    assignments:
+      - name: Project Proposal
+        due_date: |-
+          <!-- Wednesday, 14th Oct, 11:59 PM EST -->
+                                              <!-- Sept 30th, 2021 <br>11:59 PM EST</br> -->
+        materials: []
+  - release_date: Monday, 20th Feb, 11:59 PM
+    assignments:
+      - name: HW5
+        due_date: |-
+          Thursday, 27th Apr, 11:59 PM EST
+                                              <!-- Sept 30th, 2021 <br>11:59 PM EST</br> -->
+        materials: []
+  - release_date: Friday, 17th Feb, 11:59 PM
+    assignments:
+      - name: HW2P1
+        due_date: 'Early Submission: 4th Mar, 11:59 PM'
+        materials:
+          - text: Writeup
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw2p1/attachments/4379
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw2p1
+      - name: 'Final: 17th Mar, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Friday, 17th Feb, 11:59 PM
+    assignments:
+      - name: HW2P2
+        due_date: 'Early Submission: 4th Mar, 11:59 PM'
+        materials:
+          - text: |-
+              Face
+                                                      Classification: Kaggle,
+            url: http://www.kaggle.com/c/11-785-s23-hw2p2-classification
+          - text: |-
+              Face
+                                                      Verification: Kaggle,
+            url: https://www.kaggle.com/c/11-785-s23-hw2p2-verification
+          - text: Writeup (*.pdf),
+            url: ./document/homework/HW2/11_785_HW2P2_S23_v2.pdf
+          - text: Starter Notebook
+            url: ./document/homework/HW2/HW2P2_Starter_S23.ipynb
+      - name: 'Final: 17th Mar, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Friday, 17th Feb, 11:59 PM
+    assignments:
+      - name: HW2 Bonus
+        due_date: Friday, 31st March, 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw2p1bonus
+  - release_date: Friday, 5th March, 11:59 PM
+    assignments:
+      - name: HW2 Autograd
+        due_date: Wednesday, 28th April, 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/autogradcnn
+  - release_date: '-'
+    assignments:
+      - name: Project Midterm Report
+        due_date: |-
+          <!-- Friday, 11th Nov -->
+                                              Friday, 31st March, 11:59 PM
+        materials: []
+  - release_date: Friday, 10th Mar, 11:59 PM
+    assignments:
+      - name: HW3P1
+        due_date: 'Early Submission: 26th Mar, 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw3p1
+          - text: Writeup
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw3p1/attachments/4418
+      - name: 'Final: 7th Apr, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Friday, 17th Mar, 11:59 PM
+    assignments:
+      - name: HW3P2
+        due_date: 'Early Submission: 26th Mar, 11:59 PM'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/11-785-s23-hw3p2
+          - text: |-
+              Canvas
+                                                      Quiz
+            url: https://canvas.cmu.edu/courses/32813/quizzes/98457
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW3/11_785_hw3p2_S23-2.pdf
+      - name: 'Final: 7th Apr, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Friday, 5th Mar, 11:59 PM
+    assignments:
+      - name: HW2 Autograd
+        due_date: Wednesday, 28th April, 11:59 PM
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/autogradcnn
+  - release_date: Friday, 31st Mar, 11:59 PM
+    assignments:
+      - name: HW4P1
+        due_date: 'Early Submission Bonus: 15th Apr, 11:59 PM'
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw4p1backup
+          - text: Writeup (*.pdf)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw4p1backup/attachments/4434
+          - text: Handout (*.zip)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s23/assessments/hw4p1backup/attachments/4437
+      - name: 'Final: 28th Apr, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Friday, 4th Apr, 11:59 PM
+    assignments:
+      - name: HW4P2
+        due_date: |-
+          Early Submission<br>
+                                              Canvas Quiz (Mandatory): 10th Apr, 11:59PM <br>
+                                              Kaggle Cutoff Bonus (Optional): 15th Apr, 11:59 PM
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/11-785-s23-hw4p2
+          - text: Writeup(*pdf)
+            url: ./document/homework/HW4/P2/HW4P2_S23.pdf
+      - name: 'Final: 28th Apr, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: Friday, 1st Apr, 11:59 PM
+    assignments:
+      - name: HW5
+        due_date: 'Early: 18th Apr, 11:59 PM'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/11-685-s23-hw5/
+          - text: Writeup(*pdf)
+            url: https://piazza.com/class_profile/get_resource/lbz3z9om43h2n3/lfyyrmqplki7ll
+          - text: Handout
+            url: https://piazza.com/class_profile/get_resource/lbz3z9om43h2n3/lfyys8tlz2kot
+      - name: 'Final: 1st May, 11:59 PM'
+        due_date: ''
+        materials: []
+  - release_date: '-'
+    assignments:
+      - name: Final Project Video Presentation & Preiliminary Project Report
+        due_date: 27th Apr, 11:59 PM
+        materials: []
+  - release_date: <!-- 10th Dec, 12:00 AM <br> -->
+    assignments:
+      - name: Project Peer reviews
+        due_date: <!-- 11th Dec, 11:59 AM -->
+        materials: []
+  - release_date: '-'
+    assignments:
+      - name: Final Project Report Submission
+        due_date: 3rd May, 11:59 PM
         materials: []

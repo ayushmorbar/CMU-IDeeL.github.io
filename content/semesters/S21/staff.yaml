@@ -5,6 +5,42 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Akshat Gupta
+    email: akshatgu@andrew.cmu.edu
+  - name: Anurag Katakkar
+    email: akatakka@andrew.cmu.edu
+  - name: Alex Kwark
+    email: hkwark@andrew.cmu.edu
+  - name: David Park
+    email: jinhyun1@andrew.cmu.edu
+  - name: Hao Chen
+    email: haoc3@andrew.cmu.edu
+  - name: Joseph Konan
+    email: jkonan@andrew.cmu.edu
+  - name: Kinori Rosnow
+    email: krosnow@andrew.cmu.edu
+  - name: Owen Wang
+    email: owenw@andrew.cmu.edu
+  - name: Sai Prahladh
+    email: saiprahp@andrew.cmu.edu
+  - name: Shayeree Sarkar
+    email: shayeres@andrew.cmu.edu
+  - name: Shentong Mo
+    email: shentonm@andrew.cmu.edu
+  - name: Vaidehi Joshi
+    email: vaidehij@andrew.cmu.edu
+  - name: (China/India) Haoxuan Zhu
+    email: haoxuanz@andrew.cmu.edu
+  - name: (China/India) Yi Shen
+    email: yishen@andrew.cmu.edu
+  - name: (Doha) Nour Ali
+    email: ntali@andrew.cmu.edu
+  - name: (India) Shriti Priya
+    email: shritip@andrew.cmu.edu
+  - name: (Kigali) Charles Yusuf
+    email: cyusuf@andrew.cmu.edu
+  - name: (Kigali) Tanya Akumu
+    email: takumu@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

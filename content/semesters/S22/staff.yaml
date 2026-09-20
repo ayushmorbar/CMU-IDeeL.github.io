@@ -5,6 +5,56 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Adebayo Oshingbesan
+    email: oaadebay@andrew.cmu.edu
+  - name: Amelia (Zhiyi) Kuang
+    email: zkuang@andrew.cmu.edu
+  - name: Ameya Mahabaleshwarkar
+    email: amahabal@andrew.cmu.edu
+  - name: Aparajith Srinivasan
+    email: aparajis@andrew.cmu.edu
+  - name: Bradley Warren
+    email: bwarren2@andrew.cmu.edu
+  - name: Chaoran ZHANG
+    email: chaoranz@andrew.cmu.edu
+  - name: Diksha agarwal
+    email: dikshaa@andrew.cmu.edu
+  - name: Fuyu Tang
+    email: fuyut@andrew.cmu.edu
+  - name: Jeff Moore
+    email: jmoore3@andrew.cmu.edu
+  - name: Jinhyung (David) Park
+    email: jinhyun1@andrew.cmu.edu
+  - name: Joseph Konan
+    email: jkonan@cs.cmu.edu
+  - name: Lavanya Gupta
+    email: lagupta@andrew.cmu.edu
+  - name: Manasi Purohit
+    email: mpurohit@andrew.cmu.edu
+  - name: Roshan Ram
+    email: rram@andrew.cmu.edu
+  - name: Rucha Khopkar
+    email: rkhopkar@andrew.cmu.edu
+  - name: Rukayat Sadiq
+    email: rsadiq@andrew.cmu.edu
+  - name: Shreyas Piplani
+    email: spiplani@andrew.cmu.edu
+  - name: Soumya Empran
+    email: sempran@andrew.mu.edu
+  - name: Urvil Kenia
+    email: ukenia@andrew.cmu.edu
+  - name: Zhe Chen
+    email: zhechen2@andrew.cmu.edu
+  - name: (Qatar) John (EuiSuh) Jeong
+    email: ejeong@andrew.cmu.edu
+  - name: (SV) Ruoyu Hua
+    email: ruoyuhua@andrew.cmu.edu
+  - name: (SV) Wenwen Ouyang
+    email: wenweno@andrew.cmu.edu
+  - name: (Kigali) Germann Atakpa
+    email: gatakpa@andrew.cmu.edu
+  - name: (Kigali) Iffanice Houndayi
+    email: ibh@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

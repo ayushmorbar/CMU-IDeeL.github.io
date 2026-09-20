@@ -5,6 +5,56 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Harini Subramanyan
+    email: harinisu@andrew.cmu.edu
+  - name: Sarthak Bisht
+    email: sbisht@andrew.cmu.edu
+  - name: Rucha Kulkarni
+    email: rmkulkar@andrew.cmu.edu
+  - name: Vishhvak Srinivasan
+    email: vishhvas@andrew.cmu.edu
+  - name: Harshith Kumar
+    email: harunkum@andrew.cmu.edu
+  - name: Pavitra Kadiyala
+    email: pkadiyal@andrew.cmu.edu
+  - name: Yu-Cheng "Samuel" Lin
+    email: ylin6@andrew.cmu.edu
+  - name: Jeel Shah
+    email: jdshah@andrew.cmu.edu
+  - name: Quentin Auster
+    email: qja@andrew.cmu.edu
+  - name: Ishan Mamadapur
+    email: imamadap@andrew.cmu.edu
+  - name: Chetan Chilkunda
+    email: cchilkun@andrew.cmu.edu
+  - name: Kateryna Shapovalenko
+    email: kshapova@andrew.cmu.edu
+  - name: Syed Hannan
+    email: shannan@andrew.cmu.edu
+  - name: Shreya Kale
+    email: shreyaak@andrew.cmu.edu
+  - name: Heena Chandak
+    email: hchandak@andrew.cmu.edu
+  - name: Harshit Mehrotra
+    email: hmehrotr@andrew.cmu.edu
+  - name: Aarya Makwana
+    email: amakwana@andrew.cmu.edu
+  - name: Liangze "Josh" Li
+    email: liangzel@andrew.cmu.edu
+  - name: Alexander Moker
+    email: amoker@andrew.cmu.edu
+  - name: Gabrial Ashungafac
+    email: gzenchaa@andrew.cmu.edu
+  - name: Denis Musinguzi
+    email: dmusingu@andrew.cmu.edu
+  - name: Dareen Alharthi
+    email: dalharth@andrew.cmu.edu
+  - name: Yuzhou Wang
+    email: yuzhouwa@andrew.cmu.edu
+  - name: Miya Sylvester
+    email: nsylvest@andrew.cmu.edu
+  - name: R Raghav
+    email: rraghavr@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

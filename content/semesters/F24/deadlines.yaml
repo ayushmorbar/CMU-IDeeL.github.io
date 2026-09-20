@@ -1,31 +1,53 @@
-- id: hw1p1
-  assignment: HW1 P1
-  deadlines:
-    - label: Early Submission
-      date: 'Early Submission: Friday, Sep 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Implementing and training an MLP from scratch
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: hw1p2
-  assignment: HW1 P2
-  deadlines:
-    - label: Checkpoint Submission
-      date: 'Checkpoint Submission: Friday, Sept 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Phoneme state labelling using MLPs
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: resources
-  assignment: Resource Links
+- id: item-0
+  assignment: HW1P1 Bonus
   deadlines: []
-  description: Quick access to piazza and project resources
+  description: Adam, AdamW Optimizers and Dropout
   links:
-    - label: Important Piazza Posts Finder
-      url: https://piazza.com
-    - label: Projects Page
+    - label: Autolab
+      url: https://autolab.andrew.cmu.edu/courses/11485-f24/assessments/hw1p1_bonus
+- id: item-1
+  assignment: HW1P1 Autograd
+  deadlines: []
+  description: Automatic Differentiation Engine
+  links:
+    - label: Autolab
+      url: https://autolab.andrew.cmu.edu/courses/11485-f24/assessments/hw1p1autograd
+- id: item-2
+  assignment: HW2P1 Bonus
+  deadlines: []
+  description: Dropout2d, BatchNorm2d and ResNet
+  links:
+    - label: Autolab
+      url: https://autolab.andrew.cmu.edu/courses/11485-f24/assessments/HW2P1
+- id: item-3
+  assignment: HW2P1 Autograd
+  deadlines: []
+  description: Applying Autograd to Convolutional Networks
+  links:
+    - label: Autolab
+      url: https://autolab.andrew.cmu.edu/courses/11485-f24/assessments/autogradcnn
+- id: item-4
+  assignment: HW4P1
+  deadlines: []
+  description: Language Modeling
+  links:
+    - label: Autolab
+      url: https://autolab.andrew.cmu.edu/courses/11485-f24/assessments/hw4p1
+    - label: Piazza
+      url: https://piazza.com/class/lvda3ibm9qz34r/post/1473
+- id: item-5
+  assignment: HW4P2
+  deadlines: []
+  description: Automatic Speech Recognition using Attention-based Encoder-Decoder Architecture
+  links:
+    - label: Autolab
+      url: https://autolab.andrew.cmu.edu/courses/11485-f24/assessments/hw4p2
+    - label: Piazza
+      url: https://piazza.com/class/lvda3ibm9qz34r/post/1465
+- id: item-6
+  assignment: Project Gallery
+  deadlines: []
+  description: Project Gallery
+  links:
+    - label: Project Gallery
       url: ../shared/project.html

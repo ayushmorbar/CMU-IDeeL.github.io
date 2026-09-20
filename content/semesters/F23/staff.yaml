@@ -5,6 +5,54 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Denis Musinguzi
+    email: dmusingu@andrew.cmu.edu
+  - name: Dheeraj Pai
+    email: dmohanda@andrew.cmu.edu
+  - name: Harini Subramanyan
+    email: harinisu@andrew.cmu.edu
+  - name: Harshit Mehrotra
+    email: hmehrotr@andrew.cmu.edu
+  - name: Harshith Arun Kumar
+    email: harunkum@andrew.cmu.edu
+  - name: Jean De Dieu Nyandwi
+    email: jeandedi@andrew.cmu.edu
+  - name: Jeel Shah
+    email: jdshah@andrew.cmu.edu
+  - name: Kelsey J. Harvey
+    email: kelseyjh@andrew.cmu.edu
+  - name: Liangze "Josh" Li
+    email: liangzel@andrew.cmu.edu
+  - name: Meng Zhou
+    email: mengzhou@andrew.cmu.edu
+  - name: Miya Sylvester
+    email: nsylvest@andrew.cmu.edu
+  - name: Pavitra Kadiyala
+    email: pkadiyal@andrew.cmu.edu
+  - name: Qin Wang
+    email: qinw@andrew.cmu.edu
+  - name: R Raghav
+    email: rraghavr@andrew.cmu.edu
+  - name: Rucha Manoj Kulkarni
+    email: rmkulkar@andrew.cmu.edu
+  - name: Sarthak Bisht
+    email: sbisht@andrew.cmu.edu
+  - name: Shikhar Agnihotri
+    email: sagnihot@andrew.cmu.edu
+  - name: Sumesh Kalambettu Suresh
+    email: skalambe@andrew.cmu.edu
+  - name: Jiaye "Tony" Zou
+    email: jiayez@andrew.cmu.edu
+  - name: Vish
+    email: vishhvas@andrew.cmu.edu
+  - name: Yohannes Haile
+    email: yohanneh@andrew.cmu.edu
+  - name: Muhammed Danso
+    email: mdanso@andrew.cmu.edu
+  - name: Schadrack Niyibizi
+    email: sniyibiz@andrew.cmu.edu
+  - name: Emmanuel Ndayisaba
+    email: enn@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

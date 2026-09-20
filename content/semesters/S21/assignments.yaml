@@ -1,40 +1,199 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: Winter Break
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: HW0p1
+        due_date: Feb 8
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s21/assessments/hw0p1
+          - text: handout
+            url: ./document/homework/HW0/P1/S21_Hw0P1.ipynb
+  - release_date: Winter Break
     assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
-        materials: []
-  - release_date: "Friday, Oct 9"
+      - name: HW0p2
+        due_date: Feb 8
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s21/assessments/hw0p2
+          - text: handout
+            url: ./document/homework/HW0/P2/hw0p2-all-versions.tar.gz
+  - release_date: Feb 6, 12:00 AM EST
     assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
-        materials: []
-  - release_date: "Friday, Nov 6"
+      - name: Quiz 1
+        due_date: Feb 7, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/52213
+  - release_date: Feb 8, 12:00 AM EST
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
+      - name: HW1P1
+        due_date: Feb 28, 11:59 PM EST
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW1/hw1p1_writeup.pdf
+  - release_date: Feb 8, 12:00 AM EST
+    assignments:
+      - name: HW1P2
+        due_date: |-
+          Feb 14, 11:59 PM EST (Early Deadline) <br>
+                                      Feb 28, 11:59 PM EST (Final Deadline)
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11785-spring2021-hw1p2/overview
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW1/HW1P2_Writeup.pdf
+  - release_date: Feb 13, 12:00 AM EST
+    assignments:
+      - name: Quiz 2
+        due_date: Feb 14, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/55356
+  - release_date: Feb 20, 12:00 AM EST
+    assignments:
+      - name: Quiz 3
+        due_date: Feb 21, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/52204
+  - release_date: Feb 20, 12:00 AM EST
+    assignments:
+      - name: ∑ HW1P1 BONUS
+        due_date: Apr 29, 11:59 PM EST
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s21/assessments/hw1p1bonus
+          - text: Handout (*.zip)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s21/assessments/hw1p1bonus/handout
+  - release_date: Feb 27, 12:00 AM EST
+    assignments:
+      - name: Quiz 4
+        due_date: Feb 28, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/52218
+  - release_date: Mar. 1, 12:00 AM EST
+    assignments:
+      - name: ∑ HW2P1
+        due_date: Mar. 21, 11:59 PM EST
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW2/HW2P1_Writeup.pdf
+  - release_date: Mar. 1, 12:00 AM EST
+    assignments:
+      - name: ∑ HW2P2
+        due_date: |-
+          Mar. 7, 11:59 PM EST (Early Deadline) <br>
+                                      Mar. 21, 11:59 PM EST (Final Deadline)
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11785-spring2021-hw2p2/overview
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW2/Homework_2_Part_2._Spring21.pdf
+          - text: Revisiting ResNets
+            url: https://arxiv.org/pdf/2103.07579v1.pdf
+          - text: Bag of Tricks
+            url: https://arxiv.org/pdf/1812.01187.pdf
+  - release_date: Mar. 6, 12:00 AM EST
+    assignments:
+      - name: Quiz 5
+        due_date: Mar. 7, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/52210
+  - release_date: '-'
+    assignments:
+      - name: ∏ Project Proposal Submission
+        due_date: Mar. 10, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/assignments/326539
+  - release_date: Mar. 13, 12:00 AM EST
+    assignments:
+      - name: Quiz 6
+        due_date: Mar. 14, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/52217
+  - release_date: Mar. 20, 12:00 AM EST
+    assignments:
+      - name: Quiz 7
+        due_date: Mar. 21, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/52217
+  - release_date: Mar. 21, 12:00 AM EST
+    assignments:
+      - name: ∑ HW3P1
+        due_date: Apr. 11, 11:59 PM EST
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s21/assessments/hw3p1
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW3/11785_s21_hw3p1.pdf
+  - release_date: Mar. 21, 12:00 AM EST
+    assignments:
+      - name: ∑ HW3P2
+        due_date: |-
+          Mar. 28, 11:59 PM EST (Early Deadline) <br>
+                                      Apr. 11, 11:59 PM EST (Final Deadline)
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11785-spring2021-hw3p2/
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW3/hw3p2_writeup.pdf
+  - release_date: Mar. 27, 12:00 AM EST
+    assignments:
+      - name: ∏ Quiz 8
+        due_date: Mar. 28, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/quizzes/52217
+  - release_date: Mar. 11, 12:00 AM EST
+    assignments:
+      - name: ∏ Project Midterm Report
+        due_date: Apr. 10, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/assignments/326526
+  - release_date: May 1, 12:00 AM EST
+    assignments:
+      - name: ∏ Project Video Upload and Preliminary Report
+        due_date: May 6, 11:59 PM EST
         materials: []
+  - release_date: May 7, 12:00 AM EST
+    assignments:
+      - name: ∏ Project Defense
+        due_date: May 10, 11:59 PM EST
+        materials: []
+  - release_date: May 9, 12:00 AM EST
+    assignments:
+      - name: ∏ Project Final Reports
+        due_date: May 12, 11:59 PM EST
+        materials:
+          - text: Canvas
+            url: https://canvas.cmu.edu/courses/21386/assignments/326535
+  - release_date: Apr. 12, 12:00 AM EST
+    assignments:
+      - name: ∑ HW4P1
+        due_date: May 2, 11:59 PM EST
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s21/assessments/hw4p1
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW4/P1/HW4P1_Writeup.pdf
+  - release_date: Apr 12, 12:00 AM EST
+    assignments:
+      - name: ∑ HW4P2
+        due_date: |-
+          Apr. 18, 11:59 PM EST (Early Deadline) <br>
+                                      May 2, 11:59 PM EST (Final Deadline)
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11785-spring2021-hw4p2/leaderboard
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW4/P2/2021spring_HW4P2.pdf

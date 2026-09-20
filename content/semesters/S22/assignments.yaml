@@ -1,40 +1,157 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: Winter Break
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: HW0p1
+        due_date: Jan 23rd, 2022<br>11:59 PM EST<br>
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw0p1
+          - text: Handout
+            url: ./document/homework/HW0/P1/handout-HW0P1.tar
+  - release_date: Winter Break
     assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
+      - name: HW0p2
+        due_date: Jan 23rd, 2022<br>11:59 PM EST<br>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw0p2
+          - text: Handout
+            url: ./document/homework/HW0/P2/handout-HW0P2-all-difficulty-versions.tar
+  - release_date: Jan 23rd, 2022
+    assignments:
+      - name: HW1p1
+        due_date: Feb 17th, 2022<br>11:59 PM EST<br>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw1p1
+          - text: Writeup (pdf)
+            url: ./document/homework/HW1/11_785_s22__hw1p1_writeup.pdf
+          - text: Handout (.tar)
+            url: ./document/homework/HW1/hw1p1_handout.tar
+          - text: Computing Derivatives (pdf)
+            url: ./document/homework/HW1/Derivatives.pdf
+  - release_date: Jan 23rd, 2022
+    assignments:
+      - name: HW1p2
+        due_date: 'Early Submission: Jan 31th, 2022 <br>11:59 PM EST<br>'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11-785-s22-hw1p2/
+          - text: Writeup (pdf)
+            url: ./document/homework/HW1/11785-S22-HW1P2.pdf
+          - text: Canvas Quiz
+            url: https://canvas.cmu.edu/courses/27106/quizzes/78438
+      - name: 'Final: Feb 17th, 2022 11:59 PM EST'
+        due_date: ''
         materials: []
-  - release_date: "Friday, Oct 9"
+  - release_date: Jan 31st, 2022
     assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
+      - name: HW1 Bonus
+        due_date: Mar 17th, 2022<br>11:59 PM EST<br>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw1p1bonus
+          - text: Writeup (pdf)
+            url: ./document/homework/HW1/hw1_bonus.pdf
+          - text: Handout (.tar)
+            url: ./document/homework/HW1/handout_hw1bonus.tar
+  - release_date: '-'
+    assignments:
+      - name: Project Proposal
+        due_date: |-
+          TBA
+                                          <!-- Sept 30th, 2021 <br>11:59 PM EST</br> -->
         materials: []
-  - release_date: "Friday, Nov 6"
+  - release_date: Feb 17th, 2022
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
+      - name: HW2p1
+        due_date: Mar 17th, 2022 <br>11:59 PM EST<br>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/HW2P1
+          - text: Writeup
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/HW2P1/attachments/4090
+          - text: Handout (.tar)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/HW2P1/attachments/4087
+  - release_date: Feb 17th, 2022
+    assignments:
+      - name: HW2p2
+        due_date: 'Early Submission: Feb 25th, 2022 <br>11:59 PM EST<br>'
+        materials:
+          - text: 'Face Classification: Kaggle,'
+            url: https://www.kaggle.com/c/11-785-s22-hw2p2-classification
+          - text: 'Face Verification: Kaggle,'
+            url: https://www.kaggle.com/c/11-785-s22-hw2p2-verification
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW2/11_785_HW2P2_S22.pdf
+      - name: 'Final: Mar 17th, 2022 11:59 PM EST'
+        due_date: ''
+        materials: []
+  - release_date: '-'
+    assignments:
+      - name: Project Midterm Report
+        due_date: |-
+          TBA
+                                          <!-- Nov 4th, 2021 <br>11:59 PM EST</br> -->
+        materials: []
+  - release_date: Mar 17th, 2022
+    assignments:
+      - name: HW3p1
+        due_date: Apr 7th, 2022 <br>11:59 PM EST<br>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw3p1test
+          - text: handout (*.zip)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw3p1test/attachments/4141
+          - text: Writeup (*.pdf)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw3p1test/attachments/4144
+  - release_date: Mar 17th, 2022
+    assignments:
+      - name: HW3p2
+        due_date: 'Early Submission: Mar 26th, 2022<br>11:59 PM EST<br>'
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11-785-s22-hw3p2
+          - text: Writeup (*.pdf)
+            url: ./document/homework/HW3/hw3p2_writeup.pdf
+          - text: Canvas Quiz
+            url: https://canvas.cmu.edu/courses/27106/quizzes/80894
+      - name: 'Final: Apr 7th, 2022 11:59 PM EST'
+        due_date: ''
+        materials: []
+  - release_date: Apr 4th, 2022
+    assignments:
+      - name: HW4p1
+        due_date: Apr 28th, 2022 <br>11:59 PM EST<br>
+        materials:
+          - text: Writeup(*.pdf)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw4p1/attachments/4174
+          - text: Handout(*.zip)
+            url: https://autolab.andrew.cmu.edu/courses/11785-s22/assessments/hw4p1/attachments/4177
+  - release_date: Apr 5th, 2022
+    assignments:
+      - name: HW4p2
+        due_date: 'Early Submission (Bonus): Apr 16th, 2022<br>11:59 PM EST<br>'
+        materials:
+          - text: Writeup(*pdf)
+            url: ./document/homework/HW4/P2/11785_HW4P2_S22.pdf
+          - text: Kaggle
+            url: https://www.kaggle.com/competitions/11-785-s22-hw4p2
+      - name: 'Final: Apr 28th, 2022 11:59 PM EST'
+        due_date: ''
+        materials: []
+  - release_date: Apr 28th, 2022 <br>
+    assignments:
+      - name: Final Project Video Presentation & Preiliminary Project Report
+        due_date: May 2nd, 2022 <br>5:59 PM EST<br>
+        materials: []
+  - release_date: May 3rd, 2022 <br>
+    assignments:
+      - name: Project Peer reviews
+        due_date: May 4th, 2022 <br>11:59 PM EST<br>
+        materials: []
+  - release_date: '-'
+    assignments:
+      - name: Final Project Report Submission
+        due_date: May 6th, 2022 <br>11:59 PM EST<br>
         materials: []

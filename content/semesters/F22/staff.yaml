@@ -5,6 +5,54 @@ instructors:
     email: rsingh@cs.cmu.edu
 shadowInstructors: []
 headTAs: []
-coreTAs: []
+coreTAs:
+  - name: Abuzar Khan
+    email: abuzark@andrew.cmu.edu
+  - name: Aditya Singh
+    email: adityas5@andrew.cmu.edu
+  - name: Ameya Mahabaleshwarkar
+    email: amahabal@andrew.cmu.edu
+  - name: Aparajith Srinivasan
+    email: aparajis@andrew.cmu.edu
+  - name: Fuyu Tang
+    email: fuyut@andrew.cmu.edu
+  - name: George Saito
+    email: takatoms@andrew.cmu.edu
+  - name: Joseph Konan
+    email: jkonan@andrew.cmu.edu
+  - name: Karanveer Singh
+    email: karanves@andrew.cmu.edu
+  - name: Pranav Karnani
+    email: pkarnani@andrew.cmu.edu
+  - name: Samiran Gode
+    email: sgode@andrew.cmu.edu
+  - name: Samruddhi Pai
+    email: sdpai@andrew.cmu.edu
+  - name: Shreyas Piplani
+    email: spiplani@andrew.cmu.edu
+  - name: Soumya
+    email: sempran@andrew.cmu.edu
+  - name: Swathi Jadav
+    email: sjadav@andrew.cmu.edu
+  - name: Talha Faiz
+    email: mfaiz@andrew.cmu.edu
+  - name: Vishhvak Srinivasan
+    email: vishhvas@andrew.cmu.edu
+  - name: Yashash Gaurav
+    email: ygaurav@andrew.cmu.edu
+  - name: Yue Jian
+    email: yuejian@andrew.cmu.edu
+  - name: Zishen Wen
+    email: zishenw@andrew.cmu.edu
+  - name: (SV) Oscar Joris Denys
+    email: odenys@andrew.cmu.edu
+  - name: (SV) Ruoyu Hua
+    email: ruoyuhua@andrew.cmu.edu
+  - name: (SV) Spatika Ganesh
+    email: spatikag@andrew.cmu.edu
+  - name: (Kigali) Cedric Manouan
+    email: cmanouan@andrew.cmu.edu
+  - name: (Kigali) Moayad Elamin
+    email: melamin@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

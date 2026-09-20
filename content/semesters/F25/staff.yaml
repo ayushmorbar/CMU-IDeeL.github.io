@@ -44,5 +44,26 @@ coreTAs:
     email: dsreedha@andrew.cmu.edu
   - name: Chaeeun Lee
     email: chaeeunl@andrew.cmu.edu
+supportTAs:
+  - name: Shubham Kachroo
+    email: skachroo@andrew.cmu.edu
+  - name: Ahmed Issah
+    email: aissah@andrew.cmu.edu
+  - name: Tanghang Elvis Tata
+    email: etanghan@andrew.cmu.edu
+  - name: Mona Aman
+    email: amona@andrew.cmu.edu
+  - name: Peter Wauyo
+    email: pwauyo@andrew.cmu.edu
+  - name: Ahmed Safwat Abouhashem
+    email: a.s.a@pitt.edu
+  - name: delphine nyaboke
+    email: delphinenyaboke@gmail.com
+  - name: Carmel Sagbo
+    email: csagbo@andrew.cmu.edu
+  - name: Bradley Warren
+    email: bwarren2@andrew.cmu.edu
+  - name: Maxime Manzi
+    email: mmanzi@andrew.cmu.edu
 images: []
 pastTAsUrl: ../shared/TAs.html

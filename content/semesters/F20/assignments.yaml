@@ -1,40 +1,237 @@
-# deadlines_data.yaml
 assignment_groups:
-  - release_date: "Friday, Aug 28"
+  - release_date: Semester Ongoing
     assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
+      - name: Summer
+        due_date: ''
+        materials: []
+  - release_date: HW0p1 due
+    assignments:
+      - name: Mon. Aug. 31
+        due_date: HW0p2 due
+        materials: []
+      - name: Fri. Sept. 4
+        due_date: ''
         materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
+          - text: Quiz 1 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/40864
+  - release_date: |-
+      HW1p1 out<br>
+                              <a href="https://autolab.andrew.cmu.edu/courses/11485-f20/assessments/hw1p1">Autolab</a><br>
+                              <a href="document/homework/Homework_1_1.pdf">Writeup (*.pdf)</a><br>
+                              <a href="document/homework/handout1.zip">Handout (*.zip)</a>
     assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
+      - name: Sun. Sept. 6
+        due_date: |-
+          HW1p2 out<br>
+                                  <a href="https://www.kaggle.com/c/11-785-fall-20-homework-1-part-2"> Kaggle</a><br>
+                                  <a href="document/homework/Homework_1_2.pdf">Writeup (*.pdf)</a><br>
+                                  <a href="https://canvas.cmu.edu/courses/16837/quizzes/42655">Quiz</a><br>
+                                  <a href="https://autolab.andrew.cmu.edu/courses/11485-f20/assessments/hw1p2">Autolab</a>
         materials: []
-  - release_date: "Friday, Oct 9"
-    assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
+      - name: Quiz 1 due
+        due_date: ''
         materials: []
-  - release_date: "Friday, Nov 6"
+      - name: Fri. Sept. 11
+        due_date: ''
+        materials: []
+      - name: Sun. Sept. 13
+        due_date: ''
+        materials: []
+      - name: Wed. Sept. 16
+        due_date: HW1p2 early deadline
+        materials: []
+      - name: Fri. Sept. 18
+        due_date: ''
+        materials:
+          - text: Quiz 3 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/44949
+      - name: Sun. Sept. 20
+        due_date: ''
+        materials: []
+      - name: Fri. Sept. 25
+        due_date: ''
+        materials:
+          - text: Quiz 4 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/45503
+      - name: Sun. Sept. 27
+        due_date: ''
+        materials: []
+      - name: |-
+          HW2p1 out
+                                  Autolab
+                                  Writeup (*.pdf)
+                                  Handout (*.zip)
+        due_date: ''
+        materials:
+          - text: Kaggle
+            url: https://www.kaggle.com/c/11-785-fall-20-homework-2-part-2
+          - text: Writeup (*.pdf)
+            url: document/homework/Homework_2_2.pdf
+          - text: Quiz
+            url: https://canvas.cmu.edu/courses/16837/quizzes/45654
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f20/assessments/hw2p2
+      - name: Mon. Sept. 28
+        due_date: ''
+        materials: []
+      - name: Fri. Oct. 2
+        due_date: ''
+        materials:
+          - text: Quiz 5 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/45996
+  - release_date: HW1p2 code submission deadline
     assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
+      - name: Sun. Oct. 4
+        due_date: Team formations due<br>(or be randomly grouped)
+        materials: []
+  - release_date: HW2p2 early deadline
+    assignments:
+      - name: Wed. Oct. 7
+        due_date: ''
+        materials: []
+      - name: Fri. Oct. 9
+        due_date: ''
+        materials:
+          - text: Quiz 6 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/46550
+      - name: Sun. Oct. 11
+        due_date: |-
+          Project proposals due<br>
+                                  <a href="document/project/Project Proposal Guidelines.pdf">Proposal Guidelines</a><br>
+                                  <a href="https://canvas.cmu.edu/courses/16837/assignments/298760">Canvas</a><br>
+                                  <a href="https://www.overleaf.com/read/btddtdztdrgs">Template</a>
+        materials: []
+      - name: Fri. Oct. 16
+        due_date: ''
+        materials:
+          - text: Quiz 7 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/46996
+  - release_date: HW2p1 due
+    assignments:
+      - name: Sun. Oct. 18
+        due_date: |-
+          HW2p2 on-time deadline<br>
+                                  <a href="https://piazza.com/class/k9lk3ucwopisb?cid=974">Baseline</a><br>
+                                  A: ≥ 0.92,  B ≥ 0.85,<br>
+                                  C ≥ 0.77, D ≥ 0.50
+        materials: []
+      - name: |-
+          HW3p1 out
+                                  Autolab
+                                  Writeup (*.pdf)
+                                  Handout (*.zip)
+        due_date: |-
+          HW3p2 out<br>
+                                  <a href="https://www.kaggle.com/c/11-785-fall-20-homework-3/"> Kaggle</a><br>
+                                  <a href="document/homework/Homework_3_2.pdf">Writeup (*.pdf)</a><br>
+                                  <a href="https://autolab.andrew.cmu.edu/courses/11485-f20/assessments/hw3p2">Autolab</a>
+        materials:
+          - text: Autolab
+            url: https://autolab.andrew.cmu.edu/courses/11485-f20/assessments/hw2p1bonus
+          - text: Writeup (*.pdf)
+            url: document/homework/Homework_2_Bonus.pdf
+          - text: Handout (*.zip)
+            url: document/homework/handoutbonus2.zip
+      - name: Fri. Oct. 23
+        due_date: ''
+        materials: []
+      - name: Sun. Oct. 25
+        due_date: HW2p2 code submission deadline
+        materials: []
+      - name: Fri. Oct. 30
+        due_date: HW3p2 early deadline
+        materials:
+          - text: Quiz 9 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/48520
+  - release_date: |-
+      HW4p1 out<br>
+                              <a href="https://autolab.andrew.cmu.edu/courses/11485-f20/assessments/hw4p1">Autolab</a><br>
+                              <a href="document/homework/Homework_4_1.pdf">Writeup (*.pdf)</a><br>
+                              <a href="document/homework/handout4.zip">Handout (*.zip)</a>
+    assignments:
+      - name: Sun. Nov. 1
+        due_date: ''
+        materials: []
+      - name: Fri. Nov. 6
+        due_date: ''
+        materials:
+          - text: Quiz 10 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/48889
+  - release_date: HW3p1 due
+    assignments:
+      - name: Sun. Nov. 8
+        due_date: |-
+          HW3p2 on-time deadline<br>
+                                  <a href="https://piazza.com/class/k9lk3ucwopisb?cid=1528">Baseline</a><br>
+                                  A: ≤ 8,  B ≤ 12,<br>
+                                  C ≤ 20, D ≤ 30
+        materials: []
+      - name: |-
+          HW4p2 out
+                                     Kaggle
+                                    Writeup (*.pdf)
+                                    Autolab
+        due_date: ''
+        materials: []
+      - name: Tue. Nov. 10
+        due_date: ''
+        materials: []
+      - name: Fri. Nov. 13
+        due_date: ''
+        materials:
+          - text: Quiz 11 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/49335
+      - name: Sun. Nov. 15
+        due_date: HW3p2 code submission deadline
+        materials: []
+      - name: Wed. Nov. 18
+        due_date: ''
+        materials: []
+      - name: Fri. Nov. 20
+        due_date: ''
+        materials:
+          - text: Quiz 12 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/49812
+      - name: Sun. Nov. 22
+        due_date: HW4p2 early deadline
+        materials: []
+      - name: Fri. Nov. 27
+        due_date: ''
+        materials:
+          - text: Quiz 13 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/50061
+  - release_date: HW4p1 due
+    assignments:
+      - name: Sun. Nov. 29
+        due_date: HW4p2 on-time deadline
+        materials: []
+      - name: Fri. Dec. 1
+        due_date: ''
+        materials: []
+      - name: Fri. Dec. 4
+        due_date: |-
+          Start project uploads<br>
+                                  <a href="https://piazza.com/class/k9lk3ucwopisb?cid=2265">Video/other instructions</a>
+        materials:
+          - text: Quiz 14 out
+            url: https://canvas.cmu.edu/courses/16837/quizzes/50451
+  - release_date: HW4p2 code submission deadline
+    assignments:
+      - name: Sun. Dec. 6
+        due_date: ''
+        materials: []
+      - name: Sun. Dec. 8
+        due_date: Preliminary report due
+        materials: []
+      - name: Wed. Dec. 9
+        due_date: ''
+        materials: []
+      - name: Thu. Dec. 10
+        due_date: ''
+        materials: []
+      - name: Sat. Dec. 12
+        due_date: ''
+        materials: []
+      - name: Sun. Dec. 13
+        due_date: ''
         materials: []

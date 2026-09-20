@@ -1,31 +1,7 @@
-- id: hw1p1
-  assignment: HW1 P1
-  deadlines:
-    - label: Early Submission
-      date: 'Early Submission: Friday, Sep 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Implementing and training an MLP from scratch
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: hw1p2
-  assignment: HW1 P2
-  deadlines:
-    - label: Checkpoint Submission
-      date: 'Checkpoint Submission: Friday, Sept 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Phoneme state labelling using MLPs
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
 - id: resources
   assignment: Resource Links
   deadlines: []
-  description: Quick access to piazza and project resources
+  description: Quick access to project gallery and resources
   links:
-    - label: Important Piazza Posts Finder
-      url: https://piazza.com
-    - label: Projects Page
+    - label: Project Gallery
       url: ../shared/project.html

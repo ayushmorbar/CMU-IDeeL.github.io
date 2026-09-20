@@ -1,31 +1,53 @@
-- id: hw1p1
-  assignment: HW1 P1
-  deadlines:
-    - label: Early Submission
-      date: 'Early Submission: Friday, Sep 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Implementing and training an MLP from scratch
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: hw1p2
-  assignment: HW1 P2
-  deadlines:
-    - label: Checkpoint Submission
-      date: 'Checkpoint Submission: Friday, Sept 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Phoneme state labelling using MLPs
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: resources
-  assignment: Resource Links
+- id: item-0
+  assignment: Final Project Report
   deadlines: []
-  description: Quick access to piazza and project resources
+  description: '-'
   links:
-    - label: Important Piazza Posts Finder
-      url: https://piazza.com
-    - label: Projects Page
+    - label: Canvas Submission
+      url: https://canvas.cmu.edu/courses/22984/assignments/423649
+- id: item-1
+  assignment: HW4P1
+  deadlines: []
+  description: Word-based Language Model
+  links:
+    - label: Writeup (*.pdf)
+      url: ./document/homework/HW4/P2/2021fall_HW4P1.pdf
+- id: item-2
+  assignment: HW3P2
+  deadlines: []
+  description: Listen, Attend and Spell
+  links:
+    - label: Writeup (*.pdf)
+      url: ./document/homework/HW4/P2/2021fall_HW4P2.pdf
+- id: item-3
+  assignment: Project Gallery
+  deadlines: []
+  description: Project Gallery
+  links:
+    - label: Project Gallery
       url: ../shared/project.html
+- id: item-4
+  assignment: |-
+    Here's an example of a successful project from Fall 2020.
+                                    The team developed an AI Limmerick generator, 
+                                    and compiled a book from the AI Poet's creations.
+  deadlines: []
+  description: Here's an example of a successful project from Fall 2020. The team developed an AI Limmerick generator, and compiled a book from the AI Poet's creations. Project Report, Project Video, Book (Amazon)
+  links:
+    - label: Project Report,
+      url: https://drive.google.com/file/d/1BORroctAKMLcZmmnmxDZjQwPFYDA8yJ2/view
+    - label: Project Video,
+      url: https://www.youtube.com/watch?v=b16xOLpG_p0&feature=youtu.be
+    - label: Book (Amazon)
+      url: https://www.amazon.com/dp/B08TV36KF7
+- id: item-5
+  assignment: |-
+    This piece is performed by the Chinese Music Institute at 
+                                    Peking University (PKU) together with PKU's Chinese orchestra.
+                                    This is an adaptation of Beethoven: Serenade in D major, Op.25 - 1.
+                                    Entrata (Allegro),for Chinese transverse flute (Dizi), clarinet and flute.
+  deadlines: []
+  description: 'This piece is performed by the Chinese Music Institute at Peking University (PKU) together with PKU''s Chinese orchestra. This is an adaptation of Beethoven: Serenade in D major, Op.25 - 1. Entrata (Allegro),for Chinese transverse flute (Dizi), clarinet and flute. Your browser does not support the audio element.'
+  links:
+    - label: Details
+      url: '#title'

@@ -1,31 +1,18 @@
-- id: hw1p1
-  assignment: HW1 P1
-  deadlines:
-    - label: Early Submission
-      date: 'Early Submission: Friday, Sep 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Implementing and training an MLP from scratch
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: hw1p2
-  assignment: HW1 P2
-  deadlines:
-    - label: Checkpoint Submission
-      date: 'Checkpoint Submission: Friday, Sept 4, 11:59 PM'
-    - label: Final Submission
-      date: 'Final Submission: Friday, Sep 18, 11:59 PM'
-  description: Phoneme state labelling using MLPs
-  links:
-    - label: Gradescope Submission
-      url: https://www.gradescope.com/courses/1315509
-- id: resources
-  assignment: Resource Links
+- id: item-0
+  assignment: |-
+    This piece is performed by the Chinese Music Institute at Peking University (PKU)
+                                    together with PKU's Chinese orchestra. This is an adaptation of
+                                    Beethoven: Serenade in D major, Op.25 - 1. Entrata (Allegro),
+                                    for Chinese transverse flute (Dizi), clarinet and flute.
   deadlines: []
-  description: Quick access to piazza and project resources
+  description: 'This piece is performed by the Chinese Music Institute at Peking University (PKU) together with PKU''s Chinese orchestra. This is an adaptation of Beethoven: Serenade in D major, Op.25 - 1. Entrata (Allegro), for Chinese transverse flute (Dizi), clarinet and flute. Your browser does not support the audio element.'
   links:
-    - label: Important Piazza Posts Finder
-      url: https://piazza.com
-    - label: Projects Page
-      url: ../shared/project.html
+    - label: Details
+      url: '#title'
+- id: item-1
+  assignment: Fall 2020 Project Gallery
+  deadlines: []
+  description: Fall 2020 Project Gallery
+  links:
+    - label: Fall 2020 Project Gallery
+      url: ../shared/projects/F20/gallery.html

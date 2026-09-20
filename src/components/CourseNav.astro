@@ -1,0 +1,114 @@
+---
+interface Props {
+  currentSemester: string;
+  allSemesters?: Array<{ id: string; title: string; isCurrent: boolean }>;
+}
+
+const { currentSemester, allSemesters = [] } = Astro.props;
+
+const navItems = [
+  { label: 'About', href: '#title' },
+  { label: 'Events', href: '#events' },
+  { label: 'OH', href: '#oh' },
+  { label: 'Syllabus', href: '#syllabus' },
+  { label: 'Lectures', href: '#lectures' },
+  { label: 'Recitations & Bootcamps', href: '#recitations' },
+  { label: 'Assignments', href: '#homework' },
+  { label: 'Projects Page', href: '../shared/project.html' },
+];
+
+const otherSemesters = allSemesters.filter((s) => s.id !== currentSemester);
+---
+
+<header class="site-header" role="banner">
+  <nav class="nav-menu" aria-label="Primary Navigation">
+    {navItems.map((item) => (
+      <a href={item.href} class="nav-link">
+        {item.label}
+      </a>
+    ))}
+  </nav>
+
+  <div class="version-menu" aria-label="Semester Switcher">
+    <span class="version-current" aria-current="page">{currentSemester}</span>
+    {otherSemesters.map((s) => (
+      <a href={`../${s.id}/`} class="version-link">
+        {s.id}
+      </a>
+    ))}
+  </div>
+</header>
+
+<div class="mobile-header-bar">
+  <button
+    type="button"
+    class="menu-toggle-btn"
+    id="menu-open-btn"
+    aria-expanded="false"
+    aria-controls="mobile-drawer"
+    aria-label="Open Navigation Menu"
+  >
+    Menu
+  </button>
+</div>
+
+<div class="mobile-menu-backdrop" id="drawer-backdrop"></div>
+
+<aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <button
+    type="button"
+    class="mobile-drawer-close"
+    id="menu-close-btn"
+    aria-label="Close Navigation Menu"
+  >
+    &times;
+  </button>
+
+  <nav class="mobile-nav-list" aria-label="Mobile Primary Navigation">
+    {navItems.map((item) => (
+      <a href={item.href} class="mobile-nav-link">
+        {item.label}
+      </a>
+    ))}
+  </nav>
+
+  <div class="mobile-version-menu" aria-label="Mobile Semester Switcher">
+    <span class="version-current">{currentSemester}</span>
+    {otherSemesters.map((s) => (
+      <a href={`../${s.id}/`} class="version-link">
+        {s.id}
+      </a>
+    ))}
+  </div>
+</aside>
+
+<script>
+  // Ultra-lightweight Vanilla JS for Mobile Navigation Drawer (0 KB external libraries)
+  const openBtn = document.getElementById('menu-open-btn');
+  const closeBtn = document.getElementById('menu-close-btn');
+  const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.getElementById('drawer-backdrop');
+
+  function openMenu() {
+    drawer?.classList.add('open');
+    backdrop?.classList.add('open');
+    drawer?.setAttribute('aria-hidden', 'false');
+    openBtn?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    drawer?.classList.remove('open');
+    backdrop?.classList.remove('open');
+    drawer?.setAttribute('aria-hidden', 'true');
+    openBtn?.setAttribute('aria-expanded', 'false');
+  }
+
+  openBtn?.addEventListener('click', openMenu);
+  closeBtn?.addEventListener('click', closeMenu);
+  backdrop?.addEventListener('click', closeMenu);
+
+  // Close drawer on internal link clicks
+  drawer?.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>

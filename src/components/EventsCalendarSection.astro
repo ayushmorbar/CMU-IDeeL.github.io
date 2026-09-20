@@ -1,0 +1,91 @@
+---
+interface Props {
+  eventsData?: {
+    lectures?: string;
+    recitations?: string;
+    officeHours?: string;
+    hackathons?: {
+      location?: string;
+      time?: string;
+      description?: string;
+    };
+    eventCalendarUrl?: string;
+    ohCalendarUrl?: string;
+  };
+}
+
+const { eventsData } = Astro.props;
+if (!eventsData) return null;
+---
+
+<section id="events" aria-labelledby="events-heading">
+  <h2 id="events-heading">Events & Schedule</h2>
+
+  {eventsData.lectures && (
+    <p style="margin-bottom: 0.75rem;">
+      <strong style="color: var(--cmu-red);">Lectures:</strong> {eventsData.lectures}
+    </p>
+  )}
+
+  {eventsData.recitations && (
+    <p style="margin-bottom: 0.75rem;">
+      <strong style="color: var(--cmu-red);">Recitations/Labs:</strong> {eventsData.recitations}
+    </p>
+  )}
+
+  {eventsData.officeHours && (
+    <p style="margin-bottom: 0.75rem;">
+      <strong style="color: var(--cmu-red);">Office Hours:</strong> {eventsData.officeHours}
+    </p>
+  )}
+
+  {eventsData.hackathons && (
+    <div style="margin-bottom: 1.5rem;">
+      <p style="margin-bottom: 0.25rem;">
+        <strong style="color: var(--cmu-red);">Homework Hackathons:</strong> {eventsData.hackathons.description}
+      </p>
+      <ul>
+        <li>Location: <strong>{eventsData.hackathons.location}</strong></li>
+        <li>Time: <strong>{eventsData.hackathons.time}</strong></li>
+      </ul>
+    </div>
+  )}
+
+  {eventsData.eventCalendarUrl && (
+    <div style="margin-top: 2rem; margin-bottom: 2.5rem;">
+      <h3 style="color: var(--cmu-red); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">
+        Event Calendar:
+      </h3>
+      <p style="margin-bottom: 1rem; color: var(--color-text-muted);">
+        This Google Calendar contains all course events and deadlines. Feel free to add the entire calendar or any individual event to your personal Google Calendar. Ad-hoc changes to the schedule will be reflected in this calendar first.
+      </p>
+      <div class="table-responsive" style="border: 1px solid var(--color-border); border-radius: 6px; overflow: hidden;">
+        <iframe
+          src={eventsData.eventCalendarUrl}
+          style="border: 0; width: 100%; height: 600px;"
+          loading="lazy"
+          title="Course Events Google Calendar"
+        ></iframe>
+      </div>
+    </div>
+  )}
+
+  {eventsData.ohCalendarUrl && (
+    <div id="oh" style="margin-top: 2.5rem; scroll-margin-top: calc(var(--header-height) + 20px);">
+      <h3 style="color: var(--cmu-red); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">
+        OH Calendar:
+      </h3>
+      <p style="margin-bottom: 1rem; color: var(--color-text-muted);">
+        This Google Calendar is dedicated only for Office Hours. Instruction on how to access an OH can be found in the description of the respective OH. Any ad-hoc changes to OHs will reflect in this calendar first.
+      </p>
+      <div class="table-responsive" style="border: 1px solid var(--color-border); border-radius: 6px; overflow: hidden;">
+        <iframe
+          src={eventsData.ohCalendarUrl}
+          style="border: 0; width: 100%; height: 600px;"
+          loading="lazy"
+          title="Office Hours Google Calendar"
+        ></iframe>
+      </div>
+    </div>
+  )}
+</section>

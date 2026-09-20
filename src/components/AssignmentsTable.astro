@@ -1,0 +1,70 @@
+---
+import type { AssignmentsData } from '../schemas/assignment';
+
+interface Props {
+  assignmentsData?: AssignmentsData;
+}
+
+const { assignmentsData } = Astro.props;
+if (!assignmentsData || !assignmentsData.assignment_groups) return null;
+---
+
+<section id="homework" aria-labelledby="homework-heading">
+  <h2 id="homework-heading">Assignments</h2>
+
+  <div class="table-responsive">
+    <table class="content-table" aria-label="Course Assignments Schedule">
+      <thead>
+        <tr>
+          <th scope="col" style="text-align: center; width: 15%;">Assignment</th>
+          <th scope="col" style="text-align: center; width: 20%;">Release Date (EST)</th>
+          <th scope="col" style="text-align: center; width: 30%;">Due Date (EST)</th>
+          <th scope="col" style="text-align: center; width: 35%;">Related Materials / Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {assignmentsData.assignment_groups.map((group) =>
+          group.assignments.map((assignment, aIdx) => (
+            <tr>
+              <td style="text-align: center; font-weight: 600;">{assignment.name}</td>
+              {aIdx === 0 && (
+                <td style="text-align: center;" rowspan={group.assignments.length}>
+                  {group.release_date}
+                </td>
+              )}
+              {assignment.due_date_rowspan ? (
+                <td
+                  style="text-align: center;"
+                  rowspan={assignment.due_date_rowspan}
+                  set:html={assignment.due_date}
+                />
+              ) : assignment.due_date ? (
+                <td style="text-align: center;" set:html={assignment.due_date} />
+              ) : null}
+              <td>
+                {assignment.materials && assignment.materials.length > 0 ? (
+                  <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                    {assignment.materials.map((mat) => (
+                      <a
+                        href={mat.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="table-link"
+                      >
+                        {mat.text}
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <span style="color: var(--color-text-muted); font-style: italic;">
+                    To be announced
+                  </span>
+                )}
+              </td>
+            </tr>
+          ))
+        )}
+      </tbody>
+    </table>
+  </div>
+</section>

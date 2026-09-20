@@ -1,0 +1,23 @@
+---
+description: Rules for modifying CMU 11-785 course content, deadlines, and schedules
+globs: content/**/*, src/**/*
+---
+
+# CMU 11-785 Cursor Maintenance Rules
+
+## Content Edits
+- When updating deadlines, lectures, staff, or syllabus, edit ONLY the YAML and Markdown files inside `content/semesters/<SEMESTER>/`.
+- Do not edit raw HTML files or generated tables directly.
+- Ensure all dates conform to ISO-8601 strings (e.g. `2026-09-18T23:59:00-04:00`).
+- Ensure all URLs are syntactically valid and absolute.
+
+## Design & UI Edits
+- Refer to `DESIGN.md` for all color tokens and typography rules.
+- Maintain CMU Tartan Red (`#A80000`) as primary brand accent.
+- Adhere to WCAG 2.2 Level AA accessibility: use semantic `<nav>`, `<button>`, and `<a href="...">` elements. Never use clickable `<span>` elements for links.
+- Use CSS Custom Properties defined in `DESIGN.md`.
+
+## Safety Constraints
+- NEVER run `git push` or modify remote repositories. Keep all changes local.
+- NEVER delete or overwrite existing educational binary assets (PDFs, PPTXs, IPYNBs, ZIPs).
+- Always verify changes locally using `pnpm typecheck` and `pnpm build`.

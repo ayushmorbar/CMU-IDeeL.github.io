@@ -1,0 +1,48 @@
+instructors:
+  - name: Bhiksha Raj
+    email: bhiksha@cs.cmu.edu
+  - name: Rita Singh
+    email: rsingh@cs.cmu.edu
+shadowInstructors: []
+headTAs: []
+coreTAs:
+  - name: Miya Sylvester
+    email: nsylvest@andrew.cmu.edu
+  - name: Rutvik Joshi
+    email: rutvikj@andrew.cmu.edu
+  - name: Shravanth Srinivas
+    email: shravans@andrew.cmu.edu
+  - name: Yuzhou Wang
+    email: yuzhouwa@andrew.cmu.edu
+  - name: Massa Baali
+    email: mbaali@andrew.cmu.edu
+  - name: Mengchun Zhang
+    email: mengchuz@andrew.cmu.edu
+  - name: Michael Kireeff
+    email: mkireeff@andrew.cmu.edu
+  - name: Sophia Wang
+    email: sophiaw3@andrew.cmu.edu
+  - name: Ishita Gupta
+    email: ishitag@andrew.cmu.edu
+  - name: Sreeharsha Paruchuri
+    email: sparuchu@andrew.cmu.edu
+  - name: Aisha Opaluwa
+    email: aopaluwa@andrew.cmu.edu
+  - name: Ahmed Alhassan
+    email: aalhassa@andrew.cmu.edu
+  - name: Kipngeno Koech
+    email: bkoech@andrew.cmu.edu
+  - name: Nayesha Gandotra
+    email: nayeshag@andrew.cmu.edu
+  - name: Haojia Sun
+    email: haojias@andrew.cmu.edu
+  - name: Yuanyi Gao
+    email: yuanyig@andrew.cmu.edu
+  - name: Euijin Hong
+    email: ehong@andrew.cmu.edu
+  - name: Dhivya Sreedhar
+    email: dsreedha@andrew.cmu.edu
+  - name: Chaeeun Lee
+    email: chaeeunl@andrew.cmu.edu
+images: []
+pastTAsUrl: ../shared/TAs.html

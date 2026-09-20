@@ -1,0 +1,44 @@
+currentSemester: "F26"
+semesters:
+  - id: "F26"
+    title: "Fall 2026"
+    isCurrent: true
+  - id: "S26"
+    title: "Spring 2026"
+    isCurrent: false
+  - id: "F25"
+    title: "Fall 2025"
+    isCurrent: false
+  - id: "S25"
+    title: "Spring 2025"
+    isCurrent: false
+  - id: "F24"
+    title: "Fall 2024"
+    isCurrent: false
+  - id: "S24"
+    title: "Spring 2024"
+    isCurrent: false
+  - id: "F23"
+    title: "Fall 2023"
+    isCurrent: false
+  - id: "S23"
+    title: "Spring 2023"
+    isCurrent: false
+  - id: "F22"
+    title: "Fall 2022"
+    isCurrent: false
+  - id: "S22"
+    title: "Spring 2022"
+    isCurrent: false
+  - id: "F21"
+    title: "Fall 2021"
+    isCurrent: false
+  - id: "S21"
+    title: "Spring 2021"
+    isCurrent: false
+  - id: "F20"
+    title: "Fall 2020"
+    isCurrent: false
+  - id: "S20"
+    title: "Spring 2020"
+    isCurrent: false

@@ -1,0 +1,82 @@
+instructors:
+  - name: Bhiksha Raj
+    email: bhiksha@cs.cmu.edu
+  - name: Rita Singh
+    email: rsingh@cs.cmu.edu
+shadowInstructors:
+  - name: Massa Baali
+    email: mbaali@andrew.cmu.edu
+headTAs:
+  - name: Bradley Warren
+    email: bwarren2@andrew.cmu.edu
+coreTAs:
+  - name: Miya Sylvester
+    email: nsylvest@andrew.cmu.edu
+  - name: Mengchun Zhang
+    email: mengchuz@andrew.cmu.edu
+  - name: Rutvik Joshi
+    email: rutvikj@andrew.cmu.edu
+  - name: Ahmed Tahiru Issah
+    email: aissah@andrew.cmu.edu
+  - name: delphine nyaboke
+    email: delphinenyaboke@gmail.com
+  - name: Yuanyi Gao
+    email: yuanyig@andrew.cmu.edu
+  - name: Dhivya Sreedhar
+    email: dsreedha@andrew.cmu.edu
+  - name: Puru Samal
+    email: psamal@andrew.cmu.edu
+  - name: Nayesha Gandotra
+    email: nayeshag@andrew.cmu.edu
+  - name: Shravanth Srinivas
+    email: shravans@andrew.cmu.edu
+  - name: Euijin Hong
+    email: ehong@andrew.cmu.edu
+  - name: Manigandan Ramadasan
+    email: mramadas@andrew.cmu.edu
+  - name: Olivier Kwizera
+    email: okwizera@andrew.cmu.edu
+  - name: Pengyu Chang
+    email: pengyuch@andrew.cmu.edu
+  - name: Felix Hirwa Nshuti
+    email: fhirwans@andrew.cmu.edu
+  - name: Floride Tuyisenge
+    email: ftuyisen@andrew.cmu.edu
+  - name: Ron Sarma
+    email: rsarma@andrew.cmu.edu
+  - name: Akshara Nadayanur Sathis Kanna
+    email: anadayan@andrew.cmu.edu
+  - name: Yixiong Fang
+    email: yixiongf@andrew.cmu.edu
+  - name: Yabsera Yemanberhan
+    email: yhy@andrew.cmu.edu
+  - name: En Zheng
+    email: enzheng@andrew.cmu.edu
+  - name: Madhavi Gulavani
+    email: mgulavan@andrew.cmu.edu
+  - name: Mugur Preda
+    email: mpreda@andrew.cmu.edu
+  - name: Praneeth Chaitanya Jonnavithula
+    email: pjonnavi@andrew.cmu.edu
+  - name: Khushee Singh
+    email: khushees@andrew.cmu.edu
+  - name: Anurag Aryal
+    email: aaryal@andrew.cmu.edu
+  - name: Malihah Rahaman
+    email: marahaman@andrew.cmu.edu
+  - name: Thomas Seleshi
+    email: tseleshi@andrew.cmu.edu
+  - name: Ahmed Safwat Abouhashem
+    email: A.S.A@pitt.edu
+  - name: Siddhartha (Bud) Vanjari
+    email: svanjari@andrew.cmu.edu
+  - name: Kangping Liu
+    email: kangpinl@andrew.cmu.edu
+images:
+  - src: ./images/TA_S26_2.png
+    alt: S26 TAs
+    caption: S26 Teaching Staff
+  - src: ./images/TA_S26_1.png
+    alt: S26 TAs
+    caption: S26 Teaching Staff
+pastTAsUrl: ../shared/TAs.html

@@ -1,0 +1,121 @@
+---
+interface StaffMember {
+  name: string;
+  email: string;
+}
+
+interface StaffImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+interface Props {
+  staffData?: {
+    instructors?: StaffMember[];
+    shadowInstructors?: StaffMember[];
+    headTAs?: StaffMember[];
+    coreTAs?: StaffMember[];
+    images?: StaffImage[];
+    pastTAsUrl?: string;
+  };
+}
+
+const { staffData } = Astro.props;
+if (!staffData) return null;
+---
+
+<section id="staff" aria-labelledby="staff-heading">
+  <h2 id="staff-heading">Your Supporters</h2>
+
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 320px;">
+      {staffData.instructors && staffData.instructors.length > 0 && (
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--cmu-red); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem;">
+            Instructors:
+          </h3>
+          <ul style="list-style: none; padding-left: 0;">
+            {staffData.instructors.map((person) => (
+              <li>
+                <strong>{person.name}</strong>: <a href={`mailto:${person.email}`}>{person.email}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {staffData.shadowInstructors && staffData.shadowInstructors.length > 0 && (
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--cmu-red); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem;">
+            Shadow Instructor:
+          </h3>
+          <ul style="list-style: none; padding-left: 0;">
+            {staffData.shadowInstructors.map((person) => (
+              <li>
+                <strong>{person.name}</strong>: <a href={`mailto:${person.email}`}>{person.email}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {staffData.headTAs && staffData.headTAs.length > 0 && (
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--cmu-red); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem;">
+            Head TA:
+          </h3>
+          <ul style="list-style: none; padding-left: 0;">
+            {staffData.headTAs.map((person) => (
+              <li>
+                <strong>{person.name}</strong>: <a href={`mailto:${person.email}`}>{person.email}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {staffData.coreTAs && staffData.coreTAs.length > 0 && (
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--cmu-red); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem;">
+            Core Instruction TAs:
+          </h3>
+          <ul style="list-style: none; padding-left: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.25rem 1rem;">
+            {staffData.coreTAs.map((person) => (
+              <li>
+                <strong>{person.name}</strong>: <a href={`mailto:${person.email}`}>{person.email}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {staffData.pastTAsUrl && (
+        <div style="margin-top: 2rem;">
+          <h3>Acknowledgments</h3>
+          <p>
+            <a href={staffData.pastTAsUrl}>Past TA Acknowledgments</a> - check out our TA hall of fame!
+          </p>
+        </div>
+      )}
+    </div>
+
+    {staffData.images && staffData.images.length > 0 && (
+      <div style="flex: 0 0 auto; display: flex; flex-direction: column; gap: 2rem; max-width: 550px;">
+        {staffData.images.map((img) => (
+          <figure style="margin: 0;">
+            <img
+              src={img.src}
+              alt={img.alt}
+              style="width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"
+              loading="lazy"
+            />
+            <figcaption style="margin-top: 8px; text-align: center; font-size: 0.85rem; color: var(--color-text-muted);">
+              {img.caption}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

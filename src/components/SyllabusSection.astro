@@ -1,141 +1,100 @@
 ---
-// Static pre-rendered syllabus policy and resources component
+import type { SyllabusData } from '../schemas/syllabus';
+
+interface Props {
+  syllabusData?: SyllabusData;
+}
+
+const { syllabusData } = Astro.props;
 ---
 
 <section id="syllabus" aria-labelledby="syllabus-heading">
   <h2 id="syllabus-heading">Syllabus & Course Policies</h2>
 
-  <div class="table-responsive" style="margin-bottom: 3rem;">
-    <table class="content-table" aria-label="Course Policies Breakdown">
-      <thead>
-        <tr>
-          <th scope="col" style="width: 25%;">Category</th>
-          <th scope="col" style="width: 75%;">Policy Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Grading Breakdown</strong></td>
-          <td>
-            Grading will be based on weekly quizzes (<strong>24%</strong>), homeworks (<strong>50%</strong>), and a course project (<strong>25%</strong>). <strong>1%</strong> of your grade is for attendance.
-            <ul style="margin-top: 0.5rem; margin-bottom: 0.25rem;">
-              <li><strong>11-485 Base Score:</strong> Assignments (50%) + Quiz (24%) + Attendance (1%) = 75%</li>
-              <li><strong>11-685 / 11-785 Base Score:</strong> 11-485 Base Score (75%) + Project (25%) = 100%</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Quizzes</strong></td>
-          <td>
-            There will be weekly quizzes.
-            <ul style="margin-top: 0.5rem; margin-bottom: 0.25rem;">
-              <li>We will retain your best 12 out of the 14 quizzes you take.</li>
-              <li>Quizzes will generally (but not always) be released on Fridays and due 48 hours later, on Sundays.</li>
-              <li><strong>Quizzes will be worth 24% of your overall score.</strong></li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Homeworks</strong></td>
-          <td>
-            There will be four homework assignments in total. Each homework (other than HW4) will include two parts, P1 and P2. For HWxP1, you will implement low-level operations in a deterministic setting. HWxP2 is more open-ended, where you compete in a <i>Kaggle</i> competition for the best performing model.
-            <ul style="margin-top: 0.5rem; margin-bottom: 0.25rem;">
-              <li>All homework materials will be released on <a href="https://canvas.cmu.edu/courses/53621/assignments" target="_blank" rel="noopener noreferrer">Canvas</a> and submitted on <a href="https://www.gradescope.com/courses/1315509" target="_blank" rel="noopener noreferrer">Gradescope</a>.</li>
-              <li>Each HWxP1 has an "on-time" deadline evaluated based on correctly completed parts submitted to Gradescope.</li>
-              <li>Each HWxP2 has 3 deadlines:
-                <ul>
-                  <li><strong>Early submission deadline:</strong> Make at least one Kaggle submission by this deadline to receive a 3% bonus.</li>
-                  <li><strong>On-time deadline:</strong> Usual deadline for HWxP2 submissions.</li>
-                  <li><strong>Late/Slack deadline:</strong> Submissions after on-time deadline made on a separate slack competition using slack days.</li>
-                  <li><strong>Slack days:</strong> Everyone gets 10 slack days for the semester to distribute across <strong>HWxP2 only</strong>.</li>
-                  <li><strong>Kaggle scoring:</strong> <i>max(max(on-time score | given early submission), max(slack-day score))</i>.</li>
-                </ul>
-              </li>
-              <li>HWxP2 cutoffs: <strong>HIGH (90%), MEDIUM (70%), LOW (50%), and VERY LOW (30%)</strong>, linearly interpolated.</li>
-              <li>Bonus assignments exist for each HW (up to 5% total) adding directly on top of the base score.</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Project</strong></td>
-          <td>
-            <ul>
-              <li>All students taking a graduate version of the course are required to do a course project (<strong>25% of grade</strong>): 20% Midterm Report, 35% Project Video, 5% Responding to comments on Piazza, 40% Project Report.</li>
-              <li>Mandatory for 11-785 students. 11-685 students may choose an open project or guided project.</li>
-              <li>Detailed report and video guidelines are available <a href="https://docs.google.com/spreadsheets/d/1nguV-Z45QJkQUambJ4dv-SijA_ttsDQnwUYlbBOzicw/edit#gid=0" target="_blank" rel="noopener noreferrer">HERE</a>.</li>
-              <li>Peer review of project videos is required of all students (11-485/685/785) over the last weekend before finals week (~15-20 min each).</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Attendance</strong></td>
-          <td>
-            <ul>
-              <li>Section A students are expected to attend in-person lectures; attendance is tracked.</li>
-              <li>Out-of-timezone sections must watch lectures live on Zoom or obtain permission to watch pre-recorded lectures on <a href="https://mediaservices.cmu.edu/channel/Introduction+to+Deep+Learning_Spring+2026/397642153" target="_blank" rel="noopener noreferrer">MediaServices</a> before <strong>Monday 8:00 AM EST</strong> of the following week.</li>
-              <li>Attendance credit is granted for attending at least <strong>70%</strong> of a randomly chosen subset of lectures.</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Final Grade</strong></td>
-          <td>
-            The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates.
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Pass/Fail</strong></td>
-          <td>
-            Students registered for pass/fail must complete all quizzes, HWs, and (if graduate) the project. A grade equivalent to <strong>B-</strong> is required to pass.
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Auditing</strong></td>
-          <td>
-            Auditors are not required to complete the course project, but must complete all quizzes and homeworks. Doing a project is encouraged regardless.
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Academic Integrity</strong></td>
-          <td>
-            Students are expected to strictly comply with the <a href="https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html" target="_blank" rel="noopener noreferrer">CMU Policy on Academic Integrity and Plagiarism</a>. You may talk and discuss with other students, but you must write and submit your own code.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  {syllabusData && syllabusData.policies.length > 0 ? (
+    <div class="table-responsive" style="margin-bottom: 3rem;">
+      <table class="content-table" aria-label="Course Policies Breakdown">
+        <thead>
+          <tr>
+            <th scope="col" style="width: 25%;">Category</th>
+            <th scope="col" style="width: 75%;">Policy Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          {syllabusData.policies.map((item) => (
+            <tr>
+              <td><strong>{item.category}</strong></td>
+              <td>
+                {item.details}
+                {item.subItems && item.subItems.length > 0 && (
+                  <ul style="margin-top: 0.5rem; margin-bottom: 0.25rem;">
+                    {item.subItems.map((sub) => (
+                      <li>{sub}</li>
+                    ))}
+                  </ul>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ) : (
+    <div class="table-responsive" style="margin-bottom: 3rem;">
+      <table class="content-table" aria-label="Course Policies Breakdown">
+        <thead>
+          <tr>
+            <th scope="col" style="width: 25%;">Category</th>
+            <th scope="col" style="width: 75%;">Policy Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Grading Breakdown</strong></td>
+            <td>
+              Grading will be based on weekly quizzes (<strong>24%</strong>), homeworks (<strong>50%</strong>), and a course project (<strong>25%</strong>). <strong>1%</strong> of your grade is for attendance.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  )}
 
   <h2>Resources</h2>
 
   <div style="margin-bottom: 2rem;">
-    <h3>Study groups</h3>
-    <p>We believe that effective collaboration can greatly enhance learning. Thus, this course employs study groups for both quizzes and homeworks. It is highly recommended that you join a study group.</p>
-
-    <h3>Piazza</h3>
-    <p><a href="https://www.piazza.com" target="_blank" rel="noopener noreferrer"><strong>Piazza</strong></a> is used for discussions on pretty much everything. You should be automatically signed up upon enrollment. If not, please reach out to a TA.</p>
-
-    <h3>Canvas</h3>
-    <p><a href="https://canvas.cmu.edu/courses/53621/assignments" target="_blank" rel="noopener noreferrer"><strong>Canvas</strong></a> is where all homework assignments and weekly quizzes are posted. Note that HWs are submitted on Gradescope, not Canvas.</p>
-
-    <h3>Gradescope</h3>
-    <p><a href="https://www.gradescope.com/courses/1315509" target="_blank" rel="noopener noreferrer"><strong>Gradescope</strong></a> is where all homework assignments are submitted and evaluated. You can make multiple submissions for each assignment.</p>
-
-    <h3>Hohum - IDL HW Platform <span style="background: var(--cmu-red); color: white; padding: 2px 6px; font-size: 0.75rem; border-radius: 4px; font-weight: bold;">NEW</span></h3>
-    <p>We have developed a new web-based platform, led by TA Ahmed Issah: <a href="https://hohum.andrew.cmu.edu/login" target="_blank" rel="noopener noreferrer"><strong>Hohum</strong></a>. This is where all homework part 1, bonus homeworks, and autograd homework assignments live, reimagining the homework experience for IDL students. Every enrolled student will receive an email invite.</p>
-
-    <h3>Kaggle</h3>
-    <p><a href="https://kaggle.com/" target="_blank" rel="noopener noreferrer"><strong>Kaggle</strong></a> tests your ability to extend neural network architectures discussed in lectures for Part 2 of homework assignments. You can make up to 10 submissions each day, and the highest score is used for grading.</p>
-
-    <h3>MediaServices & YouTube</h3>
-    <p>CMU students not in live lectures can watch recorded lectures on <a href="https://mediaservices.cmu.edu/channel/Introduction+to+Deep+Learning_Spring+2026/397642153" target="_blank" rel="noopener noreferrer"><strong>MediaServices</strong></a> for attendance credit. Non-CMU learners can view recordings on <a href="https://www.youtube.com/channel/UC8hYZGEkI2dDO8scT8C5UQA" target="_blank" rel="noopener noreferrer"><strong>Our YouTube Channel</strong></a>.</p>
-
-    <h3>Books and Other Resources</h3>
-    <p>Given the explosive development of the field, this course does not follow any specific book. We list pioneering textbooks below, and recommend these popular reading materials:</p>
-    <ul style="margin-top: 0.5rem; margin-bottom: 1rem;">
-      <li><a href="https://distill.pub/" target="_blank" rel="noopener noreferrer">Distill</a></li>
-      <li><a href="https://lilianweng.github.io/" target="_blank" rel="noopener noreferrer">Lil'Log</a></li>
-      <li><a href="https://magazine.sebastianraschka.com/" target="_blank" rel="noopener noreferrer">Sebastian Raschka's Blog</a></li>
-      <li><a href="https://www.3blue1brown.com/?topic=neural-networks" target="_blank" rel="noopener noreferrer">3Blue1Brown</a></li>
-    </ul>
+    {syllabusData && syllabusData.resources.length > 0 ? (
+      syllabusData.resources.map((res) => (
+        <div style="margin-bottom: 1.5rem;">
+          <h3>
+            {res.title}
+            {res.badge && (
+              <span style="background: var(--cmu-red); color: white; padding: 2px 6px; font-size: 0.75rem; border-radius: 4px; font-weight: bold; margin-left: 0.5rem;">
+                {res.badge}
+              </span>
+            )}
+          </h3>
+          <p>{res.description}</p>
+          {res.links && res.links.length > 0 && (
+            <ul style="margin-top: 0.25rem; margin-bottom: 0.5rem;">
+              {res.links.map((link) => (
+                <li>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    <strong>{link.label}</strong>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))
+    ) : (
+      <div>
+        <h3>Study groups</h3>
+        <p>We believe that effective collaboration can greatly enhance learning.</p>
+        <h3>Piazza</h3>
+        <p><a href="https://www.piazza.com" target="_blank" rel="noopener noreferrer"><strong>Piazza</strong></a> is used for discussions.</p>
+      </div>
+    )}
   </div>
 </section>

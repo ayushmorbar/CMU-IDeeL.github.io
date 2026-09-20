@@ -20,6 +20,7 @@ import {
   getStaff,
   getEvents,
   getAssignments,
+  getSyllabusData,
   getConfig,
 } from '../../lib/content';
 
@@ -41,6 +42,7 @@ const eventsData = getEvents(term);
 const lectures = getLectures(term);
 const recitations = getRecitations(term);
 const assignmentsData = getAssignments(term);
+const syllabusData = getSyllabusData(term);
 const textbooks = getTextbooks();
 const config = getConfig();
 ---
@@ -50,7 +52,7 @@ const config = getConfig();
   <AboutSection aboutData={aboutData} />
   <StaffSection staffData={staffData} />
   <EventsCalendarSection eventsData={eventsData} />
-  <SyllabusSection />
+  <SyllabusSection syllabusData={syllabusData} />
   <LectureTable
     lectures={lectures}
     mediaServicesUrl={semesterData.mediaServicesLink}

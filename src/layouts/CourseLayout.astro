@@ -61,15 +61,17 @@ const { semester, allSemesters = [] } = Astro.props;
       <slot />
     </main>
 
-    <aside class="supported-by" aria-label="Course Support">
-      <strong>Supported by</strong>
-      <img
-        src="./images/google-logo-transparent.png"
-        alt="Google"
-        class="supported-by-logo"
-        loading="lazy"
-      />
-    </aside>
+    {semester.supportedBy && (
+      <aside class="supported-by" aria-label="Course Support">
+        <strong>{semester.supportedBy.label}</strong>
+        <img
+          src={semester.supportedBy.logo}
+          alt={semester.supportedBy.alt}
+          class="supported-by-logo"
+          loading="lazy"
+        />
+      </aside>
+    )}
 
     <button id="scroll-to-top" class="scroll-to-top" type="button" aria-label="Scroll to top of page">
       &#8679;

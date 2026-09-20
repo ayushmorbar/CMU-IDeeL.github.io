@@ -1,0 +1,101 @@
+policies:
+  - category: "Grading Breakdown"
+    details: "Grading will be based on weekly quizzes (24%), homeworks (50%), a course project (25%), and attendance (1%)."
+    subItems:
+      - "11-485 Base Score: Assignments (50%) + Quiz (24%) + Attendance (1%) = 75%"
+      - "11-685 / 11-785 Base Score: 11-485 Base Score (75%) + Project (25%) = 100%"
+  - category: "Quizzes"
+    details: "There will be weekly quizzes."
+    subItems:
+      - "We will retain your best 12 out of the 14 quizzes you take."
+      - "Quizzes will generally (but not always) be released on Fridays and due 48 hours later, on Sundays."
+      - "Quizzes will be worth 24% of your overall score."
+  - category: "Homeworks"
+    details: "There will be four homework assignments in total. Each homework (other than HW4) will include two parts, P1 and P2. For HWxP1, you will implement low-level operations in a deterministic setting. HWxP2 is more open-ended, you will compete with your classmates in a Kaggle competition for the best performing model for a given task."
+    subItems:
+      - "All homework materials will be released on Canvas and submitted on Gradescope."
+      - "Each HWxP1 has an 'on-time' deadline evaluated based on the number of correctly completed parts submitted to Gradescope by this deadline."
+      - "Early submission deadline: Make at least one submission to Kaggle by this deadline to receive 3% bonus points."
+      - "On-time deadline: Standard deadline for HWxP2 submissions."
+      - "Late/Slack deadline: Submissions after the on-time deadline will have to be made on a separate slack competition using slack days."
+      - "Slack days: Everyone gets 10 slack days for the semester to distribute across HWxP2 only."
+      - "Kaggle scoring: max(max(on-time score | given early submission), max(slack-day score)) as your final score for HWxP2."
+      - "HWxP2 cutoffs: HIGH (90%), MEDIUM (70%), LOW (50%), and VERY LOW (30%), linearly interpolated."
+      - "Bonus assignments exist for each HW (up to 5% total) adding directly on top of the base score."
+  - category: "Project"
+    details: "All students taking a graduate version of the course are required to do a course project. The project is worth 25% of your grade: 20% Midterm Report, 35% Project Video, 5% Responding to comments on Piazza, 40% Project report."
+    subItems:
+      - "A project is mandatory for 11-785 students. 11-685 students may choose an open project or guided project."
+      - "Detailed information regarding reports and video presentations is available in the project evaluation guidelines spreadsheet."
+      - "Peer review of project videos is required of all students (11-485/685/785) over the last weekend before finals week (~15-20 min each)."
+  - category: "Attendance"
+    details: "Attendance contributes 1% to your grade."
+    subItems:
+      - "Section A students are expected to attend in-person lectures; attendance is tracked."
+      - "Out-of-timezone sections must watch lectures live on Zoom or obtain permission to watch pre-recorded lectures on MediaServices before Monday 8:00 AM EST of the following week."
+      - "Attendance credit is granted for attending at least 70% of a randomly chosen subset of lectures."
+  - category: "Final Grade"
+    details: "The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates."
+    subItems: []
+  - category: "Pass/Fail"
+    details: "Students registered for pass/fail must complete all quizzes, HWs, and (if graduate) the project. A grade equivalent to B- is required to pass."
+    subItems: []
+  - category: "Auditing"
+    details: "Auditors are not required to complete the course project, but must complete all quizzes and homeworks. Doing a project is encouraged regardless."
+    subItems: []
+  - category: "Academic Integrity"
+    details: "Students are expected to strictly comply with the CMU Policy on Academic Integrity and Plagiarism. You may talk and discuss with other students, but you must write and submit your own code."
+    subItems:
+      - "You are allowed to talk with and work with other students on homework assignments."
+      - "You can share ideas but not code. You should submit your own code."
+
+resources:
+  - title: "Study groups"
+    description: "We believe that effective collaboration can greatly enhance learning. Thus, this course employs study groups for both quizzes and homeworks. It is highly recommended that you join a study group."
+    links: []
+  - title: "Piazza"
+    description: "Piazza is used for discussions on pretty much everything. You should be automatically signed up upon enrollment. If not, please reach out to a TA."
+    links:
+      - label: "Piazza"
+        url: "https://www.piazza.com"
+  - title: "Canvas"
+    description: "Canvas is where all homework assignments and weekly quizzes are posted. Note that HWs are submitted on Gradescope, not Canvas."
+    links:
+      - label: "Canvas"
+        url: "https://canvas.cmu.edu/courses/53621/assignments"
+  - title: "Gradescope"
+    description: "Gradescope is where all homework assignments are submitted and evaluated. You can make multiple submissions for each assignment."
+    links:
+      - label: "Gradescope"
+        url: "https://www.gradescope.com/courses/1315509"
+  - title: "Hohum - IDL HW Platform"
+    description: "We have developed a new web-based platform, led by TA Ahmed Issah: Hohum. This is where all homework part 1, bonus homeworks, and autograd homework assignments live, reimagining the homework experience for IDL students. Every enrolled student will receive an email invite."
+    links:
+      - label: "Hohum"
+        url: "https://hohum.andrew.cmu.edu/login"
+    badge: "NEW"
+  - title: "Kaggle"
+    description: "Kaggle tests your ability to extend neural network architectures discussed in lectures for Part 2 of homework assignments. You can make up to 10 submissions each day, and the highest score is used for grading."
+    links:
+      - label: "Kaggle"
+        url: "https://kaggle.com/"
+  - title: "MediaServices & YouTube"
+    description: "CMU students not in live lectures can watch recorded lectures on MediaServices for attendance credit. Non-CMU learners can view recordings on Our YouTube Channel."
+    links:
+      - label: "MediaServices"
+        url: "https://mediaservices.cmu.edu/channel/Introduction+to+Deep+Learning_Spring+2026/397642153"
+      - label: "Our YouTube Channel"
+        url: "https://www.youtube.com/channel/UC8hYZGEkI2dDO8scT8C5UQA"
+  - title: "Books and Other Resources"
+    description: "Given the explosive development of the field, this course does not follow any specific book. We list pioneering textbooks below, and recommend these popular reading materials:"
+    links:
+      - label: "Distill"
+        url: "https://distill.pub/"
+      - label: "Lil'Log"
+        url: "https://lilianweng.github.io/"
+      - label: "Sebastian Raschka's Blog"
+        url: "https://magazine.sebastianraschka.com/"
+      - label: "3Blue1Brown"
+        url: "https://www.3blue1brown.com/?topic=neural-networks"
+
+readingList: []

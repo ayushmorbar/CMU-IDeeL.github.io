@@ -6,3 +6,7 @@ venue: "Giant Eagle Auditorium, Baker Hall (A51)"
 zoomLink: "https://cmu.zoom.us/j/98857399276"
 piazzaLink: ""
 mediaServicesLink: "https://mediaservices.cmu.edu/channel/Introduction+to+Deep+Learning_Spring+2026/397642153"
+supportedBy:
+  label: "Supported by"
+  logo: "./images/google-logo-transparent.png"
+  alt: "Google"

@@ -6,3 +6,4 @@ export * from './about';
 export * from './staff';
 export * from './event';
 export * from './assignment';
+export * from './syllabus';

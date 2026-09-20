@@ -74,6 +74,16 @@ export function getTextbooks(): any[] {
   return TextbooksSchema.parse(data);
 }
 
+import { SyllabusDataSchema, type SyllabusData } from '../schemas/syllabus';
+
+export function getSyllabusData(term: string): SyllabusData | undefined {
+  const file = path.join(CONTENT_DIR, 'semesters', term, 'syllabus.yaml');
+  if (!fs.existsSync(file)) return undefined;
+  const raw = fs.readFileSync(file, 'utf-8');
+  const data = load(raw);
+  return SyllabusDataSchema.parse(data);
+}
+
 export function getSyllabus(term: string): string {
   const file = path.join(CONTENT_DIR, 'semesters', term, 'syllabus.md');
   if (!fs.existsSync(file)) return '';

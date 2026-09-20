@@ -1,0 +1,85 @@
+policies:
+  - category: "Grading"
+    details: "Grading will be based on weekly quizzes (24%), homeworks (50%) and a course project (25%). Note that 1% of your grade is assigned to Attendance."
+    subItems:
+      - "11-485 Base Score: Assignments (50%) + Quiz (24%) + Attendance (1%) = 75%"
+      - "11-685 / 11-785 Base Score: 11-485 Base Score (75%) + Project (25%) = 100%"
+      - "Bonus Points: Up to 5% total bonus points contribute directly on top of the base score."
+  - category: "Quizzes"
+    details: "There will be weekly quizzes."
+    subItems:
+      - "We will retain your best 12 out of the remaining 14 quizzes."
+      - "Quizzes will generally (but not always) be released on Friday and due 48 hours later."
+      - "Quizzes are scored by the number of correct answers."
+      - "Quizzes will be worth 24% of your overall score."
+  - category: "Assignments"
+    details: "There will be four assignments in all, plus the Peer Review assignment during the last week of the semester. Assignments will include Autolab components, where you implement low-level operations, and a Kaggle component, where you compete with your colleagues over relevant DL tasks."
+    subItems:
+      - "Autolab components are scored according to the number of correctly completed parts."
+      - "We will post performance cutoffs for HIGH (90%), MEDIUM (70%), LOW (50%), and VERY LOW (30%) for Kaggle competitions. Scores will be interpolated linearly between these cutoffs."
+      - "Early submission deadline: You are required to make at least one submission to Kaggle by this deadline. People who miss this deadline will automatically lose 10% of subsequent marks they may get on the homework."
+      - "On-time deadline: People who submit by this deadline are eligible for up to five bonus points computed by interpolation up to 105."
+      - "Late deadline: People who submit after the on-time deadline can still submit until the late deadline with a 10% penalty applied to the final score."
+      - "Slack days: Everyone gets up to 10 slack days, which they can distribute across all their homework P2s only."
+      - "Kaggle scoring: max(max(on-time score), max(slack-day score), 0.9*max(late-submission score)) as final score."
+      - "Assignments carry 50% of your total score, with each of the four HWs being worth 12.5%."
+      - "Peer Review: Required of all students (11-485/685/785). Review and grade 4-6 videos over the last weekend (~15-20 min each)."
+  - category: "Project"
+    details: "All students taking a graduate version of the course are required to do a course project. The project is worth 25% of your grade: 20% - Midterm Report; 35% - Project Video; 5% - Responding to comments on Piazza; 40% - Project report."
+    subItems:
+      - "A Project is mandatory for 11-785 students. In the event of a catastrophe (remember Spring 2020), the Project may be substituted with the guided project. 11-685 Students may choose to do a Project instead of the guided project."
+      - "Important information for project reports and video presentations (rubrics, timeline): available in course documentation."
+  - category: "Attendance"
+    details: "Attendance contributes 1% to your final grade."
+    subItems:
+      - "If you are in section A you are expected to attend in-person lectures (Giant Eagle Auditorium, Baker Hall A51). We will track attendance."
+      - "If you are in any of the other (out-of-timezone) sections, you must watch lectures live on zoom or on MediaServices before Monday 8AM EST of the following week."
+      - "At the end of the semester, we will select a random subset of lectures and tabulate attendance. If you have attended at least 70% of these lectures, you get the attendance point."
+  - category: "Final grade"
+    details: "The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates."
+    subItems: []
+  - category: "Pass/Fail"
+    details: "Students registered for pass/fail must complete all quizzes, HWs and if they are in the graduate course, the project. A grade equivalent to B- is required to pass the course."
+    subItems: []
+  - category: "Auditing"
+    details: "Auditors are not required to complete the course project, but must complete all quizzes and homeworks. We encourage doing a course project regardless."
+    subItems: []
+  - category: "Academic Integrity"
+    details: "You are expected to comply with the University Policy on Academic Integrity and Plagiarism."
+    subItems:
+      - "You are allowed to talk with and work with other students on homework assignments."
+      - "You can share ideas but not code. You should submit your own code."
+
+resources:
+  - title: "Study groups"
+    description: "We believe that effective collaboration can greatly enhance student learning. Thus, this course employs study groups for both quizzes and homework ablations. It is highly recommended that you join a study group. Check Piazza for more information."
+    links: []
+  - title: "Piazza"
+    description: "Piazza is what we use for discussions. You should be automatically signed up if you are enrolled at the start of the semester. If not, please sign up manually."
+    links:
+      - label: "Piazza"
+        url: "https://www.piazza.com"
+  - title: "AutoLab"
+    description: "AutoLab is where all the homework assignments are posted. You will also use Autolab to submit your solutions and test your implementations based on the scores given by the autograder. You can make multiple submissions for each assignment."
+    links:
+      - label: "AutoLab"
+        url: "https://autolab.andrew.cmu.edu/courses"
+  - title: "Kaggle"
+    description: "Kaggle is where we test your understanding and ability to extend neural network architectures discussed in the lectures, particularly for the Part 2s of the homework assignments. Each Kaggle competition (HW Part 2s) has a leaderboard where you can evaluate your model performance compared to your classmates. You can make up to 10 submissions each day for every assignment, the highest score will be used for grading."
+    links:
+      - label: "Kaggle"
+        url: "https://kaggle.com/"
+  - title: "MediaServices & YouTube"
+    description: "CMU students who are not in the live lectures should watch the uploaded lectures at MediaServices in order to get attendance credit. Links to individual videos will be available in the Schedule of Lectures table as they are uploaded. Our YouTube Channel is where non-CMU folks can view all lectures and recitation recordings."
+    links:
+      - label: "MediaServices"
+        url: "https://mediaservices.cmu.edu/channel/Introduction+to+Deep+Learning_Spring+2026/397642153"
+      - label: "Our YouTube Channel"
+        url: "https://www.youtube.com/channel/UC8hYZGEkI2dDO8scT8C5UQA"
+  - title: "Books and Other Resources"
+    description: "The course will not follow a specific book, but will draw from a number of sources. We list relevant books at the end of this page. We will also put up links to relevant reading material for each class. Students are expected to familiarize themselves with the material before the class."
+    links:
+      - label: "Catalog of Deep Learning Architectures"
+        url: "http://www.datasciencecentral.com/profiles/blogs/concise-visual-summary-of-deep-learning-architectures"
+
+readingList: []

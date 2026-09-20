@@ -1,0 +1,26 @@
+{
+  "name": "cmu-11-785-web",
+  "version": "2026.9.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "typecheck": "astro check",
+    "lint": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "astro": "^7.3.3",
+    "js-yaml": "^5.4.2",
+    "typescript": "^6.0.2",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^26.6.2"
+  }
+}

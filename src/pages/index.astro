@@ -1,0 +1,19 @@
+---
+import { getConfig } from '../lib/content';
+
+const config = getConfig();
+const targetUrl = `./${config.currentSemester}/`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0; url=${targetUrl}`} />
+    <title>Redirecting to {config.currentSemester}...</title>
+    <link rel="canonical" href={targetUrl} />
+  </head>
+  <body>
+    <p>Redirecting to <a href={targetUrl}>{config.currentSemester}</a>...</p>
+  </body>
+</html>

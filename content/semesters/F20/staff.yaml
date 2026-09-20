@@ -1,0 +1,10 @@
+instructors:
+  - name: Bhiksha Raj
+    email: bhiksha@cs.cmu.edu
+  - name: Rita Singh
+    email: rsingh@cs.cmu.edu
+shadowInstructors: []
+headTAs: []
+coreTAs: []
+images: []
+pastTAsUrl: ../shared/TAs.html

@@ -1,0 +1,54 @@
+---
+import type { DeadlineItem } from '../schemas/deadline';
+
+interface Props {
+  deadlines: DeadlineItem[];
+}
+
+const { deadlines = [] } = Astro.props;
+---
+
+<section id="general_logistics" aria-labelledby="deadlines-heading">
+  <h2 id="deadlines-heading">Active Deadlines and Bulletin</h2>
+  
+  <div class="table-responsive">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th scope="col" style="text-align: center; width: 15%;">Assignment</th>
+          <th scope="col" style="text-align: center; width: 30%;">Deadline</th>
+          <th scope="col" style="text-align: center; width: 35%;">Description</th>
+          <th scope="col" style="text-align: center; width: 20%;">Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {deadlines.map((item) => (
+          <tr>
+            <td style="text-align: center; font-weight: 600;">
+              {item.assignment}
+            </td>
+            <td style="text-align: center;">
+              {item.deadlines.map((d) => (
+                <div>
+                  {d.label}: {d.date}
+                </div>
+              ))}
+            </td>
+            <td style="text-align: center;">
+              {item.description}
+            </td>
+            <td style="text-align: center;">
+              {item.links.map((link) => (
+                <div>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                </div>
+              ))}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

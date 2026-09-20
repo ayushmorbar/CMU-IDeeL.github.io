@@ -1,0 +1,100 @@
+---
+import type { LectureItem } from '../schemas/lecture';
+
+interface Props {
+  lectures: LectureItem[];
+  mediaServicesUrl?: string;
+}
+
+const { lectures = [], mediaServicesUrl } = Astro.props;
+---
+
+<section id="lectures" aria-labelledby="lectures-heading">
+  <h2 id="lectures-heading">Schedule of Lectures</h2>
+  {mediaServicesUrl && (
+    <p style="margin-bottom: 1rem;">
+      You can watch the recorded lectures on{' '}
+      <strong>
+        <a href={mediaServicesUrl} target="_blank" rel="noopener noreferrer">
+          MediaServices
+        </a>
+      </strong>.
+    </p>
+  )}
+
+  <div class="table-responsive">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th scope="col" style="width: 8%;">Lecture</th>
+          <th scope="col" style="width: 12%;">Date</th>
+          <th scope="col" style="width: 32%;">Topics</th>
+          <th scope="col" style="width: 18%;">Slides, Videos</th>
+          <th scope="col" style="width: 20%;">Additional Materials</th>
+          <th scope="col" style="width: 10%; text-align: center;">Quiz</th>
+        </tr>
+      </thead>
+      <tbody>
+        {lectures.map((lecture) => (
+          <tr>
+            <td style="font-weight: 600;">{lecture.number}</td>
+            <td set:html={lecture.date} />
+            <td>
+              <ul style="padding-left: 1.2rem; margin: 0;">
+                {lecture.topics.map((topic) => {
+                  if (typeof topic === 'string') {
+                    return <li>{topic}</li>;
+                  }
+                  return (
+                    <li>
+                      {topic.main}
+                      {topic.sub_topics && topic.sub_topics.length > 0 && (
+                        <ul style="padding-left: 1.2rem;">
+                          {topic.sub_topics.map((sub) => (
+                            <li>{sub}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </td>
+            <td>
+              {lecture.slides_videos.map((item) => (
+                <div>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.text}
+                  </a>
+                </div>
+              ))}
+            </td>
+            <td>
+              {lecture.additional_materials.map((item) => (
+                <div style="margin-bottom: 0.25rem;">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.text}
+                  </a>
+                </div>
+              ))}
+            </td>
+            {lecture.quiz && (
+              <td
+                rowspan={lecture.quiz.rowspan || 1}
+                style="vertical-align: middle; text-align: center;"
+              >
+                {lecture.quiz.url ? (
+                  <a href={lecture.quiz.url} target="_blank" rel="noopener noreferrer">
+                    {lecture.quiz.text || 'Quiz'}
+                  </a>
+                ) : (
+                  lecture.quiz.text
+                )}
+              </td>
+            )}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,99 @@
+---
+import CourseNav from '../components/CourseNav.astro';
+import type { Semester } from '../schemas/semester';
+import '../styles/main.css';
+
+interface Props {
+  semester: Semester;
+  allSemesters?: Array<{ id: string; title: string; isCurrent: boolean }>;
+}
+
+const { semester, allSemesters = [] } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{semester.courseNumber}: {semester.title} ({semester.term})</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- Open Sans Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <CourseNav currentSemester={semester.id} allSemesters={allSemesters} />
+
+    <header class="titlebar container" id="title">
+      <h1 class="course-title">
+        <b>{semester.courseNumber}</b> {semester.title}
+      </h1>
+      <div class="course-subtitle">
+        <i>{semester.term}</i>
+      </div>
+      {semester.zoomLink && (
+        <div>
+          <a
+            href={semester.zoomLink}
+            class="zoom-badge"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Class Streaming Link on Zoom"
+          >
+            Class Streaming Link &#8599;
+          </a>
+        </div>
+      )}
+      {semester.venue && (
+        <p class="venue-info">In-Person Venue: {semester.venue}</p>
+      )}
+    </header>
+
+    <main id="main-content" class="container" role="main">
+      <slot />
+    </main>
+
+    <aside class="supported-by" aria-label="Course Support">
+      <strong>Supported by</strong>
+      <img
+        src="./images/google-logo-transparent.png"
+        alt="Google"
+        class="supported-by-logo"
+        loading="lazy"
+      />
+    </aside>
+
+    <button id="scroll-to-top" class="scroll-to-top" type="button" aria-label="Scroll to top of page">
+      &#8679;
+    </button>
+
+    <footer class="site-footer" role="contentinfo">
+      <p>
+        {semester.courseNumber} {semester.title} |{' '}
+        <span style="white-space: nowrap;">Carnegie Mellon University</span>
+      </p>
+    </footer>
+
+    <script>
+      const scrollBtn = document.getElementById('scroll-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          scrollBtn?.classList.add('visible');
+        } else {
+          scrollBtn?.classList.remove('visible');
+        }
+      });
+      scrollBtn?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>

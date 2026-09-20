@@ -1,0 +1,13 @@
+theCourse:
+  - "“Deep Learning” systems, typified by deep neural networks, are increasingly taking over all the AI tasks, ranging from language understanding, speech and image recognition, to machine translation, planning, and even game playing and autonomous driving. As a result, expertise in deep learning is fast changing from an esoteric desirable to a mandatory prerequisite in many advanced academic settings, and a large advantage in the industrial job market."
+  - "In this course we will learn about the basics of deep neural networks, and their applications to various AI tasks. By the end of the course, it is expected that students will have significant familiarity with the subject, and be able to apply Deep Learning to a variety of tasks. They will also be positioned to understand much of the current literature on the topic and extend their knowledge through further study."
+  - "If you are only interested in the lectures, you can watch them on the YouTube channel."
+youtubeChannelUrl: "https://www.youtube.com/channel/UC8hYZGEkI2dDO8scT8C5UQA"
+
+studentPerspective: "The course is well rounded in terms of concepts. It helps us understand the fundamentals of Deep Learning. The course starts off gradually with MLPs and it progresses into the more complicated concepts such as attention and sequence-to-sequence models. We get a complete hands on with PyTorch which is very important to implement Deep Learning models. As a student, you will learn the tools required for building Deep Learning models. The homeworks usually have 2 components which is Autolab and Kaggle. The Kaggle components allow us to explore multiple architectures and understand how to fine-tune and continuously improve models. The task for all the homeworks were similar and it was interesting to learn how the same task can be solved using multiple Deep Learning approaches. Overall, at the end of this course you will be confident enough to build and tune Deep Learning models."
+
+prerequisites:
+  - "We will use Numpy and PyTorch in this class, so you will need to be able to program in python3."
+  - "You will need familiarity with basic calculus (differentiation, chain rule), linear algebra, and basic probability."
+
+units: "Courses 11-785 and 11-685 are equivalent 12-unit graduate courses, and have a final project and a guided project respectively. Course 11-485 is the undergraduate version worth 9 units, the only difference being that there is no final project nor guided project."

@@ -1,0 +1,61 @@
+- id: "hw1p1"
+  assignment: "HW1 P1"
+  deadlines:
+    - label: "Early Submission"
+      date: "Friday, Sep 4, 11:59 PM"
+    - label: "Final Submission"
+      date: "Friday, Sep 18, 11:59 PM"
+  description: "Implementing and training an MLP from scratch"
+  links:
+    - label: "Gradescope Submission"
+      url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
+    - label: "HW1P1 Piazza"
+      url: "https://piazza.com/class/mo4ko44arnc3sg/post/111"
+
+- id: "hw1p2"
+  assignment: "HW1 P2"
+  deadlines:
+    - label: "Checkpoint Submission"
+      date: "Friday, Sept 4, 11:59 PM"
+    - label: "Final Submission"
+      date: "Friday, Sep 18, 11:59 PM"
+  description: "Phoneme state labelling using MLPs"
+  links:
+    - label: "Gradescope Submission"
+      url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
+    - label: "HW1P2 Piazza"
+      url: "https://piazza.com/class/mo4ko44arnc3sg/post/83"
+
+- id: "hw1bonus"
+  assignment: "HW1 Bonus"
+  deadlines:
+    - label: "Final Submission"
+      date: "December, 4th, 11:59 PM"
+  description: "Implementing Adam, AdamW, BatchNorm and Dropout"
+  links:
+    - label: "Gradescope Submission"
+      url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
+    - label: "Piazza"
+      url: "https://piazza.com/class/mo4ko44arnc3sg/post/68"
+
+- id: "hw1autograd"
+  assignment: "HW1 Autograd"
+  deadlines:
+    - label: "Final Submission"
+      date: "December, 4th, 11:59 PM"
+  description: "Building the Autograd Engine - I"
+  links:
+    - label: "Gradescope Submission"
+      url: "https://www.gradescope.com/courses/1315509/assignments/8475747"
+    - label: "Piazza"
+      url: "https://piazza.com/class/mo4ko44arnc3sg/post/68"
+
+- id: "important-links"
+  assignment: "Resource Links"
+  deadlines: []
+  description: "Quick access to piazza and project resources"
+  links:
+    - label: "Important Piazza Posts Finder"
+      url: "https://piazza.com/class/mo4ko44arnc3sg/post/38"
+    - label: "Projects Page"
+      url: "../shared/project.html"

@@ -1,0 +1,118 @@
+---
+interface Props {
+  recitationsData?: {
+    recitations_0?: any[];
+    recitations?: any[];
+  };
+}
+
+const { recitationsData = {} } = Astro.props;
+const recitations_0 = recitationsData.recitations_0 || [];
+const recitations = recitationsData.recitations || [];
+---
+
+<section id="recitations" aria-labelledby="recitations-heading">
+  <h2 id="recitations-heading">Recitations/Labs & Bootcamps</h2>
+
+  <div class="table-responsive">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th scope="col" style="text-align: center; width: 8%;">Recitation</th>
+          <th scope="col" style="text-align: center; width: 12%;">Date</th>
+          <th scope="col" style="text-align: center; width: 15%;">Group</th>
+          <th scope="col" style="text-align: center; width: 25%;">Topics</th>
+          <th scope="col" style="text-align: center; width: 15%;">Materials</th>
+          <th scope="col" style="text-align: center; width: 15%;">YouTube Videos</th>
+          <th scope="col" style="text-align: center; width: 10%;">Instructor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {/* Recitation 0 Block */}
+        {recitations_0.map((recitationDay) => (
+          recitationDay.groups?.map((group: any) => (
+            group.topics?.map((topic: any, topicIdx: number) => (
+              <tr>
+                <td style="text-align: center; font-weight: 600;">{topic.id}</td>
+                <td>{topic.date || (topicIdx === 0 ? recitationDay.date : '')}</td>
+                {topicIdx === 0 && (
+                  <td
+                    rowspan={group.topics.length}
+                    style="vertical-align: middle; font-weight: 600;"
+                  >
+                    {group.name}
+                  </td>
+                )}
+                <td>{topic.title}</td>
+                <td>
+                  {topic.materials?.map((item: any) => (
+                    <div>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        {item.text}
+                      </a>
+                    </div>
+                  ))}
+                </td>
+                <td>
+                  {topic.videos && topic.videos.length > 0 ? (
+                    topic.videos.map((vid: any) => (
+                      <div>
+                        <a href={vid.url} target="_blank" rel="noopener noreferrer">
+                          {vid.text}
+                        </a>
+                      </div>
+                    ))
+                  ) : (
+                    <span style="color: var(--color-text-muted); font-style: italic;">Coming Soon</span>
+                  )}
+                </td>
+                <td>{topic.authors}</td>
+              </tr>
+            ))
+          ))
+        ))}
+
+        {/* Regular Recitations Block */}
+        {recitations.map((entry) => (
+          <tr>
+            <td style="font-weight: 600;">{entry.title}</td>
+            <td set:html={entry.date} />
+            <td></td>
+            <td>
+              {Array.isArray(entry.topics) ? (
+                <ul style="padding-left: 1.2rem; margin: 0;">
+                  {entry.topics.map((t: string) => (
+                    <li>{t}</li>
+                  ))}
+                </ul>
+              ) : (
+                entry.topics || ''
+              )}
+            </td>
+            <td>
+              {entry.materials?.map((item: any) => (
+                <div>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.text}
+                  </a>
+                </div>
+              ))}
+            </td>
+            <td>
+              {entry.videos && entry.videos.length > 0 ? (
+                entry.videos.map((vid: any) => (
+                  <div>
+                    <a href={vid.url} target="_blank" rel="noopener noreferrer">
+                      {vid.text}
+                    </a>
+                  </div>
+                ))
+              ) : null}
+            </td>
+            <td>{entry.authors}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

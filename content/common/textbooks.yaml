@@ -1,0 +1,23 @@
+- title: "Dive Into Deep Learning"
+  authors: "Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola"
+  edition: "PDF, 2020"
+  url: "http://d2l.ai"
+  image: "./images/dive.png"
+
+- title: "Deep Learning"
+  authors: "Ian Goodfellow, Yoshua Bengio, Aaron Courville"
+  edition: "Online book, 2017"
+  url: "https://www.deeplearningbook.org/"
+  image: "./images/Goodfellow.jpg"
+
+- title: "Neural Networks and Deep Learning"
+  authors: "Michael Nielsen"
+  edition: "Online book, 2016"
+  url: "http://neuralnetworksanddeeplearning.com/"
+  image: "./images/Nielsen.jpg"
+
+- title: "Deep Learning Step by Step with Python: A Very Gentle Introduction to Deep Neural Networks for Practical Data Science"
+  authors: "ND Lewis"
+  edition: "2016"
+  url: "https://www.amazon.com/Deep-Learning-Step-Python-Introduction/dp/1535410264"
+  image: "./images/Lewis.jpg"

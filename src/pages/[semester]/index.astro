@@ -1,0 +1,61 @@
+---
+import CourseLayout from '../../layouts/CourseLayout.astro';
+import DeadlinesBulletin from '../../components/DeadlinesBulletin.astro';
+import AboutSection from '../../components/AboutSection.astro';
+import StaffSection from '../../components/StaffSection.astro';
+import EventsCalendarSection from '../../components/EventsCalendarSection.astro';
+import SyllabusSection from '../../components/SyllabusSection.astro';
+import LectureTable from '../../components/LectureTable.astro';
+import RecitationTable from '../../components/RecitationTable.astro';
+import AssignmentsTable from '../../components/AssignmentsTable.astro';
+import TextbooksSection from '../../components/TextbooksSection.astro';
+import {
+  getAllSemesters,
+  getSemester,
+  getDeadlines,
+  getLectures,
+  getRecitations,
+  getTextbooks,
+  getAbout,
+  getStaff,
+  getEvents,
+  getAssignments,
+  getConfig,
+} from '../../lib/content';
+
+export async function getStaticPaths() {
+  const semesters = getAllSemesters();
+  return semesters.map((sem) => ({
+    params: { semester: sem },
+  }));
+}
+
+const { semester } = Astro.params;
+const term = semester as string;
+
+const semesterData = getSemester(term);
+const deadlines = getDeadlines(term);
+const aboutData = getAbout(term);
+const staffData = getStaff(term);
+const eventsData = getEvents(term);
+const lectures = getLectures(term);
+const recitations = getRecitations(term);
+const assignmentsData = getAssignments(term);
+const textbooks = getTextbooks();
+const config = getConfig();
+---
+
+<CourseLayout semester={semesterData} allSemesters={config.semesters}>
+  <DeadlinesBulletin deadlines={deadlines} />
+  <AboutSection aboutData={aboutData} />
+  <StaffSection staffData={staffData} />
+  <EventsCalendarSection eventsData={eventsData} />
+  <SyllabusSection />
+  <LectureTable
+    lectures={lectures}
+    mediaServicesUrl={semesterData.mediaServicesLink}
+  />
+  <RecitationTable recitationsData={recitations} />
+  <AssignmentsTable assignmentsData={assignmentsData} />
+  <TextbooksSection textbooks={textbooks} />
+</CourseLayout>

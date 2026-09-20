@@ -1,0 +1,48 @@
+---
+interface Textbook {
+  title: string;
+  authors: string;
+  edition: string;
+  url: string;
+  image: string;
+}
+
+interface Props {
+  textbooks: Textbook[];
+}
+
+const { textbooks = [] } = Astro.props;
+---
+
+<section id="docs-tools" aria-labelledby="docs-tools-heading">
+  <h2 id="docs-tools-heading">Documentation and Tools</h2>
+  <h3>Textbooks</h3>
+  <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+    This is a selection of optional textbooks you may find useful:
+  </p>
+
+  <div class="textbooks-grid">
+    {textbooks.map((book) => (
+      <article class="textbook-card">
+        <img
+          src={book.image}
+          alt={`Cover of ${book.title}`}
+          class="textbook-cover"
+          loading="lazy"
+        />
+        <div class="textbook-details">
+          <a
+            href={book.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="textbook-title"
+          >
+            {book.title}
+          </a>
+          <span class="textbook-authors">By {book.authors}</span>
+          <span class="textbook-year">{book.edition}</span>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

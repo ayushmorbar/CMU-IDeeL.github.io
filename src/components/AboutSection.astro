@@ -1,0 +1,62 @@
+---
+interface Props {
+  aboutData?: {
+    theCourse?: string[];
+    youtubeChannelUrl?: string;
+    studentPerspective?: string;
+    prerequisites?: string[];
+    units?: string;
+  };
+}
+
+const { aboutData } = Astro.props;
+if (!aboutData) return null;
+---
+
+<section id="about" aria-labelledby="about-heading">
+  <h2 id="about-heading">About</h2>
+
+  <h3>The Course</h3>
+  {aboutData.theCourse?.map((paragraph) => (
+    <p style="margin-bottom: 1rem;">
+      {paragraph}
+      {paragraph.includes('YouTube channel') && aboutData.youtubeChannelUrl && (
+        <>
+          {' '}
+          <a
+            href={aboutData.youtubeChannelUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube channel
+          </a>.
+        </>
+      )}
+    </p>
+  ))}
+
+  {aboutData.studentPerspective && (
+    <>
+      <h3>Course Description from a Student's Perspective</h3>
+      <p style="margin-bottom: 1rem;">{aboutData.studentPerspective}</p>
+    </>
+  )}
+
+  {aboutData.prerequisites && aboutData.prerequisites.length > 0 && (
+    <>
+      <h3>Prerequisites</h3>
+      <ol style="margin-bottom: 1rem;">
+        {aboutData.prerequisites.map((prereq) => (
+          <li>{prereq}</li>
+        ))}
+      </ol>
+    </>
+  )}
+
+  {aboutData.units && (
+    <>
+      <h3>Units</h3>
+      <p style="margin-bottom: 1rem;">{aboutData.units}</p>
+    </>
+  )}
+</section>

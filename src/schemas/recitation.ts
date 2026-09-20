@@ -4,14 +4,22 @@ export const RecitationItemSchema = z.object({
   number: z.union([z.number(), z.string()]),
   date: z.string().default(''),
   topics: z.array(z.string()).default([]),
-  slides_videos: z.array(z.object({
-    text: z.string(),
-    url: z.string(),
-  })).default([]),
-  notes_code: z.array(z.object({
-    text: z.string(),
-    url: z.string(),
-  })).default([]),
+  slides_videos: z
+    .array(
+      z.object({
+        text: z.string(),
+        url: z.string(),
+      })
+    )
+    .default([]),
+  notes_code: z
+    .array(
+      z.object({
+        text: z.string(),
+        url: z.string(),
+      })
+    )
+    .default([]),
 });
 
 export const RecitationsDataSchema = z.object({

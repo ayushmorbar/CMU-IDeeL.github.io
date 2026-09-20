@@ -12,19 +12,29 @@ export const LectureItemSchema = z.object({
   number: z.union([z.number(), z.string()]),
   date: z.string().default(''),
   topics: z.array(LectureTopicSchema).default([]),
-  slides_videos: z.array(z.object({
-    text: z.string().optional().default(''),
-    url: z.string().optional().default(''),
-  })).default([]),
-  additional_materials: z.array(z.object({
-    text: z.string().optional().default(''),
-    url: z.string().optional().default(''),
-  })).default([]),
-  quiz: z.object({
-    text: z.string().optional().default(''),
-    url: z.string().optional(),
-    rowspan: z.number().optional().default(1),
-  }).optional(),
+  slides_videos: z
+    .array(
+      z.object({
+        text: z.string().optional().default(''),
+        url: z.string().optional().default(''),
+      })
+    )
+    .default([]),
+  additional_materials: z
+    .array(
+      z.object({
+        text: z.string().optional().default(''),
+        url: z.string().optional().default(''),
+      })
+    )
+    .default([]),
+  quiz: z
+    .object({
+      text: z.string().optional().default(''),
+      url: z.string().optional(),
+      rowspan: z.number().optional().default(1),
+    })
+    .optional(),
 });
 
 export const LecturesDataSchema = z.object({

@@ -10,7 +10,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "astro check",
-    "lint": "astro check"
+    "lint": "biome check src/lib/ src/schemas/",
+    "lint:fix": "biome check --write src/lib/ src/schemas/",
+    "format": "biome format --write src/ tools/"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -21,6 +23,7 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.14",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^26.6.2",
     "cheerio": "^1.2.0"

@@ -174,9 +174,15 @@ spacing:
 
 ### 1. Header & Navigation Bar
 - Global Sticky Navigation in CMU Scarlet (`#A80000`).
-- Navigation links at `label-nav` (13px semi-bold, line-height 18px).
-- Term Switcher: Active term (`F26`) and historical terms (`S26`, `F25`).
-- Mobile: Condenses to responsive hamburger drawer labeled "Menu".
+- Navigation links at `label-nav` (13px regular to semi-bold, line-height 18px).
+- Navigation items: `About`, `Events`, `OH`, `Syllabus`, `Lectures`, `Recitations & Bootcamps`, `Assignments`, `Projects Page`.
+- Term Switcher: Windowed to **at most 3 consecutive semesters** (e.g. `F26`, `S26`, `F25`) centered around the active semester, maintaining clean density without cluttering the header.
+- Mobile: Condenses to responsive hamburger drawer labeled "Menu" with `#A80000` bar and `#AF4F4F` button.
+
+### 2. Site Footer
+- Full-width block in CMU Scarlet (`#A80000`).
+- Crisp white text, centered: `{courseNumber} {title} | Carnegie Mellon University`.
+- Spacing: `margin-top: 20px`, `margin-bottom: 0`, `padding: 15px`.
 
 ### 2. High-Priority Action Buttons (Streaming & Zoom Links)
 - Pill-shaped (`border-radius: 9999px`).

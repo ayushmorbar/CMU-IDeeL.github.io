@@ -96,7 +96,7 @@ a:hover, a:focus-visible {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background: linear-gradient(180deg, #8B1E1E 0%, #70040F 100%);
+  background-color: var(--cmu-scarlet);
   color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 1000;
@@ -527,7 +527,7 @@ a:hover, a:focus-visible {
   color: #ffffff;
   padding: 15px;
   text-align: center;
-  margin-top: var(--space-2xl);
+  margin-top: 20px;
   margin-bottom: 0;
   font-size: var(--body-md-size);
 }

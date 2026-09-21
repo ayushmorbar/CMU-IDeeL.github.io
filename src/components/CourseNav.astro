@@ -17,7 +17,22 @@ const navItems = [
   { label: 'Projects Page', href: '/shared/project.html' },
 ];
 
-const otherSemesters = allSemesters.filter((s) => s.id !== currentSemester);
+// Only keep at most 3 consecutive semesters around currentSemester
+// config.yaml lists semesters in reverse chronological order: F26, S26, F25, S25, ...
+const currentIndex = allSemesters.findIndex((s) => s.id === currentSemester);
+let visibleSemesters = allSemesters;
+if (allSemesters.length > 3) {
+  if (currentIndex <= 0) {
+    // Current is latest (e.g. F26): show [F26, S26, F25]
+    visibleSemesters = allSemesters.slice(0, 3);
+  } else if (currentIndex >= allSemesters.length - 1) {
+    // Current is oldest: show last 3
+    visibleSemesters = allSemesters.slice(-3);
+  } else {
+    // Current is in the middle: show [prev, current, next]
+    visibleSemesters = allSemesters.slice(currentIndex - 1, currentIndex + 2);
+  }
+}
 ---
 
 <header class="site-header" role="banner">
@@ -30,12 +45,15 @@ const otherSemesters = allSemesters.filter((s) => s.id !== currentSemester);
   </nav>
 
   <div class="version-menu" aria-label="Semester Switcher">
-    <span class="version-current" aria-current="page">{currentSemester}</span>
-    {otherSemesters.map((s) => (
-      <a href={`../${s.id}/`} class="version-link">
-        {s.id}
-      </a>
-    ))}
+    {visibleSemesters.map((s) =>
+      s.id === currentSemester ? (
+        <span class="version-current" aria-current="page">{s.id}</span>
+      ) : (
+        <a href={`../${s.id}/`} class="version-link">
+          {s.id}
+        </a>
+      )
+    )}
   </div>
 </header>
 
@@ -73,12 +91,15 @@ const otherSemesters = allSemesters.filter((s) => s.id !== currentSemester);
   </nav>
 
   <div class="mobile-version-menu" aria-label="Mobile Semester Switcher">
-    <span class="version-current">{currentSemester}</span>
-    {otherSemesters.map((s) => (
-      <a href={`../${s.id}/`} class="version-link">
-        {s.id}
-      </a>
-    ))}
+    {visibleSemesters.map((s) =>
+      s.id === currentSemester ? (
+        <span class="version-current" aria-current="page">{s.id}</span>
+      ) : (
+        <a href={`../${s.id}/`} class="version-link">
+          {s.id}
+        </a>
+      )
+    )}
   </div>
 </aside>
 

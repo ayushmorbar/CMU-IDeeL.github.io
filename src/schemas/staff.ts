@@ -3,6 +3,9 @@ import { z } from 'zod';
 export const StaffMemberSchema = z.object({
   name: z.string(),
   email: z.string(),
+  avatar: z.string().optional(),
+  website: z.string().optional(),
+  officeHours: z.string().optional(),
 });
 
 export const StaffImageSchema = z.object({
@@ -20,4 +23,6 @@ export const StaffSchema = z.object({
   pastTAsUrl: z.string().optional(),
 });
 
+export type StaffMember = z.infer<typeof StaffMemberSchema>;
+export type StaffImage = z.infer<typeof StaffImageSchema>;
 export type StaffData = z.infer<typeof StaffSchema>;

@@ -43,11 +43,19 @@ policies:
   - category: "Auditing"
     details: "Auditors are not required to complete the course project, but must complete all quizzes and homeworks. Doing a project is encouraged regardless."
     subItems: []
-  - category: "Academic Integrity"
-    details: "Students are expected to strictly comply with the CMU Policy on Academic Integrity and Plagiarism. You may talk and discuss with other students, but you must write and submit your own code."
+  - category: "Academic Integrity & Collaboration"
+    details: "Students are expected to strictly comply with the CMU Policy on Academic Integrity and Plagiarism. Collaboration is encouraged to understand core concepts, but all submitted work, implementations, and Kaggle models must be your own independent work."
     subItems:
-      - "You are allowed to talk with and work with other students on homework assignments."
-      - "You can share ideas but not code. You should submit your own code."
+      - "You are allowed to discuss high-level conceptual ideas and debugging strategies with other students."
+      - "You may NOT share, look at, or copy code with any classmate under any circumstance."
+      - "All code submitted to Autolab, Gradescope, Hohum, and Kaggle must be your own."
+  - category: "Generative AI Assistants Policy"
+    details: "In accordance with CMU and IDL standards, generative AI tools (such as ChatGPT, GitHub Copilot, Claude) may be used responsibly for learning and conceptual clarification, subject to strict boundary rules."
+    subItems:
+      - "Permissible: Explaining math proofs, clarifying PyTorch syntax/documentation, understanding theoretical lecture concepts, and debugging isolated error messages."
+      - "Strictly Prohibited: Using AI to directly write, synthesize, or complete homework code (Part 1 or Part 2), or generating solutions to weekly quizzes."
+      - "Attribution: If you utilize AI assistance for conceptual guidance, you must cite the tool and describe how it was used in your project reports and submission comments."
+      - "Responsibility: You remain 100% accountable for the correctness, integrity, and originality of every line of code submitted."
 
 resources:
   - title: "Study groups"

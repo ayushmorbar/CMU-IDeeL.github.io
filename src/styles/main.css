@@ -1,6 +1,15 @@
 @import './tokens.css';
 @import './reset.css';
 
+/* Custom Font Face: Avenir Book */
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/Avenir_Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Base Body Typography & Background */
 body {
   font-family: var(--font-family-base);
@@ -92,6 +101,10 @@ section[id] {
   margin-bottom: var(--space-2xl);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+}
+
 h2 {
   color: var(--color-heading-h2);
   font-size: var(--headline-lg-size);
@@ -155,6 +168,7 @@ a:hover, a:focus-visible {
 
 .nav-link {
   display: inline-block;
+  font-family: var(--font-family-heading);
   color: #ffffff;
   text-decoration: none;
   padding: 6px 12px;

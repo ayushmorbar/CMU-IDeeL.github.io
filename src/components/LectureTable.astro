@@ -7,6 +7,25 @@ interface Props {
 }
 
 const { lectures = [], mediaServicesUrl } = Astro.props;
+
+// Group lectures into Academic Weeks (2 lectures per week typical for Mon/Wed or Tue/Thu, plus Lec 0 in Week 1)
+function getWeekNumber(lecNum: number | string): number {
+  const parsed = typeof lecNum === 'number' ? lecNum : parseInt(String(lecNum).replace(/\D/g, ''), 10);
+  if (isNaN(parsed) || parsed === 0 || parsed === 1 || parsed === 2) return 1;
+  return Math.floor((parsed - 1) / 2) + 1;
+}
+
+// Compute week boundaries
+const renderedLectures = lectures.map((lecture, index) => {
+  const currentWeek = getWeekNumber(lecture.number);
+  const prevLecture = index > 0 ? lectures[index - 1] : null;
+  const isNewWeek = !prevLecture || getWeekNumber(prevLecture.number) !== currentWeek;
+  return {
+    lecture,
+    currentWeek,
+    isNewWeek,
+  };
+});
 ---
 
 <section id="lectures" aria-labelledby="lectures-heading">
@@ -23,78 +42,116 @@ const { lectures = [], mediaServicesUrl } = Astro.props;
   )}
 
   <div class="table-responsive">
-    <table class="content-table">
+    <table class="content-table schedule-table">
       <thead>
         <tr>
           <th scope="col" style="width: 8%;">Lecture</th>
           <th scope="col" style="width: 12%;">Date</th>
           <th scope="col" style="width: 32%;">Topics</th>
-          <th scope="col" style="width: 18%;">Slides, Videos</th>
-          <th scope="col" style="width: 20%;">Additional Materials</th>
+          <th scope="col" style="width: 18%;">Course Materials</th>
+          <th scope="col" style="width: 20%;">Readings &amp; Resources</th>
           <th scope="col" style="width: 10%; text-align: center;">Quiz</th>
         </tr>
       </thead>
       <tbody>
-        {lectures.map((lecture) => (
-          <tr>
-            <td style="font-weight: 600;">{lecture.number}</td>
-            <td set:html={lecture.date} />
-            <td>
-              <ul style="padding-left: 1.2rem; margin: 0;">
-                {lecture.topics.map((topic) => {
-                  if (typeof topic === 'string') {
-                    return <li>{topic}</li>;
-                  }
-                  return (
-                    <li>
-                      {topic.main}
-                      {topic.sub_topics && topic.sub_topics.length > 0 && (
-                        <ul style="padding-left: 1.2rem;">
-                          {topic.sub_topics.map((sub) => (
-                            <li>{sub}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-            </td>
-            <td>
-              {lecture.slides_videos.map((item) => (
-                <div>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    {item.text}
-                  </a>
-                </div>
-              ))}
-            </td>
-            <td>
-              {lecture.additional_materials.map((item) => (
-                <div style="margin-bottom: 0.25rem;">
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    {item.text}
-                  </a>
-                </div>
-              ))}
-            </td>
-            {lecture.quiz && (
-              <td
-                rowspan={lecture.quiz.rowspan || 1}
-                style="vertical-align: middle; text-align: center;"
-              >
-                {lecture.quiz.url ? (
-                  <a href={lecture.quiz.url} target="_blank" rel="noopener noreferrer">
-                    {lecture.quiz.text || 'Quiz'}
-                  </a>
-                ) : (
-                  lecture.quiz.text
-                )}
-              </td>
+        {renderedLectures.map(({ lecture, currentWeek, isNewWeek }) => (
+          <>
+            {isNewWeek && (
+              <tr class="schedule-week-row">
+                <td colspan="6" class="schedule-week-cell">
+                  Week {currentWeek}
+                </td>
+              </tr>
             )}
-          </tr>
+            <tr>
+              <td style="font-weight: 700; text-align: center;">{lecture.number}</td>
+              <td set:html={lecture.date} />
+              <td>
+                <ul style="padding-left: 1.2rem; margin: 0;">
+                  {lecture.topics.map((topic) => {
+                    if (typeof topic === 'string') {
+                      return <li>{topic}</li>;
+                    }
+                    return (
+                      <li>
+                        {topic.main}
+                        {topic.sub_topics && topic.sub_topics.length > 0 && (
+                          <ul style="padding-left: 1.2rem;">
+                            {topic.sub_topics.map((sub) => (
+                              <li>{sub}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </td>
+              <td>
+                {lecture.slides_videos.map((item) => (
+                  <div style="margin-bottom: 2px;">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="material-link">
+                      {item.text}
+                    </a>
+                  </div>
+                ))}
+              </td>
+              <td>
+                {lecture.additional_materials.map((item) => (
+                  <div style="margin-bottom: 0.25rem;">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="material-link">
+                      {item.text}
+                    </a>
+                  </div>
+                ))}
+              </td>
+              <td style="text-align: center;">
+                {(() => {
+                  const q = lecture.quiz;
+                  if (!q || !q.text) return null;
+                  return q.url ? (
+                    <a href={q.url} target="_blank" rel="noopener noreferrer" class="material-link">
+                      {q.text}
+                    </a>
+                  ) : (
+                    <span>{q.text}</span>
+                  );
+                })()}
+              </td>
+            </tr>
+          </>
         ))}
       </tbody>
     </table>
   </div>
 </section>
+
+<style>
+  .schedule-week-row {
+    background-color: #ededed !important;
+  }
+
+  .schedule-week-cell {
+    font-weight: 700;
+    text-align: center;
+    padding: 6px 12px !important;
+    color: #333333;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    border-top: 1px solid var(--table-border) !important;
+    border-bottom: 1px solid var(--table-border) !important;
+    background-color: #ededed !important;
+  }
+
+  .material-link {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+  }
+
+  .material-link:hover {
+    color: var(--cmu-scarlet);
+    text-decoration: underline;
+  }
+</style>

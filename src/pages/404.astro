@@ -1,0 +1,159 @@
+---
+import CourseLayout from '../layouts/CourseLayout.astro';
+import { getSemester, getConfig } from '../lib/content';
+
+const config = getConfig();
+const currentSemesterId = config.currentSemester || 'F26';
+const semesterData = getSemester(currentSemesterId);
+---
+
+<CourseLayout semester={semesterData} allSemesters={config.semesters}>
+  <div class="error-page-container">
+    <div class="error-content-card">
+      <div class="error-badge">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-desc">
+        The requested resource, lecture, or semester archive could not be located at this address.
+      </p>
+
+      <div class="quick-links">
+        <a href={`/${currentSemesterId}/`} class="cmu-btn primary">
+          Return to {semesterData.term} Homepage
+        </a>
+        <a href="/project/" class="cmu-btn secondary">
+          Course Projects Page
+        </a>
+      </div>
+
+      <div class="helpful-box">
+        <h3>Looking for Course Material?</h3>
+        <ul>
+          <li><a href={`/${currentSemesterId}/#lectures`}>Lecture Schedule & Slide Decks</a></li>
+          <li><a href={`/${currentSemesterId}/#recitations`}>Recitations & Code Notebooks</a></li>
+          <li><a href={`/${currentSemesterId}/#homework`}>Homework & Due Dates</a></li>
+          <li><a href={`/${currentSemesterId}/#oh`}>Staff Office Hours Calendar</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</CourseLayout>
+
+<style>
+  .error-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-2xl) 0;
+    min-height: 50vh;
+  }
+
+  .error-content-card {
+    background: var(--surface-page);
+    border: 1px solid var(--surface-border);
+    border-top: 5px solid var(--cmu-scarlet);
+    border-radius: var(--rounded-default);
+    padding: var(--space-2xl);
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .error-badge {
+    display: inline-block;
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--cmu-scarlet);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+  }
+
+  .error-title {
+    font-size: var(--display-hero-mobile-size);
+    color: var(--text-primary);
+    margin: 0 0 var(--space-md) 0;
+    font-weight: 700;
+  }
+
+  .error-desc {
+    font-size: var(--body-md-size);
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+  }
+
+  .quick-links {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+  }
+
+  .cmu-btn {
+    padding: 10px 22px;
+    font-size: var(--body-sm-size);
+    font-weight: 600;
+    border-radius: var(--rounded-default);
+    text-decoration: none;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cmu-btn.primary {
+    background: var(--cmu-scarlet);
+    color: #ffffff;
+    border: 1px solid var(--cmu-scarlet);
+  }
+
+  .cmu-btn.primary:hover {
+    background: var(--pill-link-hover);
+    border-color: var(--pill-link-hover);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .cmu-btn.secondary {
+    background: var(--surface-subtle);
+    color: var(--text-primary);
+    border: 1px solid var(--surface-border);
+  }
+
+  .cmu-btn.secondary:hover {
+    background: #eae8e7;
+    text-decoration: none;
+  }
+
+  .helpful-box {
+    text-align: left;
+    background: var(--surface-subtle);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--rounded-default);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .helpful-box h3 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: var(--body-md-size);
+    color: var(--color-heading-h2);
+  }
+
+  .helpful-box ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: var(--body-sm-size);
+    line-height: 1.8;
+  }
+
+  .helpful-box a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  .helpful-box a:hover {
+    text-decoration: underline;
+  }
+</style>

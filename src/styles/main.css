@@ -561,3 +561,11 @@ a:hover, a:focus-visible {
     width: 100vw;
   }
 }
+
+/* Unavailable content notice -- shown for historical semesters missing data */
+.content-unavailable {
+  color: var(--text-muted, #888);
+  font-style: italic;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}

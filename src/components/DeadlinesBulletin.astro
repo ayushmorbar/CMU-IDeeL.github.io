@@ -1,16 +1,21 @@
 ---
-import type { DeadlineItem } from '../schemas/deadline';
+import type { UnifiedAssignment } from '../schemas/assignment';
+import { formatAssignmentDate } from '../lib/assignment-adapter';
 
 interface Props {
-  deadlines: DeadlineItem[];
+  items: UnifiedAssignment[];
 }
 
-const { deadlines = [] } = Astro.props;
+const { items = [] } = Astro.props;
+
+function deadlineDisplay(d: UnifiedAssignment['deadlines'][number]): string {
+  return `${d.label}: ${d.display ?? formatAssignmentDate(d.date)}`;
+}
 ---
 
 <section id="general_logistics" aria-labelledby="deadlines-heading">
   <h2 id="deadlines-heading">Active Deadlines and Bulletin</h2>
-  
+
   <div class="table-responsive">
     <table class="content-table">
       <thead>
@@ -22,15 +27,15 @@ const { deadlines = [] } = Astro.props;
         </tr>
       </thead>
       <tbody>
-        {deadlines.map((item) => (
+        {items.map((item) => (
           <tr>
             <td style="text-align: center; font-weight: 600;">
-              {item.assignment}
+              {item.title}
             </td>
             <td style="text-align: center;">
               {item.deadlines.map((d) => (
                 <div>
-                  {d.label}: {d.date}
+                  {deadlineDisplay(d)}
                 </div>
               ))}
             </td>

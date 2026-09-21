@@ -90,7 +90,7 @@ export function migrateSingleMonolithicSemester(term) {
       assignment: 'Resource Links',
       deadlines: [],
       description: 'Course resources and links',
-      links: [{ label: 'Project Gallery', url: '../shared/project.html' }]
+      links: [{ label: 'Project Gallery', url: '/shared/project.html' }]
     });
   }
   fs.writeFileSync(path.join(outDir, 'deadlines.yaml'), dump(deadlines, { lineWidth: -1 }));

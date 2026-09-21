@@ -1,0 +1,23 @@
+---
+import type { RecitationLink } from '../schemas/recitation';
+
+interface Props {
+  links: RecitationLink[];
+}
+
+const { links = [] } = Astro.props;
+---
+
+{links.map((item) => (
+  <div>
+    {item.url ? (
+      <a href={item.url} target="_blank" rel="noopener noreferrer">
+        {item.text}
+      </a>
+    ) : (
+      <span style="color: var(--color-text-muted); font-style: italic;">
+        {item.text}
+      </span>
+    )}
+  </div>
+))}

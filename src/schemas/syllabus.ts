@@ -1,62 +1,31 @@
 import { z } from 'zod';
 
-export const SyllabusPolicyItemSchema = z
-  .object({
-    category: z.string(),
-    details: z.string().optional(),
-    description: z.string().optional(),
-    subItems: z.array(z.string()).default([]),
-    items: z.array(z.string()).optional(),
-  })
-  .transform((val) => ({
-    category: val.category,
-    details: val.details || val.description || '',
-    subItems:
-      val.subItems && val.subItems.length > 0 ? val.subItems : val.items || [],
-  }));
+/**
+ * Canonical syllabus model (Phase 3).
+ *
+ * Files use only canonical keys: `details` / `subItems` for policies and
+ * `links: [{ label, url }]` for resources. The legacy variants
+ * (`description`, `items`, singular `link:`, `text:`) were migrated in bulk
+ * and are no longer accepted — author new content with canonical keys.
+ */
 
-export const SyllabusResourceItemSchema = z
-  .object({
-    title: z.string(),
-    description: z.string(),
-    links: z
-      .array(
-        z
-          .object({
-            label: z.string().optional(),
-            text: z.string().optional(),
-            url: z.string(),
-          })
-          .transform((l) => ({
-            label: l.label || l.text || 'Link',
-            url: l.url,
-          }))
-      )
-      .default([]),
-    link: z
-      .object({
-        text: z.string().optional(),
-        label: z.string().optional(),
-        url: z.string(),
-      })
-      .optional(),
-    badge: z.string().optional(),
-  })
-  .transform((val) => {
-    const links = [...val.links];
-    if (val.link) {
-      links.push({
-        label: val.link.label || val.link.text || 'Link',
-        url: val.link.url,
-      });
-    }
-    return {
-      title: val.title,
-      description: val.description,
-      links,
-      badge: val.badge,
-    };
-  });
+export const SyllabusPolicyItemSchema = z.object({
+  category: z.string(),
+  details: z.string().default(''),
+  subItems: z.array(z.string()).default([]),
+});
+
+export const SyllabusLinkSchema = z.object({
+  label: z.string(),
+  url: z.string(),
+});
+
+export const SyllabusResourceItemSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  links: z.array(SyllabusLinkSchema).default([]),
+  badge: z.string().optional(),
+});
 
 export const SyllabusDataSchema = z.object({
   policies: z.array(SyllabusPolicyItemSchema).default([]),
@@ -66,11 +35,12 @@ export const SyllabusDataSchema = z.object({
       z.object({
         name: z.string(),
         url: z.string(),
-      })
+      }),
     )
     .default([]),
 });
 
 export type SyllabusPolicyItem = z.infer<typeof SyllabusPolicyItemSchema>;
+export type SyllabusLink = z.infer<typeof SyllabusLinkSchema>;
 export type SyllabusResourceItem = z.infer<typeof SyllabusResourceItemSchema>;
 export type SyllabusData = z.infer<typeof SyllabusDataSchema>;

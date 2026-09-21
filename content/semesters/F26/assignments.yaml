@@ -1,40 +1,119 @@
-# deadlines_data.yaml
-assignment_groups:
-  - release_date: "Friday, Aug 28"
-    assignments:
-      - name: "HW 1"
-        due_date: "Early Submission: Friday, Sep 4<br>Final Deadline: Friday, Sep 18"
-        materials:
-          - text: "HW1P1 Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024404"
-          - text: "HW1P1 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades"
-          - text: "HW1P2 Starter Notebook"
-            url: "https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb"
-          - text: "HW1P2 Kaggle Competition Link"
-            url: "https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5"
-          - text: "HW1P2 Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades"
-          - text: "HW1 Bonus Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024506"
-          - text: "HW1 Bonus Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8457950/submissions"
-          - text: "HW1 Autograd Handout"
-            url: "https://canvas.cmu.edu/courses/53621/assignments/1024562"
-          - text: "HW1 Autograd Gradescope Submission"
-            url: "https://www.gradescope.com/courses/1315509/assignments/8475747/submissions"
-  - release_date: "Friday, Sep 18"
-    assignments:
-      - name: "HW 2"
-        due_date: "Early Submission: Friday, Oct 2<br>Final Deadline: Friday, Oct 9"
-        materials: []
-  - release_date: "Friday, Oct 9"
-    assignments:
-      - name: "HW 3"
-        due_date: "Early Submission: Friday, Oct 30<br>Final Deadline: Friday, Nov 6"
-        materials: []
-  - release_date: "Friday, Nov 6"
-    assignments:
-      - name: "HW 4"
-        due_date: "Early Submission: Friday, Nov 20<br>Final Deadline: Friday, Dec 4"
-        materials: []
+# Canonical unified assignment data (Phase 2).
+# Strict ISO 8601 timestamps with America/New_York offsets. Display strings
+# are derived from the timestamps by the components — do not add any.
+assignments:
+  - id: hw1p1
+    title: HW1 P1
+    releaseDate: 2026-08-28T00:00:00-04:00
+    dueDate: 2026-09-18T23:59:00-04:00
+    deadlines:
+      - label: Early Submission
+        date: 2026-09-04T23:59:00-04:00
+      - label: Final Submission
+        date: 2026-09-18T23:59:00-04:00
+    description: Implementing and training an MLP from scratch
+    links:
+      - label: HW1P1 Handout
+        url: https://canvas.cmu.edu/courses/53621/assignments/1024404
+      - label: HW1P1 Gradescope Submission
+        url: https://www.gradescope.com/courses/1315509/assignments/8463000/review_grades
+      - label: HW1P1 Piazza
+        url: https://piazza.com/class/mo4ko44arnc3sg/post/111
+
+  - id: hw1p2
+    title: HW1 P2
+    releaseDate: 2026-08-28T00:00:00-04:00
+    dueDate: 2026-09-18T23:59:00-04:00
+    deadlines:
+      - label: Checkpoint Submission
+        date: 2026-09-04T23:59:00-04:00
+      - label: Final Submission
+        date: 2026-09-18T23:59:00-04:00
+    description: Phoneme state labelling using MLPs
+    links:
+      - label: HW1P2 Starter Notebook
+        url: https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fmcgd2y2xd3j723%2F692bb633acce2e98a481e04f2e73dc0688a425c4aa477fb0cecc4fbbb5e158c2%2F11785_HW1P2_Student_Notebook_F26.ipynb
+      - label: HW1P2 Kaggle Competition Link
+        url: https://www.kaggle.com/t/a17f96321e434c2daadd98cadfe559f5
+      - label: HW1P2 Gradescope Submission
+        url: https://www.gradescope.com/courses/1315509/assignments/8455147/review_grades
+      - label: HW1P2 Piazza
+        url: https://piazza.com/class/mo4ko44arnc3sg/post/83
+
+  - id: hw1bonus
+    title: HW1 Bonus
+    releaseDate: 2026-08-28T00:00:00-04:00
+    dueDate: 2026-12-04T23:59:00-05:00
+    deadlines:
+      - label: Final Submission
+        date: 2026-12-04T23:59:00-05:00
+    description: Implementing Adam, AdamW, BatchNorm and Dropout
+    links:
+      - label: HW1 Bonus Handout
+        url: https://canvas.cmu.edu/courses/53621/assignments/1024506
+      - label: HW1 Bonus Gradescope Submission
+        url: https://www.gradescope.com/courses/1315509/assignments/8457950/submissions
+      - label: Piazza
+        url: https://piazza.com/class/mo4ko44arnc3sg/post/68
+
+  - id: hw1autograd
+    title: HW1 Autograd
+    releaseDate: 2026-08-28T00:00:00-04:00
+    dueDate: 2026-12-04T23:59:00-05:00
+    deadlines:
+      - label: Final Submission
+        date: 2026-12-04T23:59:00-05:00
+    description: Building the Autograd Engine - I
+    links:
+      - label: HW1 Autograd Handout
+        url: https://canvas.cmu.edu/courses/53621/assignments/1024562
+      - label: HW1 Autograd Gradescope Submission
+        url: https://www.gradescope.com/courses/1315509/assignments/8475747/submissions
+      - label: Piazza
+        url: https://piazza.com/class/mo4ko44arnc3sg/post/68
+
+  - id: hw2
+    title: HW 2
+    releaseDate: 2026-09-18T00:00:00-04:00
+    dueDate: 2026-10-09T23:59:00-04:00
+    deadlines:
+      - label: Early Submission
+        date: 2026-10-02T23:59:00-04:00
+      - label: Final Deadline
+        date: 2026-10-09T23:59:00-04:00
+    description: ''
+    links: []
+
+  - id: hw3
+    title: HW 3
+    releaseDate: 2026-10-09T00:00:00-04:00
+    dueDate: 2026-11-06T23:59:00-05:00
+    deadlines:
+      - label: Early Submission
+        date: 2026-10-30T23:59:00-04:00
+      - label: Final Deadline
+        date: 2026-11-06T23:59:00-05:00
+    description: ''
+    links: []
+
+  - id: hw4
+    title: HW 4
+    releaseDate: 2026-11-06T00:00:00-05:00
+    dueDate: 2026-12-04T23:59:00-05:00
+    deadlines:
+      - label: Early Submission
+        date: 2026-11-20T23:59:00-05:00
+      - label: Final Deadline
+        date: 2026-12-04T23:59:00-05:00
+    description: ''
+    links: []
+
+  - id: resources
+    title: Resource Links
+    deadlines: []
+    description: Quick access to piazza and project resources
+    links:
+      - label: Important Piazza Posts Finder
+        url: https://piazza.com/class/mo4ko44arnc3sg/post/38
+      - label: Projects Page
+        url: /shared/project.html

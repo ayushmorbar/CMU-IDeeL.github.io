@@ -1,33 +1,35 @@
 policies:
   - category: Score Assignment
-    description: Grading will be based on weekly quizzes (24%), homeworks (50%) and a course project (25%). Note that 1% of your grade is assigned to Attendance.
+    details: Grading will be based on weekly quizzes (24%), homeworks (50%) and a course project (25%). Note that 1% of your grade is assigned to Attendance.
   - category: Quizzes
-    description: There will be weekly quizzes. We will retain your best 12 out of the remaining 14 quizzes. Quizzes are scored by the number of correct answers and are worth 24% of your overall score.
+    details: There will be weekly quizzes. We will retain your best 12 out of the remaining 14 quizzes. Quizzes are scored by the number of correct answers and are worth 24% of your overall score.
   - category: Assignments
-    description: There will be four/five assignments in all, plus the Peer Review assignment during the last week of the semester. Assignments carry 50% of your total score.
+    details: There will be four/five assignments in all, plus the Peer Review assignment during the last week of the semester. Assignments carry 50% of your total score.
   - category: Course Project
-    description: All students taking a graduate version of the course are required to do a course project. The project is worth 25% of your grade.
+    details: All students taking a graduate version of the course are required to do a course project. The project is worth 25% of your grade.
   - category: Attendance
-    description: If you are in section A you are expected to attend in-person lectures. We will track attendance.
+    details: If you are in section A you are expected to attend in-person lectures. We will track attendance.
   - category: Grading & Curves
-    description: The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates.
+    details: The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates.
 resources:
   - title: Study Groups
     description: We believe that effective collaboration can greatly enhance student learning. It is highly recommended that you join a study group.
+    links: []
   - title: Discussion Forum
     description: Piazza / Canvas is used for course discussion and questions.
-    link:
-      text: Class Forum
-      url: https://piazza.com
+    links:
+      - label: Class Forum
+        url: https://piazza.com
   - title: AutoLab
     description: AutoLab is used to test your understanding of low-level concepts from scratch.
+    links: []
   - title: Kaggle
     description: Kaggle is where we test your understanding and ability to extend neural network architectures.
-    link:
-      text: Kaggle
-      url: https://kaggle.com
+    links:
+      - label: Kaggle
+        url: https://kaggle.com
   - title: Academic Integrity
     description: You are expected to comply with the University Policy on Academic Integrity and Plagiarism.
-    link:
-      text: CMU Academic Integrity Policy
-      url: https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html
+    links:
+      - label: CMU Academic Integrity Policy
+        url: https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html

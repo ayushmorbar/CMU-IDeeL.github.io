@@ -9,7 +9,7 @@ from ruamel.yaml import YAML
 REPO = pathlib.Path(__file__).resolve().parents[2]
 MANIFEST = REPO / "F26/automation/upload_manifest.jsonl"
 SLIDES_DIR = REPO / "F26/documents/slides"
-LECTURES_YAML = REPO / "F26/pages/tables_data/lectures.yaml"
+LECTURES_YAML = REPO / "content/semesters/f26/lectures.yaml"
 
 
 def load_records():

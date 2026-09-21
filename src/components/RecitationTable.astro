@@ -1,14 +1,18 @@
 ---
+import type { RecitationsData, RecitationEntry } from '../schemas/recitation';
+import RecitationLinks from './RecitationLinks.astro';
+
 interface Props {
-  recitationsData?: {
-    recitations_0?: any[];
-    recitations?: any[];
-  };
+  recitationsData?: RecitationsData;
 }
 
-const { recitationsData = {} } = Astro.props;
-const recitations_0 = recitationsData.recitations_0 || [];
-const recitations = recitationsData.recitations || [];
+const { recitationsData = { recitations_0: [], recitations: [] } } = Astro.props;
+const recitations_0 = recitationsData.recitations_0;
+const recitations = recitationsData.recitations;
+
+function isSession(entry: RecitationEntry): entry is Extract<RecitationEntry, { title: string }> {
+  return 'title' in entry;
+}
 ---
 
 <section id="recitations" aria-labelledby="recitations-heading">
@@ -30,8 +34,8 @@ const recitations = recitationsData.recitations || [];
       <tbody>
         {/* Recitation 0 Block */}
         {recitations_0.map((recitationDay) => (
-          recitationDay.groups?.map((group: any) => (
-            group.topics?.map((topic: any, topicIdx: number) => (
+          recitationDay.groups?.map((group) => (
+            group.topics?.map((topic, topicIdx) => (
               <tr>
                 <td style="text-align: center; font-weight: 600;">{topic.id}</td>
                 <td>{topic.date || (topicIdx === 0 ? recitationDay.date : '')}</td>
@@ -45,23 +49,11 @@ const recitations = recitationsData.recitations || [];
                 )}
                 <td>{topic.title}</td>
                 <td>
-                  {topic.materials?.map((item: any) => (
-                    <div>
-                      <a href={item.url} target="_blank" rel="noopener noreferrer">
-                        {item.text}
-                      </a>
-                    </div>
-                  ))}
+                  <RecitationLinks links={topic.materials} />
                 </td>
                 <td>
                   {topic.videos && topic.videos.length > 0 ? (
-                    topic.videos.map((vid: any) => (
-                      <div>
-                        <a href={vid.url} target="_blank" rel="noopener noreferrer">
-                          {vid.text}
-                        </a>
-                      </div>
-                    ))
+                    <RecitationLinks links={topic.videos} />
                   ) : (
                     <span style="color: var(--color-text-muted); font-style: italic;">Coming Soon</span>
                   )}
@@ -74,43 +66,49 @@ const recitations = recitationsData.recitations || [];
 
         {/* Regular Recitations Block */}
         {recitations.map((entry) => (
-          <tr>
-            <td style="font-weight: 600;">{entry.title}</td>
-            <td set:html={entry.date} />
-            <td></td>
-            <td>
-              {Array.isArray(entry.topics) ? (
+          isSession(entry) ? (
+            <tr>
+              <td style="font-weight: 600;">{entry.title}</td>
+              <td set:html={entry.date} />
+              <td></td>
+              <td>
+                {Array.isArray(entry.topics) ? (
+                  <ul style="padding-left: 1.2rem; margin: 0;">
+                    {entry.topics.map((t: string) => (
+                      <li>{t}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  entry.topics || ''
+                )}
+              </td>
+              <td>
+                <RecitationLinks links={entry.materials} />
+              </td>
+              <td>
+                <RecitationLinks links={entry.videos} />
+              </td>
+              <td>{entry.authors}</td>
+            </tr>
+          ) : (
+            <tr>
+              <td style="font-weight: 600;">{entry.number}</td>
+              <td set:html={entry.date} />
+              <td></td>
+              <td>
                 <ul style="padding-left: 1.2rem; margin: 0;">
                   {entry.topics.map((t: string) => (
                     <li>{t}</li>
                   ))}
                 </ul>
-              ) : (
-                entry.topics || ''
-              )}
-            </td>
-            <td>
-              {entry.materials?.map((item: any) => (
-                <div>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    {item.text}
-                  </a>
-                </div>
-              ))}
-            </td>
-            <td>
-              {entry.videos && entry.videos.length > 0 ? (
-                entry.videos.map((vid: any) => (
-                  <div>
-                    <a href={vid.url} target="_blank" rel="noopener noreferrer">
-                      {vid.text}
-                    </a>
-                  </div>
-                ))
-              ) : null}
-            </td>
-            <td>{entry.authors}</td>
-          </tr>
+              </td>
+              <td>
+                <RecitationLinks links={[...entry.slides_videos, ...entry.notes_code]} />
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          )
         ))}
       </tbody>
     </table>

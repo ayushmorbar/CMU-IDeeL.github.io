@@ -9,7 +9,7 @@ const { syllabusData } = Astro.props;
 ---
 
 <section id="syllabus" aria-labelledby="syllabus-heading">
-  <h2 id="syllabus-heading">Syllabus & Course Policies</h2>
+  <h2 id="syllabus-heading">Syllabus &amp; Course Policies</h2>
 
   {syllabusData && syllabusData.policies.length > 0 ? (
     <div class="table-responsive" style="margin-bottom: 3rem;">
@@ -40,24 +40,9 @@ const { syllabusData } = Astro.props;
       </table>
     </div>
   ) : (
-    <div class="table-responsive" style="margin-bottom: 3rem;">
-      <table class="content-table" aria-label="Course Policies Breakdown">
-        <thead>
-          <tr>
-            <th scope="col" style="width: 25%;">Category</th>
-            <th scope="col" style="width: 75%;">Policy Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Grading Breakdown</strong></td>
-            <td>
-              Grading will be based on weekly quizzes (<strong>24%</strong>), homeworks (<strong>50%</strong>), and a course project (<strong>25%</strong>). <strong>1%</strong> of your grade is for attendance.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p class="content-unavailable">
+      Syllabus and course policy information is not available for this semester.
+    </p>
   )}
 
   <h2>Resources</h2>
@@ -89,12 +74,9 @@ const { syllabusData } = Astro.props;
         </div>
       ))
     ) : (
-      <div>
-        <h3>Study groups</h3>
-        <p>We believe that effective collaboration can greatly enhance learning.</p>
-        <h3>Piazza</h3>
-        <p><a href="https://www.piazza.com" target="_blank" rel="noopener noreferrer"><strong>Piazza</strong></a> is used for discussions.</p>
-      </div>
+      <p class="content-unavailable">
+        Resource information is not available for this semester.
+      </p>
     )}
   </div>
 </section>

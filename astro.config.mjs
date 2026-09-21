@@ -3,16 +3,40 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const LEGACY_DIRS = [
+// Historical semesters live under archive/ — they are read-only.
+// Their assets are copied verbatim into dist/ at build time.
+// Active semester content (F26, future semesters) lives in content/semesters/
+// and is compiled by Astro through src/pages/[semester]/index.astro.
+const ARCHIVE_DIRS = [
   'F20', 'S20', 'F21', 'S21', 'F22', 'S22',
   'F23', 'S23', 'F24', 'S24', 'F25', 'S25',
-  'S26', 'shared'
+  'S26', 'shared',
 ];
+
+function copyDir(src, dest) {
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(dest, { recursive: true });
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const s = path.join(src, entry.name);
+    const d = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(s, d);
+    } else if (!fs.existsSync(d)) {
+      fs.copyFileSync(s, d);
+    } else {
+      const ss = fs.statSync(s);
+      const ds = fs.statSync(d);
+      if (ss.size !== ds.size || Math.abs(ss.mtimeMs - ds.mtimeMs) >= 1000) {
+        fs.copyFileSync(s, d);
+      }
+    }
+  }
+}
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
-  '.js': 'application/javascript; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
@@ -21,124 +45,93 @@ const MIME_TYPES = {
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.pdf': 'application/pdf',
-  '.mp3': 'audio/mpeg',
-  '.ipynb': 'application/x-ipynb+json',
-  '.zip': 'application/zip',
   '.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-  '.txt': 'text/plain; charset=utf-8',
-  '.woff': 'font/woff',
-  '.woff2': 'font/woff2',
-  '.ttf': 'font/ttf'
+  '.mp3': 'audio/mpeg',
 };
 
-function copyIncremental(srcDir, destDir, excludeFiles = []) {
-  if (!fs.existsSync(srcDir)) return;
-  if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
-
-  const entries = fs.readdirSync(srcDir, { withFileTypes: true });
-  for (const entry of entries) {
-    if (excludeFiles.includes(entry.name)) continue;
-    const srcPath = path.join(srcDir, entry.name);
-    const destPath = path.join(destDir, entry.name);
-
-    if (entry.isDirectory()) {
-      copyIncremental(srcPath, destPath, []);
-    } else {
-      let needsCopy = true;
-      if (fs.existsSync(destPath)) {
-        try {
-          const srcStat = fs.statSync(srcPath);
-          const destStat = fs.statSync(destPath);
-          if (srcStat.size === destStat.size && Math.abs(srcStat.mtimeMs - destStat.mtimeMs) < 1000) {
-            needsCopy = false;
-          }
-        } catch (_) {}
-      }
-      if (needsCopy) {
-        fs.copyFileSync(srcPath, destPath);
-      }
-    }
-  }
+function serveStaticFile(res, file) {
+  const ext = path.extname(file).toLowerCase();
+  res.setHeader('Content-Type', MIME_TYPES[ext] || 'application/octet-stream');
+  fs.createReadStream(file).pipe(res);
 }
 
-function legacySemestersIntegration() {
+// First URL segment(s) served from archive/ or F26/ during `astro dev`.
+// (The build-time copy step above only runs on `astro:build:done`.)
+const DEV_STATIC_ROOTS = [...ARCHIVE_DIRS, 'F26'];
+
+function resolveDevFile(urlPath) {
+  const clean = urlPath.split('?')[0].split('#')[0];
+  let decoded;
+  try {
+    decoded = decodeURIComponent(clean);
+  } catch {
+    return null;
+  }
+  const segments = decoded.replace(/^\/+/, '').split('/');
+  if (segments.length === 0 || !DEV_STATIC_ROOTS.includes(segments[0])) return null;
+  const [root, ...rest] = segments;
+  if (rest.length === 0) return null; // Astro owns directory indexes
+  const base = root === 'F26' ? path.join(process.cwd(), 'F26') : path.join(process.cwd(), 'archive', root);
+  const file = path.join(base, ...rest);
+  const relative = path.relative(base, file);
+  if (relative.startsWith('..') || path.isAbsolute(relative)) return null;
+  try {
+    if (fs.existsSync(file) && fs.statSync(file).isFile()) return file;
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function archiveIntegration() {
   return {
-    name: 'cmu-legacy-semesters',
+    name: 'cmu-archive',
     hooks: {
-      'astro:config:setup': ({ updateConfig }) => {
-        updateConfig({
-          vite: {
-            plugins: [
-              {
-                name: 'serve-legacy-static',
-                configureServer(server) {
-                  server.middlewares.use((req, res, next) => {
-                    const url = req.url ? decodeURIComponent(req.url.split('?')[0]) : '';
-                    if (
-                      url.startsWith('/shared/') ||
-                      url.match(/^\/[FS]\d\d\//)
-                    ) {
-                      // Do not intercept Astro routes (e.g. /S26/, /S26/index.html, /F26/, etc.)
-                      if (
-                        url.match(/^\/[FS]\d\d\/?$/) ||
-                        url.match(/^\/[FS]\d\d\/index\.html$/)
-                      ) {
-                        return next();
-                      }
-                      const localPath = path.join(process.cwd(), url.replace(/^\//, ''));
-                      if (fs.existsSync(localPath) && fs.statSync(localPath).isFile()) {
-                        const ext = path.extname(localPath).toLowerCase();
-                        if (MIME_TYPES[ext]) {
-                          res.setHeader('Content-Type', MIME_TYPES[ext]);
-                        }
-                        return fs.createReadStream(localPath).pipe(res);
-                      }
-                    }
-                    next();
-                  });
-                },
-              },
-            ],
-          },
+      'astro:server:setup': async ({ server }) => {
+        server.middlewares.use((req, res, next) => {
+          if (!req.url || (req.method !== 'GET' && req.method !== 'HEAD')) {
+            next();
+            return;
+          }
+          const file = resolveDevFile(req.url);
+          if (!file) {
+            next();
+            return;
+          }
+          serveStaticFile(res, file);
         });
       },
       'astro:build:done': async ({ dir }) => {
         const outDir = fileURLToPath(dir);
-        console.log('[legacy-semesters] Syncing historical semesters and assets to:', outDir);
-
-        const contentSemestersDir = path.join(process.cwd(), 'content', 'semesters');
-        const compiledSemesters = fs.existsSync(contentSemestersDir)
-          ? fs.readdirSync(contentSemestersDir).filter((f) => fs.statSync(path.join(contentSemestersDir, f)).isDirectory())
-          : [];
-
-        // Copy legacy directories and assets
-        for (const sem of LEGACY_DIRS) {
-          const src = path.join(process.cwd(), sem);
-          const dest = path.join(outDir, sem);
-          const excludes = compiledSemesters.includes(sem) ? ['index.html'] : [];
-          copyIncremental(src, dest, excludes);
+        const archiveRoot = path.join(process.cwd(), 'archive');
+        console.log('[archive] Copying historical semesters to:', outDir);
+        for (const sem of ARCHIVE_DIRS) {
+          copyDir(path.join(archiveRoot, sem), path.join(outDir, sem));
         }
-
-        // Copy static assets for any compiled semester (e.g. F26) without overwriting Astro index.html
-        for (const sem of compiledSemesters) {
-          const src = path.join(process.cwd(), sem);
-          const dest = path.join(outDir, sem);
-          copyIncremental(src, dest, ['index.html']);
+        // Copy F26 assets (PDFs, slides, images) without overwriting Astro-generated index.html
+        const f26src = path.join(process.cwd(), 'F26');
+        const f26dest = path.join(outDir, 'F26');
+        if (fs.existsSync(f26src)) {
+          fs.mkdirSync(f26dest, { recursive: true });
+          for (const entry of fs.readdirSync(f26src, { withFileTypes: true })) {
+            if (entry.name === 'index.html') continue; // Astro owns this
+            const s = path.join(f26src, entry.name);
+            const d = path.join(f26dest, entry.name);
+            entry.isDirectory() ? copyDir(s, d) : fs.copyFileSync(s, d);
+          }
         }
-
-        console.log('[legacy-semesters] Sync complete.');
+        console.log('[archive] Copy complete.');
       },
     },
   };
 }
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://deeplearning.cs.cmu.edu',
   output: 'static',
   trailingSlash: 'always',
   build: {
-    format: 'directory'
+    format: 'directory',
   },
-  integrations: [legacySemestersIntegration()]
+  integrations: [archiveIntegration()],
 });

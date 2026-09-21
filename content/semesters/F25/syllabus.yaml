@@ -1,16 +1,16 @@
 policies:
   - category: Score Assignment
-    description: Grading will be based on weekly quizzes (24%), homeworks (50%) and a course project (25%). Note that 1% of your grade is assigned to Attendance.
+    details: Grading will be based on weekly quizzes (24%), homeworks (50%) and a course project (25%). Note that 1% of your grade is assigned to Attendance.
   - category: Quizzes
-    description: There will be weekly quizzes.
-    items:
+    details: There will be weekly quizzes.
+    subItems:
       - We will retain your best 12 out of the remaining 14 quizzes.
       - Quizzes will generally (but not always) be released on Friday and due 48 hours later.
       - Quizzes are scored by the number of correct answers.
       - Quizzes will be worth 24% of your overall score.
   - category: Assignments
-    description: There will be four assignments in all, plus the Peer Review assignment during the last week of the semester. Assignments will include Autolab components, where you implement low-level operations, and a Kaggle component, where you compete with your colleagues over relevant DL tasks.
-    items:
+    details: There will be four assignments in all, plus the Peer Review assignment during the last week of the semester. Assignments will include Autolab components, where you implement low-level operations, and a Kaggle component, where you compete with your colleagues over relevant DL tasks.
+    subItems:
       - Autolab components are scored according to the number of correctly completed parts.
       - We will post performance cutoffs for HIGH (90%), MEDIUM (70%), LOW (50%), and VERY LOW (30%) for Kaggle competitions. Scores will be interpolated linearly between these cutoffs.
       - 'Early submission deadline: You are required to make at least one submission to Kaggle by this deadline. People who miss this deadline will automatically lose 10% of subsequent marks they may get on the homework.'
@@ -23,46 +23,48 @@ policies:
       - Bonus HWs will count towards the score of the correlating HWp1 assignment number.
       - The Peer Review assignment is required of all students, 11-485/685/785. The task is for all students to review and grade 4-6 of the videos.
   - category: Project
-    description: Course project rules for graduate versions of the course.
-    items:
+    details: Course project rules for graduate versions of the course.
+    subItems:
       - 'All students taking a graduate version of the course are required to do a course project. The project is worth 25% of your grade. These points are distributed as follows: 20% - Midterm Report; 35% - Project Video; 5% - Responding to comments on Piazza; 40% - Project report.'
       - A Project is mandatory for 11-785 students. In the event of a catastrophe, the Project may be substituted with the guided project. 11-685 Students may choose to do a Project instead of the guided project.
       - 'Important information for project reports and video presentations: see project rubrics spreadsheet.'
   - category: Attendance
-    description: Attendance policy for Section A and remote sections.
-    items:
+    details: Attendance policy for Section A and remote sections.
+    subItems:
       - If you are in section A you are expected to attend in-person lectures. We will track attendance.
       - If you are in any of the other (out-of-timezone) sections, you must watch lectures live on zoom. CMU students who view on MediaServices must watch before Monday 8AM of the following week.
       - At the end of the semester, we will select a random subset of lectures and tabulate attendance.
       - If you have attended at least 70% of these (randomly chosen) lectures, you get the attendance point.
   - category: Final Grade
-    description: The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates.
+    details: The end-of-term grade is curved. Your overall grade will depend on your performance relative to your classmates.
   - category: Pass/Fail
-    description: Students registered for pass/fail must complete all quizzes, HWs and if they are in the graduate course, the project. A grade equivalent to B- is required to pass the course.
+    details: Students registered for pass/fail must complete all quizzes, HWs and if they are in the graduate course, the project. A grade equivalent to B- is required to pass the course.
   - category: Auditing
-    description: Auditors are not required to complete the course project, but must complete all quizzes and homeworks. We encourage doing a course project regardless.
+    details: Auditors are not required to complete the course project, but must complete all quizzes and homeworks. We encourage doing a course project regardless.
 resources:
   - title: Study Groups
     description: We believe that effective collaboration can greatly enhance student learning. Thus, this course employs study groups for both quizzes and homework ablations. It is highly recommended that you join a study group; Check piazza for further updates.
+    links: []
   - title: 'Piazza: Discussion Board'
     description: Piazza is what we use for discussions. You should be automatically signed up if you are enrolled at the start of the semester.
-    link:
-      text: Sign up on Piazza
-      url: https://www.piazza.com
+    links:
+      - label: Sign up on Piazza
+        url: https://www.piazza.com
   - title: 'AutoLab: Software Engineering'
     description: AutoLab is what we use to test your understanding of low-level concepts, such as engineering your own libraries, implementing important algorithms, and developing optimization methods from scratch.
+    links: []
   - title: 'Kaggle: Data Science'
     description: Kaggle is where we test your understanding and ability to extend neural network architectures discussed in lecture. We work on hot AI topics like speech recognition, face recognition, and neural machine translation.
-    link:
-      text: Kaggle Platform
-      url: https://kaggle.com/
+    links:
+      - label: Kaggle Platform
+        url: https://kaggle.com/
   - title: 'MediaServices / YouTube: Recordings'
     description: CMU students who are not in the live lectures should watch the uploaded lectures at MediaServices. Non-CMU folks can view recordings on our YouTube Channel.
-    link:
-      text: MediaServices Channel
-      url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning_Fall%2B2025/385611772
+    links:
+      - label: MediaServices Channel
+        url: https://mediaservices.cmu.edu/channel/Introduction%2Bto%2BDeep%2BLearning_Fall%2B2025/385611772
   - title: Academic Integrity
     description: You are expected to comply with the University Policy on Academic Integrity and Plagiarism. You are allowed to talk with and work with other students on homework assignments, and share ideas but not code. You should submit your own code.
-    link:
-      text: CMU Academic Integrity Policy
-      url: https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html
+    links:
+      - label: CMU Academic Integrity Policy
+        url: https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html

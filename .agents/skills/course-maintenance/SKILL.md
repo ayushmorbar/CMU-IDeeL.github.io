@@ -17,15 +17,16 @@ This skill guides human operators and AI agents through safe, schema-validated u
 ## Maintenance Workflows
 
 ### Workflow 1: Update an Active Deadline or Bulletin
-1. Open `content/semesters/<SEMESTER>/deadlines.yaml`.
-2. Update the `deadlines` list (e.g. `Early Submission`, `Final Submission`) under the target assignment ID (e.g. `hw1p1`).
-3. Run `pnpm typecheck` to verify schema conformance.
-4. Run `pnpm build` to compile the updated static page.
+1. Open `content/semesters/<SEMESTER>/assignments.yaml` (unified model: deadlines and assignments live in one file; there is no `deadlines.yaml`).
+2. Update the `deadlines` list (e.g. `Early Submission`, `Final Submission`) under the target assignment ID (e.g. `hw1p1`). Dates are strict ISO 8601 with an explicit offset, e.g. `2026-09-18T23:59:00-04:00` (America/New_York).
+3. Run `node tools/verify-assignments.mjs` to verify dates render as expected.
+4. Run `pnpm typecheck` to verify schema conformance.
+5. Run `pnpm build` to compile the updated static page.
 
 ### Workflow 2: Update Full Assignments Schedule (HW1–HW4)
 1. Open `content/semesters/<SEMESTER>/assignments.yaml`.
-2. Update release dates, due dates, or append new material links (handouts, starter notebooks, Kaggle competition links, Gradescope links).
-3. Run `pnpm typecheck`.
+2. Update `releaseDate`, `dueDate`, `deadlines`, `description`, or append new `links` (handouts, starter notebooks, Kaggle competition links, Gradescope links). Never invent display strings — components format ISO timestamps automatically.
+3. Run `node tools/verify-assignments.mjs`, then `pnpm typecheck`.
 
 ### Workflow 3: Add Lecture Slides or Recordings
 1. Save the slide PDF to `<SEMESTER>/documents/slides/lecX.name.pdf`.

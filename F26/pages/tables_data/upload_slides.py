@@ -6,10 +6,10 @@ from datetime import datetime, date, timedelta, time
 from zoneinfo import ZoneInfo
 
 # Get the directory where this script is located
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) 
-ROOT_DIR   = os.path.abspath(os.path.join(SCRIPT_DIR, os.pardir, os.pardir)) # S26/
-LECTURES_YAML = os.path.join(SCRIPT_DIR, "lectures.yaml") # .../S26/pages/lectures.yaml
-SLIDES_DIR    = os.path.join(ROOT_DIR, "documents", "slides") # .../S26/documents/slides/
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR   = os.path.abspath(os.path.join(SCRIPT_DIR, os.pardir, os.pardir)) # F26/
+LECTURES_YAML = os.path.abspath(os.path.join(ROOT_DIR, os.pardir, 'content', 'semesters', 'f26', 'lectures.yaml'))
+SLIDES_DIR    = os.path.join(ROOT_DIR, "documents", "slides") # .../F26/documents/slides/
 
 def parse_lecture_date(date_str, year = 2026):
     # this function parses the lecture date and returns date and month of the lecture

@@ -3,15 +3,18 @@ import path from 'node:path';
 import { load } from 'js-yaml';
 import { type AboutData, AboutSchema } from '../schemas/about';
 import {
-  type AssignmentsData,
   AssignmentsDataSchema,
+  LegacyAssignmentsDataSchema,
+  LegacyDeadlinesSchema,
+  type UnifiedAssignment,
 } from '../schemas/assignment';
 import { type GlobalConfig, GlobalConfigSchema } from '../schemas/config';
-import { type DeadlineItem, DeadlinesSchema } from '../schemas/deadline';
 import { type EventSchedule, EventScheduleSchema } from '../schemas/event';
 import { type LectureItem, LecturesDataSchema } from '../schemas/lecture';
-import { TextbooksSchema } from '../schemas/recitation';
+import { type RecitationsData, RecitationsDataSchema } from '../schemas/recitation';
+import { type TextbookItem, TextbooksSchema } from '../schemas/textbook';
 import { type Semester, SemesterSchema } from '../schemas/semester';
+import { adaptLegacySemester } from './assignment-adapter';
 import { type StaffData, StaffSchema } from '../schemas/staff';
 import { type SyllabusData, SyllabusDataSchema } from '../schemas/syllabus';
 
@@ -39,11 +42,22 @@ export function getSemester(term: string): Semester {
   return SemesterSchema.parse(load(raw));
 }
 
-export function getDeadlines(term: string): DeadlineItem[] {
-  const file = path.join(CONTENT_DIR, 'semesters', term, 'deadlines.yaml');
+export function getAssignments(term: string): UnifiedAssignment[] {
+  const file = path.join(CONTENT_DIR, 'semesters', term, 'assignments.yaml');
   if (!fs.existsSync(file)) return [];
   const raw = fs.readFileSync(file, 'utf-8');
-  return DeadlinesSchema.parse(load(raw));
+  const data = load(raw) as Record<string, unknown> | null;
+  if (data && Array.isArray((data as { assignments?: unknown }).assignments)) {
+    // Canonical unified shape.
+    return AssignmentsDataSchema.parse(data).assignments;
+  }
+  // Legacy split shape: merge assignment_groups + deadlines.yaml at load time.
+  const groups = LegacyAssignmentsDataSchema.parse(data);
+  const deadlinesFile = path.join(CONTENT_DIR, 'semesters', term, 'deadlines.yaml');
+  const rows = fs.existsSync(deadlinesFile)
+    ? LegacyDeadlinesSchema.parse(load(fs.readFileSync(deadlinesFile, 'utf-8')))
+    : [];
+  return adaptLegacySemester(term, groups, rows);
 }
 
 export function getLectures(term: string): LectureItem[] {
@@ -54,17 +68,14 @@ export function getLectures(term: string): LectureItem[] {
   return parsed.lectures;
 }
 
-export function getRecitations(term: string): {
-  recitations_0?: any[];
-  recitations?: any[];
-} {
+export function getRecitations(term: string): RecitationsData {
   const file = path.join(CONTENT_DIR, 'semesters', term, 'recitations.yaml');
-  if (!fs.existsSync(file)) return {};
+  if (!fs.existsSync(file)) return { recitations_0: [], recitations: [] };
   const raw = fs.readFileSync(file, 'utf-8');
-  return (load(raw) as any) || {};
+  return RecitationsDataSchema.parse(load(raw));
 }
 
-export function getTextbooks(): any[] {
+export function getTextbooks(): TextbookItem[] {
   const file = path.join(CONTENT_DIR, 'common', 'textbooks.yaml');
   if (!fs.existsSync(file)) return [];
   const raw = fs.readFileSync(file, 'utf-8');
@@ -99,9 +110,3 @@ export function getEvents(term: string): EventSchedule | undefined {
   return EventScheduleSchema.parse(load(raw));
 }
 
-export function getAssignments(term: string): AssignmentsData | undefined {
-  const file = path.join(CONTENT_DIR, 'semesters', term, 'assignments.yaml');
-  if (!fs.existsSync(file)) return undefined;
-  const raw = fs.readFileSync(file, 'utf-8');
-  return AssignmentsDataSchema.parse(load(raw));
-}

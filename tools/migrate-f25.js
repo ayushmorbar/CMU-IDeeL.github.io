@@ -29,7 +29,7 @@ const deadlinesData = [
     deadlines: [],
     description: 'Quick access to project gallery and resources',
     links: [
-      { label: 'Project Gallery', url: '../shared/project.html' }
+      { label: 'Project Gallery', url: '/shared/project.html' }
     ]
   }
 ];

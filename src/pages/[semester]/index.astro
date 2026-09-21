@@ -12,7 +12,6 @@ import TextbooksSection from '../../components/TextbooksSection.astro';
 import {
   getAllSemesters,
   getSemester,
-  getDeadlines,
   getLectures,
   getRecitations,
   getTextbooks,
@@ -35,20 +34,19 @@ const { semester } = Astro.params;
 const term = semester as string;
 
 const semesterData = getSemester(term);
-const deadlines = getDeadlines(term);
+const assignments = getAssignments(term);
 const aboutData = getAbout(term);
 const staffData = getStaff(term);
 const eventsData = getEvents(term);
 const lectures = getLectures(term);
 const recitations = getRecitations(term);
-const assignmentsData = getAssignments(term);
 const syllabusData = getSyllabusData(term);
 const textbooks = getTextbooks();
 const config = getConfig();
 ---
 
 <CourseLayout semester={semesterData} allSemesters={config.semesters}>
-  <DeadlinesBulletin deadlines={deadlines} />
+  <DeadlinesBulletin items={assignments} />
   <AboutSection aboutData={aboutData} />
   <StaffSection staffData={staffData} />
   <EventsCalendarSection eventsData={eventsData} />
@@ -58,6 +56,6 @@ const config = getConfig();
     mediaServicesUrl={semesterData.mediaServicesLink}
   />
   <RecitationTable recitationsData={recitations} />
-  <AssignmentsTable assignmentsData={assignmentsData} />
+  <AssignmentsTable items={assignments} />
   <TextbooksSection textbooks={textbooks} />
 </CourseLayout>

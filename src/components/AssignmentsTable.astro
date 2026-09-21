@@ -1,12 +1,22 @@
 ---
-import type { AssignmentsData } from '../schemas/assignment';
+import type { UnifiedAssignment } from '../schemas/assignment';
+import { formatAssignmentDate } from '../lib/assignment-adapter';
 
 interface Props {
-  assignmentsData?: AssignmentsData;
+  items: UnifiedAssignment[];
 }
 
-const { assignmentsData } = Astro.props;
-if (!assignmentsData || !assignmentsData.assignment_groups) return null;
+const { items = [] } = Astro.props;
+
+// Resource rows (project gallery, piazza links) have no release/due dates
+// and are shown in the bulletin instead.
+const dated = items.filter((item) => item.releaseDate || item.dueDate);
+
+function releaseDisplay(item: UnifiedAssignment): string | null {
+  if (item.releaseDisplay) return item.releaseDisplay;
+  if (item.releaseDate) return formatAssignmentDate(item.releaseDate);
+  return null;
+}
 ---
 
 <section id="homework" aria-labelledby="homework-heading">
@@ -23,47 +33,49 @@ if (!assignmentsData || !assignmentsData.assignment_groups) return null;
         </tr>
       </thead>
       <tbody>
-        {assignmentsData.assignment_groups.map((group) =>
-          group.assignments.map((assignment, aIdx) => (
-            <tr>
-              <td style="text-align: center; font-weight: 600;">{assignment.name}</td>
-              {aIdx === 0 && (
-                <td style="text-align: center;" rowspan={group.assignments.length}>
-                  {group.release_date}
-                </td>
-              )}
-              {assignment.due_date_rowspan ? (
-                <td
-                  style="text-align: center;"
-                  rowspan={assignment.due_date_rowspan}
-                  set:html={assignment.due_date}
-                />
-              ) : assignment.due_date ? (
-                <td style="text-align: center;" set:html={assignment.due_date} />
-              ) : null}
-              <td>
-                {assignment.materials && assignment.materials.length > 0 ? (
-                  <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                    {assignment.materials.map((mat) => (
-                      <a
-                        href={mat.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="table-link"
-                      >
-                        {mat.text}
-                      </a>
-                    ))}
+        {dated.map((item) => (
+          <tr>
+            <td style="text-align: center; font-weight: 600;">{item.title}</td>
+            <td style="text-align: center;">
+              {releaseDisplay(item) ?? (<span>&mdash;</span>)}
+            </td>
+            <td style="text-align: center;">
+              {item.dueDisplay ? (
+                <span set:html={item.dueDisplay} />
+              ) : item.deadlines.length > 1 ? (
+                item.deadlines.map((d) => (
+                  <div>
+                    {d.label}: {d.display ?? formatAssignmentDate(d.date)}
                   </div>
-                ) : (
-                  <span style="color: var(--color-text-muted); font-style: italic;">
-                    To be announced
-                  </span>
-                )}
-              </td>
-            </tr>
-          ))
-        )}
+                ))
+              ) : item.dueDate ? (
+                formatAssignmentDate(item.dueDate)
+              ) : (
+                <span>&mdash;</span>
+              )}
+            </td>
+            <td>
+              {item.links && item.links.length > 0 ? (
+                <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                  {item.links.map((mat) => (
+                    <a
+                      href={mat.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="table-link"
+                    >
+                      {mat.label}
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <span style="color: var(--color-text-muted); font-style: italic;">
+                  To be announced
+                </span>
+              )}
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   </div>

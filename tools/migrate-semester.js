@@ -212,7 +212,7 @@ const deadlines = [
     description: 'Quick access to piazza and project resources',
     links: [
       { label: 'Important Piazza Posts Finder', url: 'https://piazza.com' },
-      { label: 'Projects Page', url: '../shared/project.html' }
+      { label: 'Projects Page', url: '/shared/project.html' }
     ]
   }
 ];

@@ -17,6 +17,7 @@ import { type Semester, SemesterSchema } from '../schemas/semester';
 import { adaptLegacySemester } from './assignment-adapter';
 import { type StaffData, StaffSchema } from '../schemas/staff';
 import { type SyllabusData, SyllabusDataSchema } from '../schemas/syllabus';
+import { type ProjectsData, ProjectsDataSchema } from '../schemas/project';
 
 const CONTENT_DIR = path.resolve(process.cwd(), 'content');
 
@@ -108,5 +109,14 @@ export function getEvents(term: string): EventSchedule | undefined {
   if (!fs.existsSync(file)) return undefined;
   const raw = fs.readFileSync(file, 'utf-8');
   return EventScheduleSchema.parse(load(raw));
+}
+
+export function getProjectsData(term = 'f26'): ProjectsData {
+  const file = path.join(CONTENT_DIR, 'semesters', term.toLowerCase(), 'projects.yaml');
+  if (!fs.existsSync(file)) {
+    return { projects: [], legacyArchives: [] };
+  }
+  const raw = fs.readFileSync(file, 'utf-8');
+  return ProjectsDataSchema.parse(load(raw));
 }
 

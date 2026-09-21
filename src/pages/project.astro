@@ -1,0 +1,660 @@
+---
+import CourseLayout from '../layouts/CourseLayout.astro';
+import { getProjectsData, getSemester, getConfig } from '../lib/content';
+
+const semesterData = getSemester('F26');
+const config = getConfig();
+const { projects, legacyArchives } = getProjectsData('F26');
+---
+
+<CourseLayout semester={semesterData} allSemesters={config.semesters}>
+  <div class="projects-page-wrapper">
+    <!-- Sub-navigation -->
+    <nav class="sub-nav" aria-label="Projects Page Sections">
+      <a href="#guidelines" class="sub-nav-link">Guidelines</a>
+      <a href="#topics" class="sub-nav-link">Project Ideas</a>
+      <a href="#apply" class="sub-nav-link">Application Form</a>
+      <a href="#legacy" class="sub-nav-link">Legacy Projects</a>
+    </nav>
+
+    <!-- Project Types & Guidelines -->
+    <section id="guidelines" class="project-section">
+      <h2>Course Project Guidelines</h2>
+      <p class="section-lead">
+        Graduate versions of IDL include a significant weightage on a course project.
+        In <strong>11-785</strong>, you are expected to come up with your own project, or use some of the suggested topics below as a starting point.
+        In <strong>11-685</strong>, you are expected to work on a guided project with a set of organized milestones.
+      </p>
+
+      <div class="cards-grid">
+        <div class="info-card">
+          <h3>11-785: Open Course Project</h3>
+          <p class="card-desc">
+            A primarily student-driven open research project. You choose your own topic and work in teams of up to 4.
+          </p>
+          <ul class="specs-list">
+            <li><strong>Core Deliverables:</strong> Midterm Report (20%), Piazza Discussion & Q&A Response (5%), Video Presentation (35%), and Final Report (40%).</li>
+            <li><strong>Structure:</strong> Aligned with industry research. Requires self-guided planning, experimentation, paper writing, and peer reviews.</li>
+            <li><strong>Themes:</strong> Open-ended topics covering Vision, NLP, Reinforcement Learning, Generative AI, or Computational Biology.</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>11-685: Guided Course Project</h3>
+          <p class="card-desc">
+            A mentored and structured project pathway. Ideal for students seeking hands-on guidance on executing an end-to-end deep learning pipeline.
+          </p>
+          <ul class="specs-list">
+            <li><strong>Core Deliverables:</strong> Midterm Report (20%), Piazza Discussion & Q&A Response (5%), Video Presentation (35%), and Final Report (40%).</li>
+            <li><strong>Structure:</strong> TAs release pre-configured guided projects with milestone benchmarks and technical constraints.</li>
+            <li><strong>Mentorship:</strong> Includes dedicated review sessions and tailored support with starter notebooks, datasets, and compute pointers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="compute-notice">
+        <strong>IMPORTANT NOTE ON COMPUTE RESOURCES:</strong> All project-related computations MUST be performed on dedicated resources (AWS/GCP/PSC/personal) for model training, testing, and inference. You MUST NOT use any resources from the IDL homework allocation on PSC.
+      </div>
+    </section>
+
+    <!-- Potential Project Ideas -->
+    <section id="topics" class="project-section">
+      <h2>Potential Project Ideas</h2>
+      <p class="section-lead">
+        We encourage you to propose a project of your own. If you need inspiration, the curated project ideas below provide rigorous starting points. Select project topics that interest you and your team to draft your application.
+      </p>
+
+      <div class="topics-grid">
+        {projects.map((proj) => (
+          <article class="topic-card" data-project-id={proj.id} data-project-title={proj.title}>
+            <div class="topic-header" style={`border-top-color: ${proj.color};`}>
+              <span class="topic-category" style={`color: ${proj.color};`}>{proj.category}</span>
+              <h3 class="topic-title">{proj.title}</h3>
+              {proj.mentors && (
+                <p class="topic-mentors"><strong>Mentor(s):</strong> {proj.mentors}</p>
+              )}
+            </div>
+
+            <p class="topic-desc">{proj.description}</p>
+
+            {proj.tags && proj.tags.length > 0 && (
+              <div class="topic-tags">
+                {proj.tags.map((tag) => (
+                  <span class="topic-tag">{tag}</span>
+                ))}
+              </div>
+            )}
+
+            <div class="topic-links">
+              {proj.paper ? (
+                <a href={proj.paper} target="_blank" rel="noopener noreferrer" class="resource-badge">
+                  Paper &#8599;
+                </a>
+              ) : (
+                <span class="resource-badge disabled">Paper: TBD</span>
+              )}
+
+              {proj.dataset && proj.dataset !== 'Private dataset' ? (
+                <a href={proj.dataset} target="_blank" rel="noopener noreferrer" class="resource-badge">
+                  Dataset &#8599;
+                </a>
+              ) : proj.dataset === 'Private dataset' ? (
+                <span class="resource-badge disabled">Private Dataset</span>
+              ) : (
+                <span class="resource-badge disabled">Dataset: TBD</span>
+              )}
+
+              {proj.code ? (
+                <a href={proj.code} target="_blank" rel="noopener noreferrer" class="resource-badge">
+                  Starter Code &#8599;
+                </a>
+              ) : (
+                <span class="resource-badge disabled">Code: TBD</span>
+              )}
+            </div>
+
+            <div class="topic-action">
+              <button type="button" class="select-project-btn" data-id={proj.id} data-title={proj.title}>
+                <span class="star-icon">&#9733;</span> Select Project
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Project Application Form -->
+    <section id="apply" class="project-section">
+      <h2>Project Interest Form</h2>
+      <div class="application-card">
+        <h3 class="app-heading">Submit Project Interest Form</h3>
+        <p class="app-subtext">
+          Use this form to show interest in any project(s) for <strong>11-785</strong> or <strong>11-685</strong>. This is for course book-keeping and matching, and not a restrictive selection process.
+        </p>
+
+        <div class="apply-cta-container">
+          <button id="apply-button" class="apply-btn" type="button">
+            Apply with Selected Projects (<span id="selected-count">0</span>) &#8599;
+          </button>
+        </div>
+
+        <div class="checklist-card">
+          <h4>What You Will Need:</h4>
+          <div class="checklist-columns">
+            <ul>
+              <li><strong>Student Details:</strong> Full names and Andrew IDs of all team members (up to 4 per team).</li>
+              <li><strong>Registered Section:</strong> Specify section: 11-785 (Open) or 11-685 (Guided).</li>
+              <li><strong>Interest Statement:</strong> A brief paragraph expressing why you are interested and what you plan to achieve.</li>
+            </ul>
+            <ul>
+              <li><strong>Core Technical Area:</strong> Select theme (Vision, NLP, Generative AI, RL, AI4Science, etc.).</li>
+              <li><strong>Links & Documents (Optional):</strong> Relevant GitHub repositories or pre-existing research references.</li>
+              <li><strong>Compute Requests (Optional):</strong> Details if requesting dedicated AWS, GCP, or PSC credits.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy Projects Showcase -->
+    <section id="legacy" class="project-section">
+      <h2>Legacy Projects Archive</h2>
+      <p class="section-lead">
+        Explore student projects and research papers from previous semesters of IDL. They serve as a benchmark of expected scientific rigor, experimentation, and paper quality.
+      </p>
+
+      <div class="legacy-grid">
+        {legacyArchives.map((archive) => (
+          <div class="legacy-card">
+            <div class="legacy-header">
+              <span class="legacy-tag">{archive.code}</span>
+              <h3>{archive.semester}</h3>
+            </div>
+            <p>{archive.description}</p>
+            <div class="legacy-actions">
+              <a href={archive.reportsUrl} class="legacy-btn" target="_blank" rel="noopener noreferrer">
+                Project Reports &#8599;
+              </a>
+              {archive.videosUrl && (
+                <a href={archive.videosUrl} class="legacy-btn secondary" target="_blank" rel="noopener noreferrer">
+                  Project Videos &#8599;
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Notification Toast -->
+    <div id="project-toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+</CourseLayout>
+
+<script>
+  // Vanilla interactive project selector & form linker (0 KB framework overhead)
+  const selectedMap = new Map();
+  const countEl = document.getElementById('selected-count');
+  const applyBtn = document.getElementById('apply-button');
+  const toast = document.getElementById('project-toast');
+
+  function showToast(msg: string) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000);
+  }
+
+  function updateCount() {
+    if (countEl) countEl.textContent = String(selectedMap.size);
+    if (applyBtn) {
+      if (selectedMap.size > 0) {
+        applyBtn.innerHTML = `Apply with Selected Projects (${selectedMap.size}) &#8599;`;
+      } else {
+        applyBtn.innerHTML = `Go to Application Form &#8599;`;
+      }
+    }
+  }
+
+  document.querySelectorAll('.select-project-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLButtonElement;
+      const id = target.getAttribute('data-id');
+      const title = target.getAttribute('data-title');
+      if (!id || !title) return;
+
+      if (selectedMap.has(id)) {
+        selectedMap.delete(id);
+        target.classList.remove('selected');
+        target.innerHTML = `<span class="star-icon">&#9733;</span> Select Project`;
+        showToast(`Removed "${title}" from selection.`);
+      } else {
+        selectedMap.set(id, title);
+        target.classList.add('selected');
+        target.innerHTML = `<span class="star-icon">&#9733;</span> Selected`;
+        showToast(`Added "${title}" to selection!`);
+      }
+      updateCount();
+    });
+  });
+
+  applyBtn?.addEventListener('click', () => {
+    const googleFormUrl = "https://forms.gle/dcMheTGXz4zF6Hem6";
+    if (selectedMap.size === 0) {
+      showToast("Opening Google Application Form...");
+      setTimeout(() => window.open(googleFormUrl, "_blank"), 600);
+      return;
+    }
+
+    const titles = Array.from(selectedMap.values()).join("; ");
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(titles).then(() => {
+        showToast("Copied drafted projects to clipboard! Opening form...");
+      }).catch(() => {
+        showToast("Opening Google Application Form...");
+      });
+    }
+    setTimeout(() => window.open(googleFormUrl, "_blank"), 1000);
+  });
+</script>
+
+<style>
+  .projects-page-wrapper {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .sub-nav {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--surface-border);
+    flex-wrap: wrap;
+  }
+
+  .sub-nav-link {
+    color: var(--color-link);
+    font-size: var(--body-sm-size);
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--rounded-default);
+    background: var(--surface-subtle);
+    border: 1px solid var(--surface-border);
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+
+  .sub-nav-link:hover {
+    background: var(--cmu-scarlet);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .section-lead {
+    font-size: var(--body-md-size);
+    line-height: var(--body-md-lh);
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .info-card {
+    background: var(--surface-page);
+    border: 1px solid var(--surface-border);
+    border-top: 4px solid var(--cmu-scarlet);
+    border-radius: var(--rounded-default);
+    padding: var(--space-lg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .info-card h3 {
+    margin-top: 0;
+    color: var(--color-heading-h2);
+    font-size: var(--headline-md-size);
+  }
+
+  .card-desc {
+    font-size: var(--body-sm-size);
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .specs-list {
+    padding-left: 20px;
+    margin: 0;
+    font-size: var(--body-sm-size);
+    line-height: 1.6;
+  }
+
+  .compute-notice {
+    background-color: #fff9f9;
+    border-left: 4px solid var(--cmu-scarlet);
+    padding: 14px 18px;
+    font-size: var(--body-sm-size);
+    line-height: 1.5;
+    margin-top: var(--space-md);
+    border-radius: 0 var(--rounded-default) var(--rounded-default) 0;
+  }
+
+  /* Topics Grid */
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .topic-card {
+    background: var(--surface-page);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--rounded-default);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .topic-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .topic-header {
+    border-top: 3px solid var(--cmu-scarlet);
+    padding-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .topic-category {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .topic-title {
+    margin: 0 0 6px 0;
+    font-size: var(--headline-sm-size);
+    color: var(--text-primary);
+  }
+
+  .topic-mentors {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0 0 8px 0;
+  }
+
+  .topic-desc {
+    font-size: var(--body-sm-size);
+    line-height: 1.5;
+    color: #444;
+    flex-grow: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .topic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: var(--space-md);
+  }
+
+  .topic-tag {
+    background: var(--surface-subtle);
+    border: 1px solid var(--surface-border);
+    padding: 2px 8px;
+    font-size: 11px;
+    border-radius: var(--rounded-default);
+    color: var(--text-muted);
+  }
+
+  .topic-links {
+    display: flex;
+    gap: 8px;
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .resource-badge {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: var(--rounded-default);
+    background: var(--surface-subtle);
+    border: 1px solid var(--surface-border);
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .resource-badge:hover {
+    background: var(--cmu-scarlet);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .resource-badge.disabled {
+    color: #aaa;
+    border-color: #eee;
+    background: #fafafa;
+    cursor: not-allowed;
+  }
+
+  .select-project-btn {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--rounded-default);
+    background: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .select-project-btn:hover {
+    border-color: var(--cmu-scarlet);
+    background: #fff8f8;
+  }
+
+  .select-project-btn.selected {
+    background: #fff0f0;
+    border-color: var(--cmu-scarlet);
+    color: var(--cmu-scarlet);
+  }
+
+  .star-icon {
+    color: #aaa;
+  }
+
+  .select-project-btn.selected .star-icon {
+    color: #f57f17;
+  }
+
+  /* Application Card */
+  .application-card {
+    background: var(--surface-page);
+    border: 1px solid var(--surface-border);
+    border-left: 4px solid var(--cmu-scarlet);
+    border-radius: var(--rounded-default);
+    padding: var(--space-xl);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .app-heading {
+    margin-top: 0;
+    color: var(--cmu-scarlet);
+    font-size: var(--headline-md-size);
+  }
+
+  .app-subtext {
+    font-size: var(--body-md-size);
+    margin-bottom: var(--space-lg);
+  }
+
+  .apply-cta-container {
+    text-align: center;
+    margin: var(--space-xl) 0;
+  }
+
+  .apply-btn {
+    background-color: var(--cmu-scarlet);
+    color: #ffffff;
+    border: none;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: var(--rounded-default);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(168, 0, 0, 0.25);
+    transition: all 0.15s ease;
+  }
+
+  .apply-btn:hover {
+    background-color: #8b1e1e;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(168, 0, 0, 0.35);
+  }
+
+  .checklist-card {
+    background: #fbf9f9;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--rounded-default);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .checklist-card h4 {
+    margin-top: 0;
+    color: var(--color-heading-h2);
+    font-size: var(--body-md-size);
+  }
+
+  .checklist-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 768px) {
+    .checklist-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .checklist-columns ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: var(--body-sm-size);
+    line-height: 1.6;
+  }
+
+  /* Legacy Grid */
+  .legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .legacy-card {
+    background: var(--surface-page);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--rounded-default);
+    padding: var(--space-md);
+  }
+
+  .legacy-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .legacy-header h3 {
+    margin: 0;
+    font-size: var(--headline-sm-size);
+    color: var(--text-primary);
+  }
+
+  .legacy-tag {
+    background: #eee;
+    color: #555;
+    padding: 2px 6px;
+    font-size: 11px;
+    border-radius: var(--rounded-default);
+    font-weight: 700;
+  }
+
+  .legacy-card p {
+    font-size: var(--body-sm-size);
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .legacy-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .legacy-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--surface-subtle);
+    border: 1px solid var(--surface-border);
+    color: var(--color-link);
+    border-radius: var(--rounded-default);
+    text-decoration: none;
+  }
+
+  .legacy-btn:hover {
+    background: var(--cmu-scarlet);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .legacy-btn.secondary {
+    background: #ffffff;
+  }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: var(--rounded-default);
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+  }
+
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+</style>

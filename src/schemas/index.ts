@@ -8,3 +8,4 @@ export * from './semester';
 export * from './staff';
 export * from './syllabus';
 export * from './textbook';
+export * from './project';

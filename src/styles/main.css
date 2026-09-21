@@ -379,6 +379,17 @@ a:active {
   margin-bottom: var(--space-xs);
 }
 
+/* Hero eyebrow: institutional framing above the course title */
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
 .course-title b {
   font-weight: 800;
 }
@@ -421,6 +432,31 @@ a:active {
   color: var(--text-muted);
   margin-top: var(--space-xs);
   margin-bottom: 0;
+}
+
+/* Hero Sponsor Lockup (single instance; footer carries no duplicate) */
+.hero-sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+  /* Brand clear space: at least half the logo height on all sides */
+  padding: 12px 0;
+}
+
+.hero-sponsor-label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #555555;
+}
+
+.hero-sponsor-logo {
+  height: 22px;
+  width: auto;
+  display: block;
 }
 
 /* Data Tables (Academic Schedule & Unified Data Tables) */
@@ -608,51 +644,13 @@ a:active {
   margin-top: var(--space-2xl);
   margin-bottom: 0;
   font-size: 14px;
-}
-
-.footer-inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding-inline: var(--container-padding);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
+  text-align: center;
 }
 
 .footer-title {
   margin: 0;
   font-weight: 400;
   color: #555555;
-}
-
-.footer-supported-by {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #555555;
-  background: #f6f6f6;
-  border: 1px solid #e5e5e5;
-  padding: 4px 12px;
-  border-radius: var(--rounded-full);
-}
-
-.supported-by-logo {
-  height: 20px;
-  width: auto;
-  display: block;
-  background: #ffffff;
-  padding: 2px 6px;
-  border-radius: var(--rounded-default);
-}
-
-@media (max-width: 600px) {
-  .footer-inner {
-    justify-content: center;
-    text-align: center;
-  }
 }
 
 /* Responsive Media Queries */

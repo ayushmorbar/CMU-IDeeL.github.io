@@ -1,0 +1,19 @@
+---
+import type { Semester } from '../schemas/semester';
+
+interface Props {
+  supportedBy: NonNullable<Semester['supportedBy']>;
+}
+
+const { supportedBy } = Astro.props;
+---
+
+<figure class="hero-sponsor">
+  <figcaption class="hero-sponsor-label">{supportedBy.label}</figcaption>
+  <img
+    src={supportedBy.logo}
+    alt=""
+    class="hero-sponsor-logo"
+    loading="lazy"
+  />
+</figure>

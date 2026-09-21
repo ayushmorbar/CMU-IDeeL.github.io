@@ -180,28 +180,36 @@ spacing:
 - Mobile: Condenses to responsive hamburger drawer labeled "Menu" with `#A80000` bar and `#AF4F4F` button.
 
 ### 2. Site Footer
-- Full-width block in CMU Scarlet (`#A80000`).
-- Crisp white text, centered: `{courseNumber} {title} | Carnegie Mellon University`.
-- Spacing: `margin-top: 20px`, `margin-bottom: 0`, `padding: 15px`.
+- Minimal white block with 1px top border (`#DDDDDD`).
+- Single centered credit line, 14px regular `#555555`: `{courseNumber} {title} | Carnegie Mellon University`.
+- Spacing: `margin-top: var(--space-2xl)` (3.5rem), `padding: 20px 0`.
+- The footer carries no sponsor claim; sponsorship lives only in the hero lockup below.
 
-### 2. High-Priority Action Buttons (Streaming & Zoom Links)
+### 3. Hero Eyebrow + Sponsor Lockup
+- Eyebrow: static `Carnegie Mellon University` line above the course title (mirrors the footer credit). 13px semi-bold, uppercase, `letter-spacing: 0.14em`, muted `#555555` — subordinate to the 38px title, never heavier.
+- Sponsor lockup: single centered instance at the bottom of the hero, after the venue line: service order is identity → term → action (streaming pill) → logistics (venue) → sponsor.
+- Markup: `<figure class="hero-sponsor">` with `<figcaption>` label text (`Supported by`, 13px regular `#555555`) and the full-color sponsor logo. The logo `alt` is empty (decorative; the visible caption carries meaning). No link.
+- Logo height 22px, `width: auto`, no card/chrome; transparent PNG sits directly on the white hero. Brand clear space: ≥ half the logo height (12px vertical padding on the figure).
+- Responsive: flex row with wrap, centered at all viewports including ≤600px.
+
+### 4. High-Priority Action Buttons (Streaming & Zoom Links)
 - Pill-shaped (`border-radius: 9999px`).
 - Crimson fill (`#8B1E1E` or `#847777`) with bold white text and external link glyph (`↗`).
 - Hover state: `#6D1717`.
 
-### 3. Active Deadlines & Bulletin Table
+### 5. Active Deadlines & Bulletin Table
 - High-visibility banner framed with 1px border (`#DDDDDD`) and subtle header background.
 - Partitioned into `Assignment`, `Deadline`, `Description`, and `Links`.
 
-### 4. Schedule Matrices (Lectures, Recitations & Bootcamps)
+### 6. Schedule Matrices (Lectures, Recitations & Bootcamps)
 - Compact high-density table sizing: `table-header` (13px bold), `table-cell` (13px regular).
 - 1px cell boundaries in `#DDDDDD`.
 - Zebra striping on alternating rows (`#F7F7F7`).
 - Embedded links (`Slides`, `YouTube`, `Notebook`, `MediaServices`) in primary crimson (`#8B1E1E`).
 
-### 5. Instructor & Course Staff Directories
+### 7. Instructor & Course Staff Directories
 - Instructors, Shadow Instructor, Head TA, and 34 Core Instruction TAs.
 - Responsive grid with direct `mailto:` links and TA team group photos (`TA_F26_2.png`, `missing_TAs.png`).
 
-### 6. Events & Google Calendars
+### 8. Events & Google Calendars
 - Responsive iframes for Course Events Calendar and Office Hours Calendar (`#oh`).

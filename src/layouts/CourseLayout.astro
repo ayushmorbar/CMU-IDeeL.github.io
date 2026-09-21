@@ -1,5 +1,6 @@
 ---
 import CourseNav from '../components/CourseNav.astro';
+import SponsorLockup from '../components/SponsorLockup.astro';
 import type { Semester } from '../schemas/semester';
 import '../styles/main.css';
 
@@ -33,6 +34,7 @@ const { semester, allSemesters = [] } = Astro.props;
     <CourseNav currentSemester={semester.id} allSemesters={allSemesters} />
 
     <header class="titlebar container" id="title">
+      <p class="hero-eyebrow">Carnegie Mellon University</p>
       <h1 class="course-title">
         <b>{semester.courseNumber}</b> {semester.title}
       </h1>
@@ -54,6 +56,9 @@ const { semester, allSemesters = [] } = Astro.props;
       )}
       {semester.venue && (
         <p class="venue-info">In-Person Venue: {semester.venue}</p>
+      )}
+      {semester.supportedBy && (
+        <SponsorLockup supportedBy={semester.supportedBy} />
       )}
     </header>
 
@@ -89,23 +94,10 @@ const { semester, allSemesters = [] } = Astro.props;
     </button>
 
     <footer class="site-footer" role="contentinfo">
-      <div class="footer-inner">
-        <p class="footer-title">
-          {semester.courseNumber} {semester.title} |{' '}
-          <span style="white-space: nowrap;">Carnegie Mellon University</span>
-        </p>
-        {semester.supportedBy && (
-          <div class="footer-supported-by" aria-label="Course Support">
-            <span>{semester.supportedBy.label}</span>
-            <img
-              src={semester.supportedBy.logo}
-              alt={semester.supportedBy.alt}
-              class="supported-by-logo"
-              loading="lazy"
-            />
-          </div>
-        )}
-      </div>
+      <p class="footer-title">
+        {semester.courseNumber} {semester.title} |{' '}
+        <span style="white-space: nowrap;">Carnegie Mellon University</span>
+      </p>
     </footer>
 
     <script>

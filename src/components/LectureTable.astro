@@ -11,7 +11,7 @@ const { lectures = [], mediaServicesUrl } = Astro.props;
 // Group lectures into Academic Weeks (2 lectures per week typical for Mon/Wed or Tue/Thu, plus Lec 0 in Week 1)
 function getWeekNumber(lecNum: number | string): number {
   const parsed = typeof lecNum === 'number' ? lecNum : parseInt(String(lecNum).replace(/\D/g, ''), 10);
-  if (isNaN(parsed) || parsed === 0 || parsed === 1 || parsed === 2) return 1;
+  if (Number.isNaN(parsed) || parsed === 0 || parsed === 1 || parsed === 2) return 1;
   return Math.floor((parsed - 1) / 2) + 1;
 }
 

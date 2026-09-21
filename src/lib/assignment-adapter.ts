@@ -1,7 +1,7 @@
-import {
-  type LegacyAssignmentsData,
-  type LegacyDeadlineEntry,
-  type UnifiedAssignment,
+import type {
+  LegacyAssignmentsData,
+  LegacyDeadlineEntry,
+  UnifiedAssignment,
 } from '../schemas/assignment.ts';
 
 /**

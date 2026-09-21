@@ -32,14 +32,13 @@ jobs:
         run: pip install ruamel.yaml pytz
 
       - name: Upload slides to lectures.yaml
-        working-directory: F26/pages/tables_data
-        run: python upload_slides.py
+        run: python tools/automation/upload_slides.py --semester f26
 
       - name: Commit updated lectures.yaml
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add F26/pages/tables_data/lectures.yaml
+          git add content/semesters/f26/lectures.yaml
           if git diff --cached --quiet; then
             echo "[INFO] No changes - slides already linked or no lecture today."
           else

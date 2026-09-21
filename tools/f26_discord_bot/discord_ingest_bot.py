@@ -25,7 +25,7 @@ AUTO_PUSH = os.getenv("AUTO_PUSH", "false").lower() == "true"
 
 INBOX = pathlib.Path("F26/documents/slides/inbox")
 MANIFEST = pathlib.Path("F26/automation/upload_manifest.jsonl")
-LECTURES_YAML = pathlib.Path("F26/pages/tables_data/lectures.yaml")
+LECTURES_YAML = pathlib.Path("content/semesters/f26/lectures.yaml")
 ALLOWED_EXT = {".pdf", ".ppt", ".pptx"}
 BAD_KEYWORDS = {"recitation", "lab", "hw", "homework", "bootcamp", "quiz", "exam", "solution", "draft"}
 LECTURE_RE = re.compile(r"\blec(?:ture)?[\s._-]*0*(\d{1,2})\b", re.I)

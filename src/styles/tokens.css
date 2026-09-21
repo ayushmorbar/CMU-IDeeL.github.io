@@ -45,35 +45,35 @@
   --cmu-red-mobile: #a54b4b;
   --cmu-red-active: #b96765;
 
-  /* Functional Accents & Links */
-  --link-crimson: #8b1e1e;
-  --color-link: #8b1e1e;
-  --color-link-hover: #6d1717;
-  --color-heading-h2: #b05145;
-  --color-heading-h3: #bf766d;
-  --pill-link-bg: #8b1e1e;
-  --pill-link-hover: #6d1717;
+  /* Functional Accents & Links (Template Style: Blue links with warm orange/red hover) */
+  --link-crimson: #1772d0;
+  --color-link: #1772d0;
+  --color-link-hover: #f09228;
+  --color-heading-h2: #000000;
+  --color-heading-h3: #000000;
+  --pill-link-bg: #1772d0;
+  --pill-link-hover: #0f549c;
   --badge-active: #c9302c;
   --color-badge-zoom: #847777;
   --color-badge-text: #ffffff;
 
   /* Text & Neutrals */
-  --text-primary: #333333;
+  --text-primary: #000000;
   --text-muted: #666666;
-  --color-text-main: #333333;
+  --color-text-main: #000000;
   --color-text-muted: #666666;
 
   /* Tables & Borders */
-  --table-border: #dddddd;
-  --table-stripe: #f7f7f7;
+  --table-border: #000000;
+  --table-stripe: #ffffff;
   --color-border: #dddddd;
   --color-border-subtle: #e5e5e5;
-  --color-table-due: #e0e0e0;
-  --color-table-stripe: #f7f7f7;
+  --color-table-due: #dddddd;
+  --color-table-stripe: #ffffff;
 
   /* Typography Scale */
-  --font-family-base: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-family-heading: 'Lato', 'Avenir', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-base: 'Avenir', 'Lato', Verdana, Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Avenir', 'Lato', Verdana, Helvetica, sans-serif;
   --font-family-alt: 'Lato', 'Avenir', sans-serif;
 
   /* Exact Font Sizes & Line Heights */

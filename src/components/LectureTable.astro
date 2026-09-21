@@ -128,19 +128,21 @@ const renderedLectures = lectures.map((lecture, index) => {
 
 <style>
   .schedule-week-row {
-    background-color: #ededed !important;
+    background-color: #dddddd !important;
   }
 
   .schedule-week-cell {
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     padding: 6px 12px !important;
-    color: #333333;
-    font-size: 13px;
-    letter-spacing: 0.03em;
-    border-top: 1px solid var(--table-border) !important;
-    border-bottom: 1px solid var(--table-border) !important;
-    background-color: #ededed !important;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    border-top: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+    background-color: #dddddd !important;
+    height: 28px;
+    vertical-align: middle;
   }
 
   .material-link {
@@ -151,7 +153,7 @@ const renderedLectures = lectures.map((lecture, index) => {
   }
 
   .material-link:hover {
-    color: var(--cmu-scarlet);
+    color: #f09228;
     text-decoration: underline;
   }
 </style>
